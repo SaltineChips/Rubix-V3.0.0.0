@@ -30,6 +30,10 @@
         <translation>Ištrinti pasirinktą adresą iš sąrašo</translation>
     </message>
     <message>
+        <source>Enter address or label to search</source>
+        <translation>Įveskite adresą ar žymę į paiešką</translation>
+    </message>
+    <message>
         <source>Export the data in the current tab to a file</source>
         <translation>Eksportuoti informaciją iš dabartinės lentelės į failą</translation>
     </message>
@@ -41,10 +45,78 @@
         <source>&amp;Delete</source>
         <translation>&amp;Trinti</translation>
     </message>
-    </context>
+    <message>
+        <source>Choose the address to send coins to</source>
+        <translation>Pasirinkite adresą, kuriam siūsite monetas</translation>
+    </message>
+    <message>
+        <source>Choose the address to receive coins with</source>
+        <translation>Pasirinkite adresą su kuriuo gauti monetas</translation>
+    </message>
+    <message>
+        <source>C&amp;hoose</source>
+        <translation>P&amp;asirinkti</translation>
+    </message>
+    <message>
+        <source>Sending addresses</source>
+        <translation>Išsiuntimo adresai</translation>
+    </message>
+    <message>
+        <source>Receiving addresses</source>
+        <translation>Gavimo adresai</translation>
+    </message>
+    <message>
+        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tai yra jūsų Empower adresai išeinantiems mokėjimams. Visada pasitikrinkite sumą ir gavėjo adresą prieš siunčiant lėšas. </translation>
+    </message>
+    <message>
+        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tai yra Jūsų Empower adresai įeinantiems mokėjimams. Kiekvienam mokėjimui rekomenduojama naudoti naują adresą. </translation>
+    </message>
+    <message>
+        <source>&amp;Copy Address</source>
+        <translation>&amp;Kopijuoti adresą</translation>
+    </message>
+    <message>
+        <source>Copy &amp;Label</source>
+        <translation>Kopijuoti &amp;Žymę</translation>
+    </message>
+    <message>
+        <source>&amp;Edit</source>
+        <translation>&amp;Keisti</translation>
+    </message>
+    <message>
+        <source>Export Address List</source>
+        <translation>Eksportuoti adresų sąrašą</translation>
+    </message>
+    <message>
+        <source>Comma separated file (*.csv)</source>
+        <translation>Kableliais atskirtų duomenų failas (*.csv)</translation>
+    </message>
+    <message>
+        <source>Exporting Failed</source>
+        <translation>Eksportavimas nepavyko</translation>
+    </message>
+    <message>
+        <source>There was an error trying to save the address list to %1. Please try again.</source>
+        <translation>Bandant išsaugoti adresų sąrašą - įvyko klaida keliant į %1. Prašome bandyti dar kartą.</translation>
+    </message>
+</context>
 <context>
     <name>AddressTableModel</name>
-    </context>
+    <message>
+        <source>Label</source>
+        <translation>Žymė</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Adresas</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(nėra žymės)</translation>
+    </message>
+</context>
 <context>
     <name>AskPassphraseDialog</name>
     <message>
@@ -63,7 +135,95 @@
         <source>Repeat new passphrase</source>
         <translation>Pakartokite naują slaptafrazę</translation>
     </message>
-    </context>
+    <message>
+        <source>Show password</source>
+        <translation>Rodyti slaptažodį</translation>
+    </message>
+    <message>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Įveskite naują piniginės slaptafrazę.&lt;br/&gt;Prašome naudoti slaptafrazę iš &lt;b&gt; 10 ar daugiau atsitiktinių simbolių&lt;/b&gt; arba &lt;b&gt;aštuonių ar daugiau žodžių&lt;/b&gt;.</translation>
+    </message>
+    <message>
+        <source>Encrypt wallet</source>
+        <translation>Užšifruoti piniginę</translation>
+    </message>
+    <message>
+        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <translation>Ši operacija reikalauja jūsų piniginės slaptafrazės jai atrakinti.</translation>
+    </message>
+    <message>
+        <source>Unlock wallet</source>
+        <translation>Atrakinti piniginę</translation>
+    </message>
+    <message>
+        <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
+        <translation>Ši operacija reikalauja jūsų piniginės slaptafrazės jai iššifruoti.</translation>
+    </message>
+    <message>
+        <source>Decrypt wallet</source>
+        <translation>Iššifruoti piniginę</translation>
+    </message>
+    <message>
+        <source>Change passphrase</source>
+        <translation>Pakeisti slaptafrazę</translation>
+    </message>
+    <message>
+        <source>Enter the old passphrase and new passphrase to the wallet.</source>
+        <translation>Įveskite seną ir naują piniginės slaptafrazes.</translation>
+    </message>
+    <message>
+        <source>Confirm wallet encryption</source>
+        <translation>Patvirtinkite piniginės užšifravimą</translation>
+    </message>
+    <message>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
+        <translation>Dėmesio: jei užšifruosite savo piniginę ir pamesite slaptafrazę, jūs&lt;b&gt;PRARASITE VISUS SAVO EMPOWERUS&lt;/b&gt;! </translation>
+    </message>
+    <message>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation>Ar tikrai norite šifruoti savo piniginę?</translation>
+    </message>
+    <message>
+        <source>Wallet encrypted</source>
+        <translation>Piniginė užšifruota</translation>
+    </message>
+    <message>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>SVARBU: Betkokios ankstesnės jūsų piniginės atsarginės kopijos turėtų būti pakeistos naujai sugeneruotu, užšifruotu piniginės failu. Dėl saugumo sumetimų, anstesnės neužšifruotos piniginės kopijos failas taps nenaudingu nuo momento, kai nauja ir užšifruota piniginė bus pradėta naudoti. </translation>
+    </message>
+    <message>
+        <source>Wallet encryption failed</source>
+        <translation>Nepavyko užšifruoti piniginę</translation>
+    </message>
+    <message>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Dėl vidinės klaidos nepavyko užšifruoti piniginę.Piniginė neužšifruota.</translation>
+    </message>
+    <message>
+        <source>The supplied passphrases do not match.</source>
+        <translation>Įvestos slaptafrazės nesutampa.</translation>
+    </message>
+    <message>
+        <source>Wallet unlock failed</source>
+        <translation>Nepavyko atrakinti piniginę</translation>
+    </message>
+    <message>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation>Neteisingai įvestas slaptažodis piniginės iššifravimui.</translation>
+    </message>
+    <message>
+        <source>Wallet decryption failed</source>
+        <translation>Nepavyko iššifruoti piniginės</translation>
+    </message>
+    <message>
+        <source>Wallet passphrase was successfully changed.</source>
+        <translation>Piniginės slaptažodis sėkmingai pakeistas.</translation>
+    </message>
+    <message>
+        <source>Warning: The Caps Lock key is on!</source>
+        <translation>Įspėjimas: įjungtas Caps Lock klavišas!</translation>
+    </message>
+</context>
 <context>
     <name>BanTableModel</name>
     <message>
@@ -114,6 +274,10 @@
         <translation>&amp;Apie %1</translation>
     </message>
     <message>
+        <source>Show information about %1</source>
+        <translation>Rodyti informaciją apie %1</translation>
+    </message>
+    <message>
         <source>About &amp;Qt</source>
         <translation>Apie &amp;Qt</translation>
     </message>
@@ -124,6 +288,10 @@
     <message>
         <source>&amp;Options...</source>
         <translation>&amp;Parinktys...</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for %1</source>
+        <translation>Keisti %1 konfigūracijos galimybes</translation>
     </message>
     <message>
         <source>&amp;Encrypt Wallet...</source>
@@ -150,12 +318,36 @@
         <translation>Atidaryti &amp;URI...</translation>
     </message>
     <message>
+        <source>Wallet:</source>
+        <translation>Piniginė</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>numatyta piniginė</translation>
+    </message>
+    <message>
+        <source>Click to disable network activity.</source>
+        <translation>Spauskite norėdami išjungti tinklo veiklą.</translation>
+    </message>
+    <message>
+        <source>Network activity disabled.</source>
+        <translation>Tinklo veikla išjungta.</translation>
+    </message>
+    <message>
+        <source>Click to enable network activity again.</source>
+        <translation>Spauskite norėdami įjungti tinklo veiklą.</translation>
+    </message>
+    <message>
+        <source>Syncing Headers (%1%)...</source>
+        <translation>Sinchronizuojamos Antraštės (%1%)...</translation>
+    </message>
+    <message>
         <source>Reindexing blocks on disk...</source>
         <translation>Blokai iš naujo indeksuojami...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Siųsti monetas Blackcoin adresui</translation>
+        <source>Send coins to a Empower address</source>
+        <translation>Siųsti monetas Empower adresui</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -178,8 +370,8 @@
         <translation>&amp;Tikrinti žinutę...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Blackcoin</translation>
+        <source>Empower.</source>
+        <translation>Empower.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -206,6 +398,14 @@
         <translation>Užšifruoti privačius raktus, kurie priklauso jūsų piniginei</translation>
     </message>
     <message>
+        <source>Sign messages with your Empower addresses to prove you own them</source>
+        <translation>Pasirašydami žinutes su savo Empower adresais įrodysite jog esate jų savininkas </translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Empower adresas</translation>
+    </message>
+    <message>
         <source>&amp;File</source>
         <translation>&amp;Failas</translation>
     </message>
@@ -226,6 +426,18 @@
         <translation>Komandinės eilutės parametrai</translation>
     </message>
     <message>
+        <source>Processing blocks on disk...</source>
+        <translation>Blokai apdirbami diske...</translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation>Paskutinis gautas blokas buvo sukurtas prieš %1.</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation>Sekančios operacijos dar nebus matomos. </translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>Klaida</translation>
     </message>
@@ -242,8 +454,48 @@
         <translation>Atnaujinta</translation>
     </message>
     <message>
+        <source>%1 client</source>
+        <translation>%1 klientas</translation>
+    </message>
+    <message>
         <source>Catching up...</source>
         <translation>Vejamasi...</translation>
+    </message>
+    <message>
+        <source>Date: %1
+</source>
+        <translation>Data: %1
+</translation>
+    </message>
+    <message>
+        <source>Amount: %1
+</source>
+        <translation>Suma: %1
+</translation>
+    </message>
+    <message>
+        <source>Wallet: %1
+</source>
+        <translation>Piniginė: %1
+</translation>
+    </message>
+    <message>
+        <source>Type: %1
+</source>
+        <translation>Spausti: %1
+</translation>
+    </message>
+    <message>
+        <source>Label: %1
+</source>
+        <translation>Antraštė: %1
+</translation>
+    </message>
+    <message>
+        <source>Address: %1
+</source>
+        <translation>Adresas: %1
+</translation>
     </message>
     <message>
         <source>Sent transaction</source>
@@ -320,6 +572,50 @@
         <source>Confirmed</source>
         <translation>Patvirtintas</translation>
     </message>
+    <message>
+        <source>Copy address</source>
+        <translation>Kopijuoti adresą</translation>
+    </message>
+    <message>
+        <source>Copy label</source>
+        <translation>Kopijuoti žymę</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Kopijuoti sumą</translation>
+    </message>
+    <message>
+        <source>Copy transaction ID</source>
+        <translation>Sandorio ID</translation>
+    </message>
+    <message>
+        <source>Copy fee</source>
+        <translation>Kopijuoti mokestį</translation>
+    </message>
+    <message>
+        <source>Copy after fee</source>
+        <translation>Kopijuoti po mokesčio</translation>
+    </message>
+    <message>
+        <source>Copy bytes</source>
+        <translation>Kopijuoti baitus</translation>
+    </message>
+    <message>
+        <source>Copy change</source>
+        <translation>Kopijuoti keisti</translation>
+    </message>
+    <message>
+        <source>yes</source>
+        <translation>taip</translation>
+    </message>
+    <message>
+        <source>no</source>
+        <translation>ne</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(nėra žymės)</translation>
+    </message>
     </context>
 <context>
     <name>EditAddressDialog</name>
@@ -353,20 +649,20 @@
         <source>Command-line options</source>
         <translation>Komandinės eilutės parametrai</translation>
     </message>
-    <message>
-        <source>Usage:</source>
-        <translation>Naudojimas:</translation>
-    </message>
-    <message>
-        <source>command-line options</source>
-        <translation>komandinės eilutės parametrai</translation>
-    </message>
-    </context>
+</context>
 <context>
     <name>Intro</name>
     <message>
         <source>Welcome</source>
         <translation>Sveiki</translation>
+    </message>
+    <message>
+        <source>Empower.</source>
+        <translation>Empower.</translation>
+    </message>
+    <message>
+        <source>The wallet will also be stored in this directory.</source>
+        <translation>Piniginė taip pat bus saugojama šiame direktyve.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -418,8 +714,8 @@
         <translation>Piniginė</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatiškai atidaryti Blackcoin kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
+        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatiškai atidaryti Empower kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -506,6 +802,10 @@
         <translation>Kliento perkrovimas reikalingas nustatymų aktyvavimui</translation>
     </message>
     <message>
+        <source>Error</source>
+        <translation>Klaida</translation>
+    </message>
+    <message>
         <source>This change would require a client restart.</source>
         <translation>Šis pakeitimas reikalautų kliento perkrovimo</translation>
     </message>
@@ -550,7 +850,11 @@
     </context>
 <context>
     <name>PeerTableModel</name>
-    </context>
+    <message>
+        <source>Received</source>
+        <translation>Gauta</translation>
+    </message>
+</context>
 <context>
     <name>QObject</name>
     <message>
@@ -569,7 +873,27 @@
         <source>N/A</source>
         <translation>nėra</translation>
     </message>
-    </context>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>nežinomas</translation>
+    </message>
+</context>
 <context>
     <name>QObject::QObject</name>
     </context>
@@ -643,10 +967,6 @@
         <translation>&amp;Konsolė</translation>
     </message>
     <message>
-        <source>&amp;Clear</source>
-        <translation>Išvalyti</translation>
-    </message>
-    <message>
         <source>Totals</source>
         <translation>Viso:</translation>
     </message>
@@ -659,20 +979,8 @@
         <translation>Išvalyti konsolę</translation>
     </message>
     <message>
-        <source>%1 B</source>
-        <translation>%1 B</translation>
-    </message>
-    <message>
-        <source>%1 KB</source>
-        <translation>%1 KB</translation>
-    </message>
-    <message>
-        <source>%1 MB</source>
-        <translation>%1 MB</translation>
-    </message>
-    <message>
-        <source>%1 GB</source>
-        <translation>%1 GB</translation>
+        <source>default wallet</source>
+        <translation>numatyta piniginė</translation>
     </message>
     <message>
         <source>never</source>
@@ -705,7 +1013,15 @@
         <source>Clear</source>
         <translation>Išvalyti</translation>
     </message>
-    </context>
+    <message>
+        <source>Copy label</source>
+        <translation>Kopijuoti žymę</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Kopijuoti sumą</translation>
+    </message>
+</context>
 <context>
     <name>ReceiveRequestDialog</name>
     <message>
@@ -716,9 +1032,29 @@
         <source>Copy &amp;Address</source>
         <translation>&amp;Kopijuoti adresą</translation>
     </message>
+    <message>
+        <source>Address</source>
+        <translation>Adresas</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Žymė</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Piniginė</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
+    <message>
+        <source>Label</source>
+        <translation>Žymė</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(nėra žymės)</translation>
+    </message>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -782,7 +1118,35 @@
         <source>S&amp;end</source>
         <translation>&amp;Siųsti</translation>
     </message>
-    </context>
+    <message>
+        <source>Copy amount</source>
+        <translation>Kopijuoti sumą</translation>
+    </message>
+    <message>
+        <source>Copy fee</source>
+        <translation>Kopijuoti mokestį</translation>
+    </message>
+    <message>
+        <source>Copy after fee</source>
+        <translation>Kopijuoti po mokesčio</translation>
+    </message>
+    <message>
+        <source>Copy bytes</source>
+        <translation>Kopijuoti baitus</translation>
+    </message>
+    <message>
+        <source>Copy change</source>
+        <translation>Kopijuoti keisti</translation>
+    </message>
+    <message>
+        <source>Transaction fee</source>
+        <translation>Sandorio mokestis</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(nėra žymės)</translation>
+    </message>
+</context>
 <context>
     <name>SendCoinsEntry</name>
     <message>
@@ -847,7 +1211,7 @@
         <translation>Įveskite pranešimą, kurį norite pasirašyti čia</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Empower address</source>
         <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
     </message>
     <message>
@@ -863,8 +1227,8 @@
         <translation>&amp;Patikrinti žinutę</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Blackcoin adresas</translation>
+        <source>Verify the message to ensure it was signed with the specified Empower address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Empower adresas</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -897,9 +1261,49 @@
     </context>
 <context>
     <name>TransactionTableModel</name>
+    <message>
+        <source>Label</source>
+        <translation>Žymė</translation>
+    </message>
+    <message>
+        <source>(no label)</source>
+        <translation>(nėra žymės)</translation>
+    </message>
     </context>
 <context>
     <name>TransactionView</name>
+    <message>
+        <source>Copy address</source>
+        <translation>Kopijuoti adresą</translation>
+    </message>
+    <message>
+        <source>Copy label</source>
+        <translation>Kopijuoti žymę</translation>
+    </message>
+    <message>
+        <source>Copy amount</source>
+        <translation>Kopijuoti sumą</translation>
+    </message>
+    <message>
+        <source>Copy transaction ID</source>
+        <translation>Sandorio ID</translation>
+    </message>
+    <message>
+        <source>Comma separated file (*.csv)</source>
+        <translation>Kableliais atskirtų duomenų failas (*.csv)</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Žymė</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Adresas</translation>
+    </message>
+    <message>
+        <source>Exporting Failed</source>
+        <translation>Eksportavimas nepavyko</translation>
+    </message>
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
@@ -916,28 +1320,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Options:</source>
-        <translation>Parinktys:</translation>
-    </message>
-    <message>
-        <source>Specify data directory</source>
-        <translation>Nustatyti duomenų aplanką</translation>
-    </message>
-    <message>
-        <source>Specify your own public address</source>
-        <translation>Nurodykite savo nuosavą viešą adresą</translation>
-    </message>
-    <message>
-        <source>Accept command line and JSON-RPC commands</source>
-        <translation>Priimti komandinę eilutę ir JSON-RPC komandas</translation>
-    </message>
-    <message>
-        <source>Run in the background as a daemon and accept commands</source>
-        <translation>Dirbti fone kaip šešėlyje ir priimti komandas</translation>
-    </message>
-    <message>
-        <source>Bitcoin Core</source>
-        <translation>Blackcoin More</translation>
+        <source>Empower Network</source>
+        <translation>Empower branduolys</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -948,40 +1332,12 @@
         <translation>Tikrinami blokai...</translation>
     </message>
     <message>
-        <source>Verifying wallet...</source>
-        <translation>Tikrinama piniginė...</translation>
-    </message>
-    <message>
         <source>Information</source>
         <translation>Informacija</translation>
     </message>
     <message>
-        <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>Siųsti atsekimo/derinimo info į konsolę vietoj debug.log failo</translation>
-    </message>
-    <message>
-        <source>Username for JSON-RPC connections</source>
-        <translation>Vartotojo vardas JSON-RPC jungimuisi</translation>
-    </message>
-    <message>
         <source>Warning</source>
         <translation>Įspėjimas</translation>
-    </message>
-    <message>
-        <source>Password for JSON-RPC connections</source>
-        <translation>Slaptažodis JSON-RPC sujungimams</translation>
-    </message>
-    <message>
-        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>Leisti DNS paiešką sujungimui ir mazgo pridėjimui</translation>
-    </message>
-    <message>
-        <source>Loading addresses...</source>
-        <translation>Užkraunami adresai...</translation>
-    </message>
-    <message>
-        <source>Invalid -proxy address: '%s'</source>
-        <translation>Neteisingas proxy adresas: '%s'</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -992,16 +1348,8 @@
         <translation>Įkeliamas blokų indeksas...</translation>
     </message>
     <message>
-        <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation>Pridėti mazgą prie sujungti su and attempt to keep the connection open</translation>
-    </message>
-    <message>
         <source>Loading wallet...</source>
         <translation>Užkraunama piniginė...</translation>
-    </message>
-    <message>
-        <source>Cannot write default address</source>
-        <translation>Negalima parašyti įprasto adreso</translation>
     </message>
     <message>
         <source>Rescanning...</source>

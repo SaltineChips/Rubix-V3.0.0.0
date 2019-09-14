@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2015 The Bitcoin Core developers
+// Copyright (c) 2011-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_QT_SENDCOINSENTRY_H
 #define BITCOIN_QT_SENDCOINSENTRY_H
 
-#include "walletmodel.h"
+#include <qt/walletmodel.h>
 
 #include <QStackedWidget>
 
@@ -26,11 +26,11 @@ class SendCoinsEntry : public QStackedWidget
     Q_OBJECT
 
 public:
-    explicit SendCoinsEntry(const PlatformStyle *platformStyle, QWidget *parent = 0);
+    explicit SendCoinsEntry(const PlatformStyle *platformStyle, QWidget *parent = nullptr, bool coldstake = false);
     ~SendCoinsEntry();
 
     void setModel(WalletModel *model);
-    bool validate();
+    bool validate(interfaces::Node& node);
     SendCoinsRecipient getValue();
 
     /** Return whether the entry is still empty and unedited */
@@ -38,6 +38,7 @@ public:
 
     void setValue(const SendCoinsRecipient &value);
     void setAddress(const QString &address);
+    void setNarration(const QString &sNarr);
     void setAmount(const CAmount &amount);
 
     /** Set up the tab chain manually, as Qt messes up the tab chain by default in some cases
@@ -65,6 +66,12 @@ private Q_SLOTS:
     void on_pasteButton_clicked();
     void updateDisplayUnit();
 
+    void on_pasteButton_cs_clicked();
+    void on_addressBookButton_cs_clicked();
+
+    void on_pasteButton2_cs_clicked();
+    void on_addressBookButton2_cs_clicked();
+
 private:
     SendCoinsRecipient recipient;
     Ui::SendCoinsEntry *ui;
@@ -72,6 +79,8 @@ private:
     const PlatformStyle *platformStyle;
 
     bool updateLabel(const QString &address);
+public:
+    bool m_coldstake;
 };
 
 #endif // BITCOIN_QT_SENDCOINSENTRY_H

@@ -1,14 +1,17 @@
 *.tar.gz
 
 *.exe
-src/bitcoin
-src/bitcoind
-src/bitcoin-cli
-src/bitcoin-tx
-src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+src/empower
+src/empowerd
+src/empower-cli
+src/empower-tx
+src/empower-wallet
+src/test/test_empower
+src/test/test_empower_fuzzy
+src/qt/test/test_empower-qt
 
 # autoreconf
+src/Makefile.in
 Makefile.in
 aclocal.m4
 autom4te.cache/
@@ -43,6 +46,18 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
+src/qt/bitcoin-qt.config
+src/qt/bitcoin-qt.creator
+src/qt/bitcoin-qt.creator.user
+src/qt/bitcoin-qt.files
+src/qt/bitcoin-qt.includes
+
+src/qt/empower-qt.config
+src/qt/empower-qt.creator
+src/qt/empower-qt.creator.user
+src/qt/empower-qt.files
+src/qt/empower-qt.includes
+
 .deps
 .dirstamp
 .libs
@@ -54,11 +69,10 @@ src/qt/test/moc*.cpp
 *.pyc
 *.o
 *.o-*
-*.patch
-.bitcoin
 *.a
 *.pb.cc
 *.pb.h
+*.dat
 
 *.log
 *.trs
@@ -67,6 +81,10 @@ src/qt/test/moc*.cpp
 *.json.h
 *.raw.h
 
+# Only ignore unexpected patches
+*.patch
+!depends/patches/*.patch
+
 #libtool object files
 *.lo
 *.la
@@ -74,13 +92,13 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoin-qt
-Bitcoin-Qt.app
+empower-qt
+Empower-Qt.app
+background.tiff*
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
-src/test/buildenv.py
+empower-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -93,7 +111,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_bitcoin.coverage/
+test_empower.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -101,17 +119,20 @@ coverage_percent.txt
 linux-coverage-build
 linux-build
 win32-build
-qa/pull-tester/run-bitcoind-for-test.sh
-qa/pull-tester/tests_config.py
-qa/pull-tester/cache/*
-qa/pull-tester/test.*/*
-qa/tmp
-cache/
-share/BitcoindComparisonTool.jar
+test/config.ini
+test/cache/*
 
 !src/leveldb*/Makefile
 
 /doc/doxygen/
 
-libbitcoinconsensus.pc
+libempowerconsensus.pc
 contrib/devtools/split-debug.sh
+
+# Output from running db4 installation
+db4/
+
+.project
+.vscode
+# clang-check
+*.plist
