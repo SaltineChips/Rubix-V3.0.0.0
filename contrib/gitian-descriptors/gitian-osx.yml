@@ -1,5 +1,5 @@
 ---
-name: "empower-osx-0.18.99.0"
+name: "Rubix-osx-0.18.99.0"
 enable_cache: true
 distro: "ubuntu"
 suites:
@@ -29,8 +29,8 @@ packages:
 - "python3-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/empower/empower-core.git"
-  "dir": "empower-core"
+- "url": "https://github.com/Rubix/Rubix-core.git"
+  "dir": "Rubix-core"
 files:
 - "MacOSX10.11.sdk.tar.gz"
 script: |
@@ -85,7 +85,7 @@ script: |
   create_per-host_faketime_wrappers "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd empower-core
+  cd Rubix-core
   BASEPREFIX=`pwd`/depends
 
   mkdir -p ${BASEPREFIX}/SDKs
@@ -106,14 +106,14 @@ script: |
   ./autogen.sh
   CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
   make dist
-  SOURCEDIST=`echo empower-*.tar.gz`
+  SOURCEDIST=`echo Rubix-*.tar.gz`
   DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
 
   # Correct tar file order
   mkdir -p temp
   pushd temp
   tar -xf ../$SOURCEDIST
-  find empower-* | sort | tar --mtime="$REFERENCE_DATETIME" --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
+  find Rubix-* | sort | tar --mtime="$REFERENCE_DATETIME" --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
   popd
 
   # Workaround for tarball not building with the bare tag version (prep)

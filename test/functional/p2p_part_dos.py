@@ -5,7 +5,7 @@
 
 import time
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.messages import CBlockHeader, msg_headers
 from test_framework.util import connect_nodes
 
@@ -13,7 +13,7 @@ _compactblocks = __import__('p2p_compactblocks')
 TestP2PConn = _compactblocks.TestP2PConn
 
 
-class DoSTest(EmpowerTestFramework):
+class DoSTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -30,7 +30,7 @@ class DoSTest(EmpowerTestFramework):
 
     def create_block_header(self, node, hashPrevBlock, hashMerkleRoot, target_block_hash):
         target_block = node.getblock(target_block_hash, 2)
-        block = CBlockHeader(is_mpwr=True)
+        block = CBlockHeader(is_RBX=True)
         block.nTime = target_block['time']
         block.hashPrevBlock = hashPrevBlock
         block.nVersion = target_block['version']
@@ -44,7 +44,7 @@ class DoSTest(EmpowerTestFramework):
 
     def get_block_header(self, node, target_block_hash):
         target_block = node.getblock(target_block_hash, 2)
-        block = CBlockHeader(is_mpwr=True)
+        block = CBlockHeader(is_RBX=True)
         block.nTime = target_block['time']
         block.hashPrevBlock = int(target_block['previousblockhash'], 16)
         block.nVersion = target_block['version']

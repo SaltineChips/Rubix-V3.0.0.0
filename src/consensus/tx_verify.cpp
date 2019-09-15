@@ -122,7 +122,7 @@ bool SequenceLocks(const CTransaction &tx, int flags, std::vector<int>* prevHeig
 unsigned int GetLegacySigOpCount(const CTransaction& tx)
 {
     unsigned int nSigOps = 0;
-    if (!tx.IsEmpowerVersion())
+    if (!tx.IsRubixVersion())
     {
         for (const auto& txin : tx.vin)
         {
@@ -326,7 +326,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
     if (::GetSerializeSize(tx, PROTOCOL_VERSION | SERIALIZE_TRANSACTION_NO_WITNESS) * WITNESS_SCALE_FACTOR > MAX_BLOCK_WEIGHT)
         return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-txns-oversize");
 
-    if (tx.IsEmpowerVersion()) {
+    if (tx.IsRubixVersion()) {
         const Consensus::Params& consensusParams = Params().GetConsensus();
         if (tx.vpout.empty()) {
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-txns-vpout-empty");
@@ -375,7 +375,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "too-many-data-outputs");
         }
     } else {
-        if (fEmpowerMode) {
+        if (fRubixMode) {
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-txn-version");
         }
         if (tx.vout.empty()) {
@@ -429,8 +429,8 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, CValidationState& state, c
     state.fHasAnonOutput = false;
     state.fHasAnonInput = false;
 
-    // early out for empower txns
-    if (tx.IsEmpowerVersion() && tx.vin.size() < 1) {
+    // early out for Rubix txns
+    if (tx.IsRubixVersion() && tx.vin.size() < 1) {
         return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-txn-no-inputs",
                          strprintf("%s: no inputs", __func__));
     }
@@ -462,7 +462,7 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, CValidationState& state, c
         {
             if (nSpendHeight - coin.nHeight < COINBASE_MATURITY)
             {
-                if (fEmpowerMode) {
+                if (fRubixMode) {
                     // Scale in the depth restriction to start the chain
                     int nRequiredDepth = std::min(COINBASE_MATURITY, (int)(coin.nHeight / 2));
                     if (nSpendHeight - coin.nHeight < nRequiredDepth) {
@@ -477,7 +477,7 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, CValidationState& state, c
         }
 
         // Check for negative or overflow input values
-        if (fEmpowerMode) {
+        if (fRubixMode) {
             if (coin.nType == OUTPUT_STANDARD) {
                 nValueIn += coin.out.nValue;
                 if (!MoneyRange(coin.out.nValue) || !MoneyRange(nValueIn)) {
@@ -509,7 +509,7 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, CValidationState& state, c
     state.fHasAnonOutput = nRingCT > nRingCTInputs;
 
     txfee = 0;
-    if (fEmpowerMode) {
+    if (fRubixMode) {
         if (!tx.IsCoinStake()) {
             // Tally transaction fees
             if (nCt > 0 || nRingCT > 0) {

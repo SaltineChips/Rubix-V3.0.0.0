@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_USBDEVICE_DEBUGDEVICE_H
-#define EMPOWER_USBDEVICE_DEBUGDEVICE_H
+#ifndef Rubix_USBDEVICE_DEBUGDEVICE_H
+#define Rubix_USBDEVICE_DEBUGDEVICE_H
 
 #include <usbdevice/usbdevice.h>
 #include <key/extkey.h>
@@ -34,4 +34,4 @@ public:
 
 } // usb_device
 
-#endif // EMPOWER_USBDEVICE_DEBUGDEVICE_H
+#endif // Rubix_USBDEVICE_DEBUGDEVICE_H

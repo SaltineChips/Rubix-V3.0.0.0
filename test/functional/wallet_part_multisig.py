@@ -5,12 +5,12 @@
 
 from decimal import Decimal
 
-from test_framework.test_empower import EmpowerTestFramework, isclose
+from test_framework.test_Rubix import RubixTestFramework, isclose
 from test_framework.util import connect_nodes_bi, satoshi_round
 from test_framework.authproxy import JSONRPCException
 
 
-class MultiSigTest(EmpowerTestFramework):
+class MultiSigTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
@@ -175,7 +175,7 @@ class MultiSigTest(EmpowerTestFramework):
         scriptTo = nodes[0].buildscript(opts)['hex']
 
         outputs = [{'address':'script', 'amount':8, 'script':scriptTo},]
-        mstxid3 = nodes[0].sendtypeto('mpwr', 'mpwr', outputs)
+        mstxid3 = nodes[0].sendtypeto('RBX', 'RBX', outputs)
 
         hexfund = nodes[0].gettransaction(mstxid3)['hex']
         ro = nodes[0].decoderawtransaction(hexfund)
@@ -230,7 +230,7 @@ class MultiSigTest(EmpowerTestFramework):
         scriptTo = nodes[0].buildscript(opts)['hex']
 
         outputs = [{ 'address':'script', 'amount':1, 'script':scriptTo }]
-        txFundId = nodes[0].sendtypeto('mpwr', 'mpwr', outputs)
+        txFundId = nodes[0].sendtypeto('RBX', 'RBX', outputs)
         hexfund = nodes[0].gettransaction(txFundId)['hex']
 
         ro = nodes[0].decoderawtransaction(hexfund)

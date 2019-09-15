@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_BLIND_H
-#define EMPOWER_BLIND_H
+#ifndef Rubix_BLIND_H
+#define Rubix_BLIND_H
 
 #include <secp256k1.h>
 #include <secp256k1_bulletproofs.h>
@@ -23,4 +23,4 @@ int GetRangeProofInfo(const std::vector<uint8_t> &vRangeproof, int &rexp, int &r
 void ECC_Start_Blinding();
 void ECC_Stop_Blinding();
 
-#endif  // EMPOWER_BLIND_H
+#endif  // Rubix_BLIND_H

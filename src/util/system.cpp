@@ -68,10 +68,10 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "empower.conf";
+const char * const BITCOIN_CONF_FILENAME = "Rubix.conf";
 
-bool fEmpowerMode = true;
-bool fEmpowerWallet = false;
+bool fRubixMode = true;
+bool fRubixWallet = false;
 ArgsManager gArgs;
 
 /** A map that contains all the currently held directory locks. After
@@ -818,10 +818,10 @@ std::string ArgsManager::GetHelpMessage() const
             case OptionsCategory::SMSG:
                 usage += HelpMessageGroup("SMSG Commands:");
                 break;
-            case OptionsCategory::MPWR_WALLET:
-                usage += HelpMessageGroup("Empower wallet Commands:");
+            case OptionsCategory::RBX_WALLET:
+                usage += HelpMessageGroup("Rubix wallet Commands:");
                 break;
-            case OptionsCategory::MPWR_STAKING:
+            case OptionsCategory::RBX_STAKING:
                 usage += HelpMessageGroup("Staking Commands:");
                 break;
             default:
@@ -878,7 +878,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "empower";
+    const char* pszModule = "Rubix";
 #endif
     if (pex)
         return strprintf(
@@ -897,13 +897,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Empower
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Empower
-    // Mac: ~/Library/Application Support/Empower
-    // Unix: ~/.empower
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Rubix
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Rubix
+    // Mac: ~/Library/Application Support/Rubix
+    // Unix: ~/.Rubix
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Empower";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Rubix";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -913,10 +913,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Empower";
+    return pathRet / "Library/Application Support/Rubix";
 #else
     // Unix
-    return pathRet / ".empower";
+    return pathRet / ".Rubix";
 #endif
 #endif
 }
@@ -1407,11 +1407,11 @@ int GetNumCores()
 std::string CopyrightHolders(const std::string& strPrefix)
 {
     const int BTC_START_YEAR = 2009;
-    const int MPWR_START_YEAR = 2017;
+    const int RBX_START_YEAR = 2017;
 
-    std::string sRange = MPWR_START_YEAR == COPYRIGHT_YEAR
+    std::string sRange = RBX_START_YEAR == COPYRIGHT_YEAR
         ? strprintf(" %i ", COPYRIGHT_YEAR)
-        : strprintf(" %i-%i ", MPWR_START_YEAR, COPYRIGHT_YEAR);
+        : strprintf(" %i-%i ", RBX_START_YEAR, COPYRIGHT_YEAR);
 
     std::string strCopyrightHolders = strPrefix + sRange + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 

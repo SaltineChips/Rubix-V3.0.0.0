@@ -62,12 +62,12 @@
         <translation>Ontvang adresse</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit is jou Empower-adress vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat u munte stuur.</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit is jou Rubix-adress vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat u munte stuur.</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit is jou Empower-adress vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat jy munte stuur.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit is jou Rubix-adress vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat jy munte stuur.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Bevestig beursie enkripsie.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
-        <translation>Waarskuwing: As jy jou beursie enkripteer en jou wagwoord verloor, sal jy &lt;b&gt;AL JOU EMPOWER VERLOOR&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
+        <translation>Waarskuwing: As jy jou beursie enkripteer en jou wagwoord verloor, sal jy &lt;b&gt;AL JOU Rubix VERLOOR&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -184,8 +184,8 @@
         <translation>Beursie enkriptasie voltooi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
-        <translation>%1 gaan nou toe maak om die enkripsie proses klaar te maak. Onthou dat jou empower nie ten volle beskerm kan word deur die beursie te enkrip teen "malware" wat jou rekenaar besmet.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
+        <translation>%1 gaan nou toe maak om die enkripsie proses klaar te maak. Onthou dat jou Rubix nie ten volle beskerm kan word deur die beursie te enkrip teen "malware" wat jou rekenaar besmet.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -342,8 +342,8 @@
         <translation>Herindekseer blokke op skyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Stuur muntstukke na 'n Empower adres</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Stuur muntstukke na 'n Rubix adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -394,12 +394,12 @@
         <translation>Versleutel die private sleutels wat aan u beursie behoort</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Teken boodskappe met u Empower adresse om te bewys dat u hul besit</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Teken boodskappe met u Rubix adresse om te bewys dat u hul besit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Bevestig boodskappe om te verseker dat hulle geteken was met gespesifiseerde Empower adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Bevestig boodskappe om te verseker dat hulle geteken was met gespesifiseerde Rubix adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -418,8 +418,8 @@
         <translation>Blad nutsbalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
-        <translation>Versoek betalings (genereer QR kodes en empower: URIs)</translation>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
+        <translation>Versoek betalings (genereer QR kodes en Rubix: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -430,8 +430,8 @@
         <translation>Wys die lys van gebruikte ontvangsadresse en etikette</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
-        <translation>Open 'n empower: URI of betalingsversoek</translation>
+        <source>Open a Rubix: URI or payment request</source>
+        <translation>Open 'n Rubix: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -474,8 +474,8 @@
         <translation>Op datum</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Empower command-line options</source>
-        <translation>Wys die %1 hulpboodskap om 'n lys met moontlike Empower bevel-lyn opsies te verkry</translation>
+        <source>Show the %1 help message to get a list with possible Rubix command-line options</source>
+        <translation>Wys die %1 hulpboodskap om 'n lys met moontlike Rubix bevel-lyn opsies te verkry</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -544,8 +544,8 @@
         <translation>Beursie is &lt;b&gt;versleutel&lt;/b&gt; en is tans &lt;b&gt;gesluit&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Empower can no longer continue safely and will quit.</source>
-        <translation>'n Noodlottige fout het voorgekom. Empower kan nie langer voortgaan nie en sal afsluit.</translation>
+        <source>A fatal error occurred. Rubix can no longer continue safely and will quit.</source>
+        <translation>'n Noodlottige fout het voorgekom. Rubix kan nie langer voortgaan nie en sal afsluit.</translation>
     </message>
 </context>
 <context>
@@ -734,8 +734,8 @@
         <translation>Wysig stuurende adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Empower address.</source>
-        <translation>Die ingeskrewe adres "%1" is nie 'n geldige Empower adres nie.</translation>
+        <source>The entered address "%1" is not a valid Rubix address.</source>
+        <translation>Die ingeskrewe adres "%1" is nie 'n geldige Rubix adres nie.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -799,8 +799,8 @@
         <translation>Welkom by %1.</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>

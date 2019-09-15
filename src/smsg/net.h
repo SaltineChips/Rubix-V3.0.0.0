@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_SMSG_NET_H
-#define EMPOWER_SMSG_NET_H
+#ifndef Rubix_SMSG_NET_H
+#define Rubix_SMSG_NET_H
 
 #include <sync.h>
 
@@ -19,4 +19,4 @@ public:
     bool fEnabled = false;
 };
 
-#endif // EMPOWER_SMSG_NET_H
+#endif // Rubix_SMSG_NET_H

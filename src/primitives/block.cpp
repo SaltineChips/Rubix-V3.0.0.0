@@ -9,7 +9,7 @@
 #include <tinyformat.h>
 #include <crypto/common.h>
 
-int WITNESS_SCALE_FACTOR = WITNESS_SCALE_FACTOR_MPWR;
+int WITNESS_SCALE_FACTOR = WITNESS_SCALE_FACTOR_RBX;
 
 uint256 CBlockHeader::GetHash() const
 {

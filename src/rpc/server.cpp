@@ -164,7 +164,7 @@ UniValue stop(const JSONRPCRequest& jsonRequest)
     if (jsonRequest.fHelp || jsonRequest.params.size() > 1)
         throw std::runtime_error(
             RPCHelpMan{"stop",
-                "\nStop Empower server.",
+                "\nStop Rubix server.",
                 {},
                 RPCResults{},
                 RPCExamples{""},
@@ -175,7 +175,7 @@ UniValue stop(const JSONRPCRequest& jsonRequest)
     if (jsonRequest.params[0].isNum()) {
         MilliSleep(jsonRequest.params[0].get_int());
     }
-    return "Empower server stopping";
+    return "Rubix server stopping";
 }
 
 static UniValue uptime(const JSONRPCRequest& jsonRequest)

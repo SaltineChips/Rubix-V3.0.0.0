@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -265,8 +265,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -760,8 +760,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower Network</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix Network</translation>
     </message>
     <message>
         <source>Information</source>

@@ -98,8 +98,8 @@
         <translation>Vhura &amp;URI</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -165,8 +165,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     </context>
 <context>
@@ -194,8 +194,8 @@
         <translation>Marii </translation>
     </message>
     <message>
-        <source>Enter a Empower address (e.g. %1)</source>
-        <translation>Nyora kero ye Empower (sekuti %1)</translation>
+        <source>Enter a Rubix address (e.g. %1)</source>
+        <translation>Nyora kero ye Rubix (sekuti %1)</translation>
     </message>
     <message>
         <source>%1 d</source>

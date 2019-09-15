@@ -254,7 +254,7 @@ static UniValue getrawtransaction(const JSONRPCRequest& request)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"address\"               (string) empower address\n"
+            "           \"address\"               (string) Rubix address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -285,7 +285,7 @@ static UniValue getrawtransaction(const JSONRPCRequest& request)
     uint256 hash = ParseHashV(request.params[0], "parameter 1");
     CBlockIndex* blockindex = nullptr;
 
-    if (!fEmpowerMode && hash == Params().GenesisBlock().hashMerkleRoot) {
+    if (!fRubixMode && hash == Params().GenesisBlock().hashMerkleRoot) {
         // Special exception for the genesis block coinbase transaction
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "The genesis block coinbase is not considered an ordinary transaction and cannot be retrieved");
     }
@@ -361,7 +361,7 @@ static UniValue getrawtransaction(const JSONRPCRequest& request)
     if (blockindex) result.pushKV("in_active_chain", in_active_chain);
     result.pushKV("hex", strHex);
 
-    if (fEmpowerMode) {
+    if (fRubixMode) {
         TxToJSONExpanded(*tx, hash_block, result, nHeight, nConfirmations, nBlockTime);
     } else {
         TxToJSON(*tx, hash_block, result);
@@ -539,7 +539,7 @@ static UniValue createrawtransaction(const JSONRPCRequest& request)
                         {
                             {"", RPCArg::Type::OBJ, RPCArg::Optional::OMITTED, "",
                                 {
-                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the empower address, the value (float or string) is the amount in " + CURRENCY_UNIT},
+                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the Rubix address, the value (float or string) is the amount in " + CURRENCY_UNIT},
                                 },
                                 },
                             {"", RPCArg::Type::OBJ, RPCArg::Optional::OMITTED, "",
@@ -624,7 +624,7 @@ static UniValue decoderawtransaction(const JSONRPCRequest& request)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"PfqK97PXYfqRFtdYcZw82x3dzPrZbEAcYa\"   (string) empower address\n"
+            "           \"PfqK97PXYfqRFtdYcZw82x3dzPrZbEAcYa\"   (string) Rubix address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -684,7 +684,7 @@ static UniValue decodescript(const JSONRPCRequest& request)
             "  \"type\":\"type\",        (string) The output type (e.g. "+GetAllOutputTypes()+")\n"
             "  \"reqSigs\": n,    (numeric) The required signatures\n"
             "  \"addresses\": [   (json array of string)\n"
-            "     \"address\"     (string) empower address\n"
+            "     \"address\"     (string) Rubix address\n"
             "     ,...\n"
             "  ],\n"
             "  \"p2sh\":\"str\"          (string) address of P2SH script wrapping this redeem script (not returned if the script is already a P2SH).\n"
@@ -743,7 +743,7 @@ static UniValue decodescript(const JSONRPCRequest& request)
                     }
                 }
             }
-            if (fEmpowerMode) return r;
+            if (fRubixMode) return r;
 
             UniValue sr(UniValue::VOBJ);
             CScript segwitScr;
@@ -1536,7 +1536,7 @@ UniValue createpsbt(const JSONRPCRequest& request)
                         {
                             {"", RPCArg::Type::OBJ, RPCArg::Optional::OMITTED, "",
                                 {
-                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the empower address, the value (float or string) is the amount in " + CURRENCY_UNIT},
+                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the Rubix address, the value (float or string) is the amount in " + CURRENCY_UNIT},
                                 },
                                 },
                             {"", RPCArg::Type::OBJ, RPCArg::Optional::OMITTED, "",

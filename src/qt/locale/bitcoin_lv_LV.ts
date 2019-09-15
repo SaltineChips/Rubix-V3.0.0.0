@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt empower</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt Rubix</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt empower</translation>
+        <translation>Izvēlies adresi ar kuru saņemt Rubix</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -214,8 +214,8 @@
         <translation>Bloku reindeksēšana no diska...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Nosūtīt bitkoinus uz Empower adresi</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Nosūtīt bitkoinus uz Rubix adresi</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -238,8 +238,8 @@
         <translation>&amp;Pārbaudīt ziņojumu...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -266,12 +266,12 @@
         <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Parakstīt ziņojumus ar savām Empower adresēm lai pierādītu ka tās pieder tev</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Parakstīt ziņojumus ar savām Rubix adresēm lai pierādītu ka tās pieder tev</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Empower adresēm</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Rubix adresēm</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -290,12 +290,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un empower: URIs)</translation>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un Rubix: URIs)</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
-        <translation>Atvērt empower URI vai maksājuma pieprasījumu</translation>
+        <source>Open a Rubix: URI or payment request</source>
+        <translation>Atvērt Rubix URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -469,8 +469,8 @@
         <translation>Izmantot pielāgotu datu mapi:</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -563,15 +563,15 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt empower &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt Rubix &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Tērēt neapstiprinātu atlikumu</translation>
     </message>
     <message>
-        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Uz rūtera automātiski atvērt Empower klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
+        <source>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Uz rūtera automātiski atvērt Rubix klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -623,7 +623,7 @@
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
-        <translation>Vai rādīt Empower kontroles funkcijas vai nē.</translation>
+        <translation>Vai rādīt Rubix kontroles funkcijas vai nē.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -661,8 +661,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</source>
-        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Empower tīklu, taču šis process vēl nav beidzies.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</source>
+        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Rubix tīklu, taču šis process vēl nav beidzies.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -928,7 +928,7 @@
     </message>
     <message>
         <source>Coin Control Features</source>
-        <translation>Empower Kontroles Funkcijas</translation>
+        <translation>Rubix Kontroles Funkcijas</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -1111,8 +1111,8 @@
         <translation>Kopēt parakstu uz sistēmas starpliktuvi</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Empower address</source>
-        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Empower adreses īpašnieks.</translation>
+        <source>Sign the message to prove you own this Rubix address</source>
+        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Rubix adreses īpašnieks.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1204,8 +1204,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower Network</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix Network</translation>
     </message>
     <message>
         <source>Error loading block database</source>

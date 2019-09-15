@@ -4,8 +4,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_POS_KERNEL_H
-#define EMPOWER_POS_KERNEL_H
+#ifndef Rubix_POS_KERNEL_H
+#define Rubix_POS_KERNEL_H
 
 #include <validation.h>
 
@@ -42,4 +42,4 @@ bool CheckCoinStakeTimestamp(int nHeight, int64_t nTimeBlock);
  */
 bool CheckKernel(const CBlockIndex *pindexPrev, unsigned int nBits, int64_t nTime, const COutPoint &prevout, int64_t* pBlockTime = nullptr);
 
-#endif // EMPOWER_POS_KERNEL_H
+#endif // Rubix_POS_KERNEL_H

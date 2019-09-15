@@ -66,12 +66,12 @@
         <translation>عناوين الاستقبال</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>هذه هي عناوين Empower التابعة لك من أجل إرسال الدفعات. تحقق دائما من المبلغ و عنوان المرسل المستقبل قبل إرسال العملات</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>هذه هي عناوين Rubix التابعة لك من أجل إرسال الدفعات. تحقق دائما من المبلغ و عنوان المرسل المستقبل قبل إرسال العملات</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>هذه هي عناوين Empower التابعة لك من أجل إستقبال الدفعات. ينصح استخدام عنوان جديد من أجل كل صفقة</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>هذه هي عناوين Rubix التابعة لك من أجل إستقبال الدفعات. ينصح استخدام عنوان جديد من أجل كل صفقة</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>تأكيد تشفير المحفظة</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
-        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات EMPOWER الخاصة بك.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
+        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات Rubix الخاصة بك.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,7 +188,7 @@
         <translation>محفظة مشفرة</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
         <translation>سيتم إغلاق %1 الآن لإنهاء عملية التشفير. تذكر أن تشفير محفظتك لا يمكن أن يحمي البتكوين الخاص بك بالكامل من السرقة عبر البرامج الضارة التي بامكانها أن تصيب جهاز الكمبيوتر الخاص بك.</translation>
     </message>
     <message>
@@ -346,7 +346,7 @@
         <translation>إعادة فهرسة الكتل على القرص ...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
+        <source>Send coins to a Rubix address</source>
         <translation>ارسل عملات الى عنوان بيتكوين</translation>
     </message>
     <message>
@@ -370,7 +370,7 @@
         <translation>&amp;التحقق من الرسالة...</translation>
     </message>
     <message>
-        <source>Empower.</source>
+        <source>Rubix.</source>
         <translation>بتكوين</translation>
     </message>
     <message>
@@ -398,12 +398,12 @@
         <translation>تشفير المفتاح الخاص بمحفظتك</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>وقَع الرسائل بواسطة ال: Empower الخاص بك لإثبات امتلاكك لهم</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>وقَع الرسائل بواسطة ال: Rubix الخاص بك لإثبات امتلاكك لهم</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Empower محدَدة</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Rubix محدَدة</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -422,7 +422,7 @@
         <translation>شريط أدوات علامات التبويب</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
         <translation>أطلب دفعات (يولد كودات الرمز المربع وبيت كوين: العناوين المعطاة)</translation>
     </message>
     <message>
@@ -434,8 +434,8 @@
         <translation>عرض قائمة عناوين الإستقبال المستخدمة والملصقات</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
-        <translation>فتح URI : Empower أو طلب دفع</translation>
+        <source>Open a Rubix: URI or payment request</source>
+        <translation>فتح URI : Rubix أو طلب دفع</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -478,7 +478,7 @@
         <translation>محدث</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Empower command-line options</source>
+        <source>Show the %1 help message to get a list with possible Rubix command-line options</source>
         <translation>بين اشارة المساعدة %1 للحصول على قائمة من خيارات اوامر البت كوين المحتملة </translation>
     </message>
     <message>
@@ -550,7 +550,7 @@
         <translation>المحفظة &lt;b&gt;مشفرة&lt;/b&gt; و &lt;b&gt;مقفلة&lt;/b&gt; حاليا</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Empower can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Rubix can no longer continue safely and will quit.</source>
         <translation>خطأ فادح حدث . لا يمكن اتمام بيتكوين بامان سيتم الخروج</translation>
     </message>
 </context>
@@ -732,7 +732,7 @@
         <translation>تعديل عنوان الارسال</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Empower address.</source>
+        <source>The entered address "%1" is not a valid Rubix address.</source>
         <translation>العنوان المدخل "%1" ليس عنوان بيت كوين صحيح.</translation>
     </message>
     <message>
@@ -821,7 +821,7 @@
         <translation>استخدام دليل بيانات مخصص:</translation>
     </message>
     <message>
-        <source>Empower.</source>
+        <source>Rubix.</source>
         <translation>بتكوين</translation>
     </message>
     <message>
@@ -833,7 +833,7 @@
         <translation>سيتم تخزين %1 جيجابايت تقريباً من البيانات في هذا الدليل.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Empower block chain.</source>
+        <source>%1 will download and store a copy of the Rubix block chain.</source>
         <translation>سيقوم %1 بتنزيل نسخة من سلسلة كتل بتكوين وتخزينها.</translation>
     </message>
     <message>
@@ -856,11 +856,11 @@
         <translation>نمودج</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the empower network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Rubix network, as detailed below.</source>
         <translation>قد لا تكون المعاملات الأخيرة مرئية بعد، وبالتالي قد يكون رصيد محفظتك غير صحيح. ستكون هذه المعلومات صحيحة بمجرد الانتهاء من محفظتك مع شبكة البيتكوين، كما هو مفصل أدناه.</translation>
     </message>
     <message>
-        <source>Attempting to spend empower that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend Rubix that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>لن تقبل الشبكة محاولة إنفاق البتكوين المتأثرة بالمعاملات التي لم يتم عرضها بعد.</translation>
     </message>
     <message>
@@ -1026,7 +1026,7 @@
         <translation>السماح بالاتصالات الواردة.</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a SOCKS5 proxy.</source>
+        <source>Connect to the Rubix network through a SOCKS5 proxy.</source>
         <translation>الاتصال بشبكة البتكوين عبر وكيل SOCKS5.</translation>
     </message>
     <message>
@@ -1062,7 +1062,7 @@
         <translation>تور</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Rubix network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>قم بالاتصال بشبكة بتكوين عبر وكيل SOCKS5 منفصل لخدمات تور المخفية.</translation>
     </message>
     <message>
@@ -1161,7 +1161,7 @@
         <translation>نمودج</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</source>
         <translation>قد تكون المعلومات المعروضة قديمة. تتزامن محفظتك تلقائيًا مع شبكة البتكوين بعد إنشاء الاتصال، ولكن هذه العملية لم تكتمل بعد.</translation>
     </message>
     <message>
@@ -1236,7 +1236,7 @@
         <translation>خطأ في طلب الدفع</translation>
     </message>
     <message>
-        <source>Cannot start empower: click-to-pay handler</source>
+        <source>Cannot start Rubix: click-to-pay handler</source>
         <translation>لا يمكن تشغيل بتكوين: معالج النقر للدفع</translation>
     </message>
     <message>
@@ -1248,7 +1248,7 @@
         <translation>عنوان الدفع غير صالح %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Empower address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Rubix address or malformed URI parameters.</source>
         <translation>لا يمكن تحليل العنوان (URI)! يمكن أن يحدث هذا بسبب عنوان بتكوين غير صالح أو معلمات عنوان (URI) غير صحيحة.</translation>
     </message>
     <message>
@@ -1350,7 +1350,7 @@
         <translation>مبلغ</translation>
     </message>
     <message>
-        <source>Enter a Empower address (e.g. %1)</source>
+        <source>Enter a Rubix address (e.g. %1)</source>
         <translation>ادخل عنوان محفطة البتكوين (مثال %1)</translation>
     </message>
     <message>
@@ -1742,7 +1742,7 @@
         <translation>&amp;رسالة:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Empower network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Rubix network.</source>
         <translation>رسالة اختيارية لإرفاقها بطلب الدفع، والتي سيتم عرضها عند فتح الطلب. ملاحظة: لن يتم إرسال الرسالة مع الدفعة عبر شبكة البتكوين.</translation>
     </message>
     <message>
@@ -1975,7 +1975,7 @@
         <translation>إخفاء</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for empower transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Rubix transactions than the network can process.</source>
         <translation>إن دفع الحد الأدنى فقط من الرسوم يجوز طالما أن حجم المعاملات أقل من المساحة الموجودة في الكتل. ولكن كن على علم بأن هذا يمكن أن ينتهي في معاملة غير مؤكدة أبداً عندما يكون هناك طلب أكبر على معاملات البتكوين مما تستطيع الشبكة معالجته.</translation>
     </message>
     <message>
@@ -2139,7 +2139,7 @@
         <translation>دفع فقط الرسوم المطلوبة ل %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Empower address</source>
+        <source>Warning: Invalid Rubix address</source>
         <translation>تحذير: عنوان بتكوين غير صالح</translation>
     </message>
     <message>
@@ -2178,7 +2178,7 @@
         <translation>هذا دفع اعتيادي</translation>
     </message>
     <message>
-        <source>The Empower address to send the payment to</source>
+        <source>The Rubix address to send the payment to</source>
         <translation>عنوان البت كوين المرسل اليه الدفع</translation>
     </message>
     <message>
@@ -2198,7 +2198,7 @@
         <translation>ازل هذه المداخله</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less empower than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Rubix than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>سيتم خصم الرسوم من المبلغ الذي يتم إرساله. لذا سوف يتلقى المستلم مبلغ أقل من البتكوين المدخل في حقل المبلغ. في حالة تحديد عدة مستلمين، يتم تقسيم الرسوم بالتساوي.</translation>
     </message>
     <message>
@@ -2226,7 +2226,7 @@
         <translation>أدخل تسمية لهذا العنوان لإضافته إلى قائمة العناوين المستخدمة</translation>
     </message>
     <message>
-        <source>A message that was attached to the empower: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Empower network.</source>
+        <source>A message that was attached to the Rubix: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Rubix network.</source>
         <translation>الرسالة التي تم إرفاقها مع البتكوين: العنوان الذي سيتم تخزينه مع المعاملة للرجوع إليه. ملاحظة: لن يتم إرسال هذه الرسالة عبر شبكة البتكوين.</translation>
     </message>
     <message>
@@ -2271,7 +2271,7 @@
         <translation>&amp;توقيع الرسالة</translation>
     </message>
     <message>
-        <source>The Empower address to sign the message with</source>
+        <source>The Rubix address to sign the message with</source>
         <translation>عنوان البتكوين لتوقيع الرسالة به</translation>
     </message>
     <message>
@@ -2303,7 +2303,7 @@
         <translation>نسخ التوقيع الحالي إلى حافظة النظام</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Empower address</source>
+        <source>Sign the message to prove you own this Rubix address</source>
         <translation>وقع الرسالة لتثبت انك تمتلك عنوان البت كوين هذا</translation>
     </message>
     <message>
@@ -2323,11 +2323,11 @@
         <translation>&amp;تحقق رسالة</translation>
     </message>
     <message>
-        <source>The Empower address the message was signed with</source>
+        <source>The Rubix address the message was signed with</source>
         <translation>عنوان البتكوين الذي تم توقيع الرسالة به</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Empower address</source>
+        <source>Verify the message to ensure it was signed with the specified Rubix address</source>
         <translation>تحقق من الرسالة للتأكد من توقيعها مع عنوان البتكوين المحدد</translation>
     </message>
     <message>
@@ -2920,7 +2920,7 @@
         <translation>غير قادر على بدء خادم ال HTTP. راجع سجل تصحيح الأخطاء للحصول على التفاصيل.</translation>
     </message>
     <message>
-        <source>Empower Network</source>
+        <source>Rubix Network</source>
         <translation>جوهر بيتكوين</translation>
     </message>
     <message>

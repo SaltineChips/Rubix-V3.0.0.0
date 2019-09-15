@@ -8,7 +8,7 @@ import json
 import subprocess
 import textwrap
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.authproxy import JSONRPCException
 from test_framework.util import assert_raises_rpc_error, assert_equal
 
@@ -35,7 +35,7 @@ def read_dump(file_name):
     return sJson, nLines
 
 
-class WalletEmpowerTest(EmpowerTestFramework):
+class WalletRubixTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 4
@@ -49,13 +49,13 @@ class WalletEmpowerTest(EmpowerTestFramework):
         self.add_nodes(self.num_nodes, extra_args=self.extra_args)
         self.start_nodes()
 
-    def empower_wallet_process(self, *args):
-        binary = self.config["environment"]["BUILDDIR"] + '/src/empower-wallet' + self.config["environment"]["EXEEXT"]
+    def Rubix_wallet_process(self, *args):
+        binary = self.config["environment"]["BUILDDIR"] + '/src/Rubix-wallet' + self.config["environment"]["EXEEXT"]
         args = ['-datadir={}'.format(self.nodes[0].datadir), '-regtest'] + list(args)
         return subprocess.Popen([binary] + args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 
     def assert_tool_output(self, output, *args):
-        p = self.empower_wallet_process(*args)
+        p = self.Rubix_wallet_process(*args)
         stdout, stderr = p.communicate()
         assert_equal(p.poll(), 0)
         assert_equal(stderr, '')
@@ -326,7 +326,7 @@ class WalletEmpowerTest(EmpowerTestFramework):
 
         Bitcoin Testnet
         Purpose: 44
-        Coin: 1 (Empower testnet)
+        Coin: 1 (Rubix testnet)
         Account: 0
         Ext/Internal: 0
 
@@ -632,7 +632,7 @@ class WalletEmpowerTest(EmpowerTestFramework):
 
         coincontrol = {'changeaddress':scriptHex,'debug':True}
         outputs = [{'address':sAddrSpend, 'amount':1, 'narr':'not change'},]
-        ro = nodes[2].sendtypeto('mpwr', 'mpwr', outputs, 'comment', 'comment-to', 4, 32, True, coincontrol)
+        ro = nodes[2].sendtypeto('RBX', 'RBX', outputs, 'comment', 'comment-to', 4, 32, True, coincontrol)
 
         ro = nodes[2].decoderawtransaction(ro['hex'])
         fFound = False
@@ -691,7 +691,7 @@ class WalletEmpowerTest(EmpowerTestFramework):
         w_rpc = nodes[0].get_wallet_rpc('new_wallet_with_privkeys')
         ek_list = w_rpc.extkey('list', True)
 
-        self.log.info('Test empower-wallet')
+        self.log.info('Test Rubix-wallet')
         out = textwrap.dedent('''\
             Wallet info
             ===========
@@ -729,4 +729,4 @@ class WalletEmpowerTest(EmpowerTestFramework):
 
 
 if __name__ == '__main__':
-    WalletEmpowerTest().main()
+    WalletRubixTest().main()

@@ -27,7 +27,7 @@ CAmount GetMinimumFee(const CWallet& wallet, unsigned int nTxBytes, const CCoinC
         if (feeCalc) feeCalc->reason = FeeReason::MAXTXFEE;
     }
 
-    // Empower
+    // Rubix
     if (coin_control.fHaveAnonOutputs)
         fee_needed *= ANON_FEE_MULTIPLIER;
     fee_needed += coin_control.m_extrafee;

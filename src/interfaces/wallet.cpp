@@ -77,7 +77,7 @@ WalletTx MakeWalletTx(interfaces::Chain::Lock& locked_chain, CWallet& wallet, co
     for (const auto& txin : wtx.tx->vin) {
         result.txin_is_mine.emplace_back(wallet.IsMine(txin));
     }
-    if (wtx.tx->IsEmpowerVersion()) {
+    if (wtx.tx->IsRubixVersion()) {
         size_t nv = wtx.tx->GetNumVOuts();
         result.txout_is_mine.reserve(nv);
         result.txout_address.reserve(nv);
@@ -207,8 +207,8 @@ class WalletImpl : public Wallet
 public:
     explicit WalletImpl(const std::shared_ptr<CWallet>& wallet) : m_wallet(wallet)
     {
-        if (::IsEmpowerWallet(wallet.get())) {
-            m_wallet_part = GetEmpowerWallet(wallet.get());
+        if (::IsRubixWallet(wallet.get())) {
+            m_wallet_part = GetRubixWallet(wallet.get());
         }
     }
 
@@ -358,7 +358,7 @@ public:
         CAmount& new_fee,
         CMutableTransaction& mtx) override
     {
-        if (total_fee > 0 || ::IsEmpowerWallet(m_wallet.get())) {
+        if (total_fee > 0 || ::IsRubixWallet(m_wallet.get())) {
             return feebumper::CreateTotalBumpTransaction(m_wallet.get(), txid, coin_control, total_fee, errors, old_fee, new_fee, mtx) ==
                 feebumper::Result::OK;
         } else {
@@ -690,7 +690,7 @@ public:
         return MakeHandler(m_wallet_part->NotifyReservedBalanceChanged.connect(fn));
     }
 
-    bool IsEmpowerWallet() override
+    bool IsRubixWallet() override
     {
         return m_wallet_part;
     }
@@ -730,7 +730,7 @@ public:
         return m_wallet_part->GetAvailableBlindBalance(&coin_control);
     }
 
-    CHDWallet *getEmpowerWallet() override
+    CHDWallet *getRubixWallet() override
     {
         return m_wallet_part;
     }

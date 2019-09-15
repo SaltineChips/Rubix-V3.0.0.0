@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_WALLET_TEST_HDWALLET_TEST_FIXTURE_H
-#define EMPOWER_WALLET_TEST_HDWALLET_TEST_FIXTURE_H
+#ifndef Rubix_WALLET_TEST_HDWALLET_TEST_FIXTURE_H
+#define Rubix_WALLET_TEST_HDWALLET_TEST_FIXTURE_H
 
 #include <test/setup_common.h>
 #include <interfaces/chain.h>
@@ -23,4 +23,4 @@ struct HDWalletTestingSetup: public TestingSetup {
 
 std::string StripQuotes(std::string s);
 
-#endif // EMPOWER_WALLET_TEST_HDWALLET_TEST_FIXTURE_H
+#endif // Rubix_WALLET_TEST_HDWALLET_TEST_FIXTURE_H

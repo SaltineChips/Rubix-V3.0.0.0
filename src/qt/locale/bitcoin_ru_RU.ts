@@ -66,12 +66,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши Empower адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши Rubix адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши Empower адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши Rubix адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,7 +172,7 @@
         <translation>Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
         <translation>Внимание: если вы зашифруете ваш кошелек и потеряете ваш пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ БИТКОЙНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -184,7 +184,7 @@
         <translation>Кошелек зашифрован</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
         <translation>%1 закроется сейчас для завершения процесса шифрования. Запомните что шифрование вашего кошелька не сможет полностью защитить ваши биткойны от кражи при помощи вредоносного ПО, заразившего ваш компьютер.</translation>
     </message>
     <message>
@@ -354,7 +354,7 @@
         <translation>Прокси &lt;b&gt;включен&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
+        <source>Send coins to a Rubix address</source>
         <translation>Послать средства на биткойн адрес</translation>
     </message>
     <message>
@@ -378,8 +378,8 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower Network</translation>
+        <source>Rubix.</source>
+        <translation>Rubix Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -406,12 +406,12 @@
         <translation>Зашифровать приватные ключи, принадлежащие вашему кошельку</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Подписывайте сообщения Empower адресами чтобы подтвердить что это написали именно Вы</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Подписывайте сообщения Rubix адресами чтобы подтвердить что это написали именно Вы</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными Empower адресами</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными Rubix адресами</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -430,7 +430,7 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
         <translation>Запросить платеж</translation>
     </message>
     <message>
@@ -442,7 +442,7 @@
         <translation>Показать список использованных адресов и меток получателей</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
+        <source>Open a Rubix: URI or payment request</source>
         <translation>Открыть биткойн: URI или запрос платежа</translation>
     </message>
     <message>
@@ -450,8 +450,8 @@
         <translation>Опции командной строки</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Empower network</source>
-        <translation><numerusform>%n активное подключение к сети Empower.</numerusform><numerusform>%n активных подключения к сети Empower.</numerusform><numerusform>%n активных подключений к сети Empower.</numerusform><numerusform>%n активных подключений к сети Empower.</numerusform></translation>
+        <source>%n active connection(s) to Rubix network</source>
+        <translation><numerusform>%n активное подключение к сети Rubix.</numerusform><numerusform>%n активных подключения к сети Rubix.</numerusform><numerusform>%n активных подключений к сети Rubix.</numerusform><numerusform>%n активных подключений к сети Rubix.</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -554,8 +554,8 @@
         <translation>Кошелек &lt;b&gt;зашифрован&lt;/b&gt; и сейчас &lt;b&gt;заблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Empower can no longer continue safely and will quit.</source>
-        <translation>Произошла критическая ошибка. Empower больше не может продолжать безопасную работу и будет закрыт.</translation>
+        <source>A fatal error occurred. Rubix can no longer continue safely and will quit.</source>
+        <translation>Произошла критическая ошибка. Rubix больше не может продолжать безопасную работу и будет закрыт.</translation>
     </message>
 </context>
 <context>
@@ -797,8 +797,8 @@
         <translation>Использовать пользовательскую директорию данных</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower Network</translation>
+        <source>Rubix.</source>
+        <translation>Rubix Network</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -828,11 +828,11 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the empower network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Rubix network, as detailed below.</source>
         <translation>Последние транзакции пока могут быть не видны, поэтому вы можете видеть некорректный баланс ваших кошельков. Отображаемая информация будет верна после завершения синхронизации. Прогресс синхронизации вы можете видеть ниже.</translation>
     </message>
     <message>
-        <source>Attempting to spend empower that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend Rubix that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Попытка потратить средства, использованные в транзакциях, которые ещё не синхронизированы, будет отклонена сетью.</translation>
     </message>
     <message>
@@ -982,8 +982,8 @@
         <translation>Разрешить входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети Empower через SOCKS5 прокси.</translation>
+        <source>Connect to the Rubix network through a SOCKS5 proxy.</source>
+        <translation>Подключится к сети Rubix через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1018,7 +1018,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Rubix network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Соединяться к Биткоин-сети через отдельные SOCKS5 прокси через Tor hidden services:</translation>
     </message>
     <message>
@@ -1148,8 +1148,8 @@
         <translation>Ошибка запроса платежа</translation>
     </message>
     <message>
-        <source>'empower://' is not a valid URI. Use 'empower:' instead.</source>
-        <translation>'empower://' не верный URI. Используйте 'empower:' вместо этого.</translation>
+        <source>'Rubix://' is not a valid URI. Use 'Rubix:' instead.</source>
+        <translation>'Rubix://' не верный URI. Используйте 'Rubix:' вместо этого.</translation>
     </message>
     <message>
         <source>Invalid payment address %1</source>
@@ -1214,7 +1214,7 @@
         <translation>Количество</translation>
     </message>
     <message>
-        <source>Enter a Empower address (e.g. %1)</source>
+        <source>Enter a Rubix address (e.g. %1)</source>
         <translation>Введите биткоин-адрес (напр. %1)</translation>
     </message>
     <message>
@@ -1815,8 +1815,8 @@
         <translation>Истекло время ожидания запроса платежа</translation>
     </message>
     <message>
-        <source>Warning: Invalid Empower address</source>
-        <translation>Предупреждение: Неверный Empower адрес</translation>
+        <source>Warning: Invalid Rubix address</source>
+        <translation>Предупреждение: Неверный Rubix адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2268,8 +2268,8 @@
         <translation>Невозможно запустить HTTP-сервер. Для получения более детальной информации необходимо обратиться к журналу отладки.</translation>
     </message>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower Network</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix Network</translation>
     </message>
     <message>
         <source>The %s developers</source>

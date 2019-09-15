@@ -1,24 +1,24 @@
-Empower Network integration/staging tree
+Rubix Network integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/empower/empower-core.svg?branch=master)](https://travis-ci.org/empower/empower-core)
+[![Build Status](https://travis-ci.org/Rubix/Rubix-core.svg?branch=master)](https://travis-ci.org/Rubix/Rubix-core)
 
-https://empower.io
+https://Rubix.io
 
-What is Empower?
+What is Rubix?
 ----------------
 
 An open source, decentralized privacy platform
 built for global person to person eCommerce.
 
 For more information, as well as an immediately useable, binary version of
-the Empower Network software, see https://empower.io.
+the Rubix Network software, see https://Rubix.io.
 
 
 Getting Started
 ---------------
 
-A new Empower wallet will need an HD master key loaded and an initial account
+A new Rubix wallet will need an HD master key loaded and an initial account
 derived before it will be functional.
 
 The GUI programs will guide you through the initial setup.
@@ -29,22 +29,22 @@ Loading the new mnemonic with the extkeyimportmaster command will setup the
 master HD key and first account.
 
 To create an initial new HD master key and account from random data, start
-empowerd or empower-qt with the parameter: -createdefaultmasterkey.
+Rubixd or Rubix-qt with the parameter: -createdefaultmasterkey.
 
 Remember to backup your passphrase and/or wallet.dat file!
 
 License
 -------
 
-Empower Network is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Rubix Network is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/empower/empower-core/tags) are created
-regularly to indicate new official, stable release versions of Empower Network.
+completely stable. [Tags](https://github.com/Rubix/Rubix-core/tags) are created
+regularly to indicate new official, stable release versions of Rubix Network.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).

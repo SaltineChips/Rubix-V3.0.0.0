@@ -1,5 +1,5 @@
 ---
-name: "empower-desktop"
+name: "Rubix-desktop"
 enable_cache: true
 sudo: true
 suites:
@@ -24,8 +24,8 @@ packages:
 - "apt-transport-https"
 - "libjpeg-dev"
 remotes:
-- "url": "https://github.com/empower/empower-desktop"
-  "dir": "empower-desktop"
+- "url": "https://github.com/Rubix/Rubix-desktop"
+  "dir": "Rubix-desktop"
 files: []
 script: |
   # prepare
@@ -92,13 +92,13 @@ script: |
   nvm install 6.11.5
   nvm use 6.11.5
 
-  cd empower-desktop
+  cd Rubix-desktop
   yarn install
 
   yarn run package:linux
-  tar -cvzf packages/empower-desktop_test.tar.gz packages/linux-unpacked/
+  tar -cvzf packages/Rubix-desktop_test.tar.gz packages/linux-unpacked/
   yarn run package:win
   yarn run package:mac
 
   mkdir -p $OUTDIR
-  cp packages/empower-desktop* $OUTDIR
+  cp packages/Rubix-desktop* $OUTDIR

@@ -571,8 +571,8 @@ void SendCoinsDialog::clear()
         ui->entries->takeAt(0)->widget()->deleteLater();
     }
 
-    ui->cbxTypeFrom->setCurrentIndex(ui->cbxTypeFrom->findText("MPWR"));
-    ui->cbxTypeTo->setCurrentIndex(ui->cbxTypeTo->findText("MPWR"));
+    ui->cbxTypeFrom->setCurrentIndex(ui->cbxTypeFrom->findText("RBX"));
+    ui->cbxTypeTo->setCurrentIndex(ui->cbxTypeTo->findText("RBX"));
 
     addEntry();
 
@@ -1022,7 +1022,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
         }
         else if (!IsValidDestination(dest)) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Empower address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Rubix address"));
         }
         else // Valid address
         {

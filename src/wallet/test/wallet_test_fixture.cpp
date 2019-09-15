@@ -13,7 +13,7 @@ WalletTestingSetup::WalletTestingSetup(const std::string& chainName)
     bool fFirstRun;
 
     gArgs.ForceSetArg("-btcmode", "1");
-    fEmpowerWallet = false;
+    fRubixWallet = false;
 
     m_wallet.LoadWallet(fFirstRun);
     m_wallet.handleNotifications();

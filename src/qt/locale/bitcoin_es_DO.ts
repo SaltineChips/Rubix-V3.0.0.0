@@ -62,12 +62,12 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones Empower para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones Rubix para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones de Empower para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones de Rubix para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <source>Export Address List</source>
@@ -152,8 +152,8 @@
         <translation>Confirme cifrado del monedero</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
-        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS EMPOWER&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
+        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS Rubix&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -164,8 +164,8 @@
         <translation>Monedero cifrado</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
-        <translation>%1 se cerrará ahora para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger de manera completa su Empower de robo por malware que esté infectando su sistema.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
+        <translation>%1 se cerrará ahora para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger de manera completa su Rubix de robo por malware que esté infectando su sistema.</translation>
     </message>
     </context>
 <context>
@@ -250,8 +250,8 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Enviar monedas a una dirección Empower.</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Enviar monedas a una dirección Rubix.</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -274,8 +274,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -302,12 +302,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones Empower para demostrar la propiedad</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones Rubix para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones Empower concretas</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones Rubix concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -326,8 +326,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de Empower )</translation>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
+        <translation>Solicitar pagos (genera codigo QR y URL's de Rubix )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -338,8 +338,8 @@
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
-        <translation>Abrir un empower: URI o petición de pago</translation>
+        <source>Open a Rubix: URI or payment request</source>
+        <translation>Abrir un Rubix: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -521,8 +521,8 @@
         <translation>Utilice un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -598,8 +598,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Empower en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Rubix en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -697,8 +697,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Empower después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Rubix después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -1131,8 +1131,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Empower address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección Empower.</translation>
+        <source>Sign the message to prove you own this Rubix address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección Rubix.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1151,8 +1151,8 @@
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Empower address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Empower indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified Rubix address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Rubix indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1228,8 +1228,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Empower Network</source>
-        <translation>Núcleo de Empower </translation>
+        <source>Rubix Network</source>
+        <translation>Núcleo de Rubix </translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

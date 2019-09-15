@@ -26,7 +26,7 @@ const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
 
 FastRandomContext g_insecure_rand_ctx;
 
-extern bool fEmpowerMode;
+extern bool fRubixMode;
 
 std::ostream& operator<<(std::ostream& os, const uint256& num)
 {
@@ -34,10 +34,10 @@ std::ostream& operator<<(std::ostream& os, const uint256& num)
     return os;
 }
 
-BasicTestingSetup::BasicTestingSetup(const std::string& chainName, bool fEmpowerModeIn)
+BasicTestingSetup::BasicTestingSetup(const std::string& chainName, bool fRubixModeIn)
     : m_path_root(fs::temp_directory_path() / "test_common_" PACKAGE_NAME / strprintf("%lu_%i", (unsigned long)GetTime(), (int)(InsecureRandRange(1 << 30))))
 {
-    fEmpowerMode = fEmpowerModeIn;
+    fRubixMode = fRubixModeIn;
 
     SHA256AutoDetect();
     ECC_Start();
@@ -47,7 +47,7 @@ BasicTestingSetup::BasicTestingSetup(const std::string& chainName, bool fEmpower
     InitScriptExecutionCache();
     fCheckBlockIndex = true;
     SelectParams(chainName);
-    ResetParams(chainName, fEmpowerMode);
+    ResetParams(chainName, fRubixMode);
 
     static bool noui_connected = false;
     if (!noui_connected) {
@@ -70,7 +70,7 @@ fs::path BasicTestingSetup::SetDataDir(const std::string& name)
     return ret;
 }
 
-TestingSetup::TestingSetup(const std::string& chainName, bool fEmpowerModeIn) : BasicTestingSetup(chainName, fEmpowerModeIn)
+TestingSetup::TestingSetup(const std::string& chainName, bool fRubixModeIn) : BasicTestingSetup(chainName, fRubixModeIn)
 {
     SetDataDir("tempdir");
     const CChainParams& chainparams = Params();
@@ -126,7 +126,7 @@ TestChain100Setup::TestChain100Setup() : TestingSetup(CBaseChainParams::REGTEST)
     // TODO: fix the code to support SegWit blocks.
     gArgs.ForceSetArg("-vbparams", strprintf("segwit:0:%d", (int64_t)Consensus::BIP9Deployment::NO_TIMEOUT));
     SelectParams(CBaseChainParams::REGTEST);
-    ResetParams(CBaseChainParams::REGTEST, fEmpowerMode);
+    ResetParams(CBaseChainParams::REGTEST, fRubixMode);
 
     // Generate a 100-block chain:
     coinbaseKey.MakeNewKey(true);

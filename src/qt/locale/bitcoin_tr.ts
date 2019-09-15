@@ -66,12 +66,12 @@
         <translation>Alım adresleri</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödemeleri göndermek için kullanacağınız Empower adreslerinizdir. Empower yollamadan önce tutarı ve alıcının alım adresini her zaman kontrol ediniz.</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödemeleri göndermek için kullanacağınız Rubix adreslerinizdir. Rubix yollamadan önce tutarı ve alıcının alım adresini her zaman kontrol ediniz.</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için kullanacağınız Empower adreslerinizdir. Her işlem için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödemeleri almak için kullanacağınız Rubix adreslerinizdir. Her işlem için yeni bir alım adresi kullanmanız tavsiye edilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,7 +176,7 @@
         <translation>Cüzdan şifrelemesini onayla</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
         <translation>Uyarı: Eğer cüzdanınızı şifreler ve parolanızı kaybederseniz &lt;b&gt;TÜM BİTCOİNLERİNİZİ KAYBEDECEKSİNİZ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -188,8 +188,8 @@
         <translation>Cüzdan şifrelendi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
-        <translation>Şifreleme işleminin bitirilmesi için %1 kapatılacak. Her ne kadar cüzdanınızı şifreleseniz de şifrelemenin empowerlerinizi bilgisayarınıza bulaşan zararlılardan tam olarak koruyamayacağını unutmayın.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
+        <translation>Şifreleme işleminin bitirilmesi için %1 kapatılacak. Her ne kadar cüzdanınızı şifreleseniz de şifrelemenin Rubixlerinizi bilgisayarınıza bulaşan zararlılardan tam olarak koruyamayacağını unutmayın.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -358,8 +358,8 @@
         <translation>Tünelleme &lt;b&gt;etkin&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Bir empower adresine empower gönder</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Bir Rubix adresine Rubix gönder</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -382,8 +382,8 @@
         <translation>İletiyi &amp;kontrol et...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -410,12 +410,12 @@
         <translation>Cüzdanınıza ait özel anahtarları şifreleyin</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>İletileri adreslerin size ait olduğunu ispatlamak için Empower adresleri ile imzala</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>İletileri adreslerin size ait olduğunu ispatlamak için Rubix adresleri ile imzala</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Belirtilen Empower adresleri ile imzalandıklarından emin olmak için iletileri kontrol et</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Belirtilen Rubix adresleri ile imzalandıklarından emin olmak için iletileri kontrol et</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +434,8 @@
         <translation>Sekme araç çubuğu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
-        <translation>Ödeme talep et (QR kodu ve empower URI'si oluşturur)</translation>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
+        <translation>Ödeme talep et (QR kodu ve Rubix URI'si oluşturur)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,16 +446,16 @@
         <translation>Kullanılmış alım adresleri ve etiketlerin listesini göster</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
-        <translation>Bir empower: bağlantısı ya da ödeme talebi aç</translation>
+        <source>Open a Rubix: URI or payment request</source>
+        <translation>Bir Rubix: bağlantısı ya da ödeme talebi aç</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Komut satırı seçenekleri</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Empower network</source>
-        <translation><numerusform>Empower şebekesine %n faal bağlantı</numerusform><numerusform>Empower ağına %n etkin bağlantı var</numerusform></translation>
+        <source>%n active connection(s) to Rubix network</source>
+        <translation><numerusform>Rubix şebekesine %n faal bağlantı</numerusform><numerusform>Rubix ağına %n etkin bağlantı var</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>Güncel</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Empower command-line options</source>
-        <translation>Olası Empower komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
+        <source>Show the %1 help message to get a list with possible Rubix command-line options</source>
+        <translation>Olası Rubix komut satırı seçeneklerinin listesini görmek için %1 yardım mesajını göster</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -574,15 +574,15 @@
         <translation>Cüzdan &lt;b&gt;şifrelenmiştir&lt;/b&gt; ve şu anda &lt;b&gt;kilitlidir&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Empower can no longer continue safely and will quit.</source>
-        <translation>Ölümcül bir hata oluştu. Empower yazılımı artık güvenli bir şekilde çalışmaya devam edemediği için kapatılacaktır.</translation>
+        <source>A fatal error occurred. Rubix can no longer continue safely and will quit.</source>
+        <translation>Ölümcül bir hata oluştu. Rubix yazılımı artık güvenli bir şekilde çalışmaya devam edemediği için kapatılacaktır.</translation>
     </message>
 </context>
 <context>
     <name>CoinControlDialog</name>
     <message>
         <source>Coin Selection</source>
-        <translation>Empower Seçimi</translation>
+        <translation>Rubix Seçimi</translation>
     </message>
     <message>
         <source>Quantity:</source>
@@ -764,8 +764,8 @@
         <translation>Gönderi adresini düzenle</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Empower address.</source>
-        <translation>Girilen "%1" adresi geçerli bir Empower adresi değildir.</translation>
+        <source>The entered address "%1" is not a valid Rubix address.</source>
+        <translation>Girilen "%1" adresi geçerli bir Rubix adresi değildir.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -849,8 +849,8 @@
         <translation>Özel bir veri klasörü kullan:</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Approximately %1 GB of data will be stored in this directory.</source>
@@ -884,12 +884,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the empower network, as detailed below.</source>
-        <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız empower ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Rubix network, as detailed below.</source>
+        <translation>Son işlemler henüz görünmeyebilir ve bu nedenle cüzdanınızın bakiyesi yanlış olabilir. Bu bilgiler, aşağıda detaylandırıldığı gibi, cüzdanınız Rubix ağı ile senkronizasyonunu tamamladığında doğru olacaktır. </translation>
     </message>
     <message>
-        <source>Attempting to spend empower that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Henüz görüntülenmeyen işlemlerden etkilenen empowerleri harcama girişiminde bulunmak ağ tarafından kabul edilmeyecektir.</translation>
+        <source>Attempting to spend Rubix that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Henüz görüntülenmeyen işlemlerden etkilenen Rubixleri harcama girişiminde bulunmak ağ tarafından kabul edilmeyecektir.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1058,8 +1058,8 @@
         <translation>Doğrulanmamış para üstünü &amp;harca</translation>
     </message>
     <message>
-        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönlendiricide Empower istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
+        <source>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönlendiricide Rubix istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1074,8 +1074,8 @@
         <translation>Gelen bağlantılara izin ver</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a SOCKS5 proxy.</source>
-        <translation>Empower ağına bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
+        <source>Connect to the Rubix network through a SOCKS5 proxy.</source>
+        <translation>Rubix ağına bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1110,8 +1110,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Empower ağına gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
+        <source>Connect to the Rubix network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Rubix ağına gizli Tor servisleri için ayrı bir SOCKS5 vekil sunucusu aracılığıyla bağlan.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1147,7 +1147,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Empower gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>Rubix gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1217,8 +1217,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</source>
-        <translation>Görüntülenen bilgiler güncel olmayabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak Empower ağı ile senkronize olur ancak bu işlem henüz tamamlanmamıştır.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</source>
+        <translation>Görüntülenen bilgiler güncel olmayabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak Rubix ağı ile senkronize olur ancak bu işlem henüz tamamlanmamıştır.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1292,8 +1292,8 @@
         <translation>Ödeme talebi hatası</translation>
     </message>
     <message>
-        <source>Cannot start empower: click-to-pay handler</source>
-        <translation>Empower başlatılamadı: tıkla-ve-öde yöneticisi</translation>
+        <source>Cannot start Rubix: click-to-pay handler</source>
+        <translation>Rubix başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1308,8 +1308,8 @@
         <translation>%1 ödeme adresi geçersizdir</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Empower address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamıyor! Bunun nedeni geçersiz bir Empower adresi veya hatalı biçimlendirilmiş URI değişkenleri olabilir.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Rubix address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamıyor! Bunun nedeni geçersiz bir Rubix adresi veya hatalı biçimlendirilmiş URI değişkenleri olabilir.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1410,8 +1410,8 @@
         <translation>Tutar</translation>
     </message>
     <message>
-        <source>Enter a Empower address (e.g. %1)</source>
-        <translation>Bir Empower adresi giriniz (mesela %1)</translation>
+        <source>Enter a Rubix address (e.g. %1)</source>
+        <translation>Bir Rubix adresi giriniz (mesela %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1792,7 +1792,7 @@
     </message>
     <message>
         <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramifications of a command.</source>
-        <translation>UYARI: Empower dolandırıcılarının çok fazla etkin olduğu zamanlarda, dolandırıcılar bazı kullanıcılara buraya komutlar yazmalarını söylerek onların cüzdanlarındaki empowerleri çalmışlardır. Bir komutun sonuçlarını tam olarak anlamadan bu konsolu kullanmayın.</translation>
+        <translation>UYARI: Rubix dolandırıcılarının çok fazla etkin olduğu zamanlarda, dolandırıcılar bazı kullanıcılara buraya komutlar yazmalarını söylerek onların cüzdanlarındaki Rubixleri çalmışlardır. Bir komutun sonuçlarını tam olarak anlamadan bu konsolu kullanmayın.</translation>
     </message>
     <message>
         <source>Network activity disabled</source>
@@ -1854,8 +1854,8 @@
         <translation>&amp;İleti:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Empower network.</source>
-        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir ileti. Not: Bu ileti ödeme ile birlikte Empower ağı üzerinden gönderilmeyecektir.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Rubix network.</source>
+        <translation>Talep açıldığında gösterilecek, isteğinize dayalı, ödeme talebi ile ilişkilendirilecek bir ileti. Not: Bu ileti ödeme ile birlikte Rubix ağı üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2016,7 +2016,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Empower yolla</translation>
+        <translation>Rubix yolla</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2091,8 +2091,8 @@
         <translation>Gizle</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for empower transactions than the network can process.</source>
-        <translation>Gerekli olan en az ücreti ödemek, bloklarda boşluktan daha az işlem hacmi olduğu sürece bir sorun çıkarmaz. Fakat ağın işleyecebileceğinden daha çok empower işlemi talebi olduğunda bunun asla doğrulanmayan bir işlem olabileceğinin farkında olmalısınız.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Rubix transactions than the network can process.</source>
+        <translation>Gerekli olan en az ücreti ödemek, bloklarda boşluktan daha az işlem hacmi olduğu sürece bir sorun çıkarmaz. Fakat ağın işleyecebileceğinden daha çok Rubix işlemi talebi olduğunda bunun asla doğrulanmayan bir işlem olabileceğinin farkında olmalısınız.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2208,7 +2208,7 @@
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Empower gönderimini onaylayın</translation>
+        <translation>Rubix gönderimini onaylayın</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -2251,8 +2251,8 @@
         <translation>Sadece asgari ücret olan %1 tutarını öde</translation>
     </message>
     <message>
-        <source>Warning: Invalid Empower address</source>
-        <translation>Uyarı: geçersiz Empower adresi</translation>
+        <source>Warning: Invalid Rubix address</source>
+        <translation>Uyarı: geçersiz Rubix adresi</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2294,8 +2294,8 @@
         <translation>Bu, normal bir ödemedir.</translation>
     </message>
     <message>
-        <source>The Empower address to send the payment to</source>
-        <translation>Ödemenin yollanacağı Empower adresi</translation>
+        <source>The Rubix address to send the payment to</source>
+        <translation>Ödemenin yollanacağı Rubix adresi</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2314,8 +2314,8 @@
         <translation>Bu ögeyi kaldır</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less empower than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Ücret yollanan tutardan alınacaktır. Alıcı tutar alanına girdiğinizden daha az empower alacaktır. Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Rubix than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Ücret yollanan tutardan alınacaktır. Alıcı tutar alanına girdiğinizden daha az Rubix alacaktır. Eğer birden çok alıcı seçiliyse ücret eşit olarak bölünecektir.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2342,8 +2342,8 @@
         <translation>Kullanılmış adres listesine eklemek için bu adrese bir etiket girin</translation>
     </message>
     <message>
-        <source>A message that was attached to the empower: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Empower network.</source>
-        <translation>Referans için empower: URI'siyle iliştirilmiş işlemle birlikte depolanacak bir ileti. Not: Bu mesaj Empower ağı üzerinden gönderilmeyecektir.</translation>
+        <source>A message that was attached to the Rubix: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Rubix network.</source>
+        <translation>Referans için Rubix: URI'siyle iliştirilmiş işlemle birlikte depolanacak bir ileti. Not: Bu mesaj Rubix ağı üzerinden gönderilmeyecektir.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2387,12 +2387,12 @@
         <translation>İleti &amp;imzala</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive empower sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Adreslerinize yollanan empowerleri alabileceğiniz ispatlamak için adreslerinizle iletiler/anlaşmalar imzalayabilirsiniz. Oltalama saldırılarının kimliğinizi imzanızla elde etmeyi deneyebilecekleri için belirsiz ya da rastgele hiçbir şey imzalamamaya dikkat ediniz. Sadece ayrıntılı açıklaması olan ve tümüne katıldığınız ifadeleri imzalayınız.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Rubix sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Adreslerinize yollanan Rubixleri alabileceğiniz ispatlamak için adreslerinizle iletiler/anlaşmalar imzalayabilirsiniz. Oltalama saldırılarının kimliğinizi imzanızla elde etmeyi deneyebilecekleri için belirsiz ya da rastgele hiçbir şey imzalamamaya dikkat ediniz. Sadece ayrıntılı açıklaması olan ve tümüne katıldığınız ifadeleri imzalayınız.</translation>
     </message>
     <message>
-        <source>The Empower address to sign the message with</source>
-        <translation>İletinin imzalanmasında kullanılacak Empower adresi</translation>
+        <source>The Rubix address to sign the message with</source>
+        <translation>İletinin imzalanmasında kullanılacak Rubix adresi</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2423,8 +2423,8 @@
         <translation>Güncel imzayı sistem panosuna kopyala</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Empower address</source>
-        <translation>Bu Empower adresinin sizin olduğunu ispatlamak için iletiyi imzalayın</translation>
+        <source>Sign the message to prove you own this Rubix address</source>
+        <translation>Bu Rubix adresinin sizin olduğunu ispatlamak için iletiyi imzalayın</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2447,12 +2447,12 @@
         <translation>Alıcının adresini, iletiyi (satır sonları, boşluklar, sekmeler vs. karakterleri tam olarak kopyaladığınızdan emin olunuz) ve imzayı aşağıya giriniz. Bir ortadaki adam saldırısı tarafından kandırılmaya engel olmak için imzadan, imzalı iletinin içeriğini aşan bir anlam çıkarmamaya dikkat ediniz. Bunun sadece imzalayan tarafın adres ile alım yapabildiğini ispatladığını ve herhangi bir işlemin gönderi tarafını kanıtlayamayacağını unutmayınız!</translation>
     </message>
     <message>
-        <source>The Empower address the message was signed with</source>
-        <translation>İletinin imzalanmasında kullanılan Empower adresi</translation>
+        <source>The Rubix address the message was signed with</source>
+        <translation>İletinin imzalanmasında kullanılan Rubix adresi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Empower address</source>
-        <translation>Belirtilen Empower adresi ile imzalandığını doğrulamak için iletiyi kontrol et</translation>
+        <source>Verify the message to ensure it was signed with the specified Rubix address</source>
+        <translation>Belirtilen Rubix adresi ile imzalandığını doğrulamak için iletiyi kontrol et</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2665,7 +2665,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Oluşturulan empower'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
+        <translation>Oluşturulan Rubix'lerin harcanabilmelerinden önce %1 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda, blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu "kabul edilmedi" olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2987,7 +2987,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Empower. Gönder</translation>
+        <translation>Rubix. Gönder</translation>
     </message>
     <message>
         <source>Increasing transaction fee failed</source>
@@ -3088,8 +3088,8 @@
         <translation>HTTP sunucusu başlatılamadı. Ayrıntılar için debug.log dosyasına bakınız.</translation>
     </message>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower Çekirdeği</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix Çekirdeği</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3117,7 +3117,7 @@
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Bu kararlı sürümden önceki bir deneme sürümüdür. - risklerini bilerek kullanma sorumluluğu sizdedir - empower oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
+        <translation>Bu kararlı sürümden önceki bir deneme sürümüdür. - risklerini bilerek kullanma sorumluluğu sizdedir - Rubix oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
         <source>Unable to rewind the database to a pre-fork state. You will need to redownload the blockchain</source>
@@ -3381,7 +3381,7 @@
     </message>
     <message>
         <source>The transaction amount is too small to pay the fee</source>
-        <translation>İşlemdeki empower tutarı ücreti ödemek için çok düşük</translation>
+        <translation>İşlemdeki Rubix tutarı ücreti ödemek için çok düşük</translation>
     </message>
     <message>
         <source>This is experimental software.</source>

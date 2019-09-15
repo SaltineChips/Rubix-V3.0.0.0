@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_RPC_RPCUTIL_H
-#define EMPOWER_RPC_RPCUTIL_H
+#ifndef Rubix_RPC_RPCUTIL_H
+#define Rubix_RPC_RPCUTIL_H
 
 #include <univalue.h>
 #include <string>
@@ -19,4 +19,4 @@ UniValue CallRPC(std::string args, std::string wallet="");
 void AddUri(JSONRPCRequest &request, std::string wallet);
 void CallRPC(UniValue &rv, const JSONRPCRequest &request);
 
-#endif // EMPOWER_RPC_RPCUTIL_H
+#endif // Rubix_RPC_RPCUTIL_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_WALLET_HDWALLETDB_H
-#define EMPOWER_WALLET_HDWALLETDB_H
+#ifndef Rubix_WALLET_HDWALLETDB_H
+#define Rubix_WALLET_HDWALLETDB_H
 
 #include <primitives/transaction.h>
 #include <wallet/walletdb.h>
@@ -408,4 +408,4 @@ public:
     bool EraseWalletSetting(const std::string &setting);
 };
 
-#endif // EMPOWER_WALLET_HDWALLETDB_H
+#endif // Rubix_WALLET_HDWALLETDB_H

@@ -1,41 +1,41 @@
-Empower Network
+Rubix Network
 =============
 
 Setup
 ---------------------
-Empower Network is the original Empower client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Empower transactions, which requires a few gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Rubix Network is the original Rubix client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Rubix transactions, which requires a few gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Empower Network, visit [empower.io](https://empower.io/downloads/).
+To download Rubix Network, visit [Rubix.io](https://Rubix.io/downloads/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Empower Network on your native platform.
+The following are some helpful notes on how to run Rubix Network on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/empower-qt` (GUI) or
-- `bin/empowerd` (headless)
+- `bin/Rubix-qt` (GUI) or
+- `bin/Rubixd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run empower-qt.exe.
+Unpack the files into a directory, and then run Rubix-qt.exe.
 
 ### macOS
 
-Drag Empower Network to your applications folder, and then run Empower Network.
+Drag Rubix Network to your applications folder, and then run Rubix Network.
 
 ### Need Help?
 
-* See the documentation at the [Empower Wiki](https://empower.wiki/start)
+* See the documentation at the [Rubix Wiki](https://Rubix.wiki/start)
 for help and more information.
-* Ask for help on [#empower](https://riot.im/app/#/room/#empower:matrix.org) on Riot.
-* Ask for help on [Discord](https://discord.me/empower).
+* Ask for help on [#Rubix](https://riot.im/app/#/room/#Rubix:matrix.org) on Riot.
+* Ask for help on [Discord](https://discord.me/Rubix).
 
 Building
 ---------------------
-The following are developer notes on how to build Empower Network on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Rubix Network on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -48,7 +48,7 @@ The following are developer notes on how to build Empower Network on your native
 
 Development
 ---------------------
-The Empower repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Rubix repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
@@ -67,7 +67,7 @@ The Empower repo's [root README](/README.md) contains relevant information on th
 
 ### Resources
 * Discuss on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1835782.0) forums.
-* Discuss project-specific development on [#empower](https://riot.im/app/#/room/#empower-dev:matrix.org) on Riot.
+* Discuss project-specific development on [#Rubix](https://riot.im/app/#/room/#Rubix-dev:matrix.org) on Riot.
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

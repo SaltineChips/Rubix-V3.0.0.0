@@ -66,12 +66,12 @@
         <translation>Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat Empower.osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat Rubix.osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat Empower vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tässä ovat Rubix vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Vahvista lompakon salaaminen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI EMPOWERISI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI RubixISI&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,7 +188,7 @@
         <translation>Lompakko salattiin</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
         <translation>%1 sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
@@ -358,8 +358,8 @@
         <translation>Välipalvelin on &lt;b&gt;käytössä&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Lähetä kolikoita Empower.osoitteeseen</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Lähetä kolikoita Rubix.osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -382,8 +382,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -403,19 +403,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Empower.ikkuna</translation>
+        <translation>Näytä tai piilota Rubix.ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Empower -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Rubix -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Empower -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Rubix -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +434,8 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja empower: URIt)</translation>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja Rubix: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,16 +446,16 @@
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
-        <translation>Avaa empower: URI tai maksupyyntö</translation>
+        <source>Open a Rubix: URI or payment request</source>
+        <translation>Avaa Rubix: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Komentorivin valinnat</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Empower network</source>
-        <translation><numerusform>%n aktiivinen yhteys Empower.verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Empower.verkkoon</numerusform></translation>
+        <source>%n active connection(s) to Rubix network</source>
+        <translation><numerusform>%n aktiivinen yhteys Rubix.verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Rubix.verkkoon</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Empower command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Empower.n komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible Rubix command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Rubix.n komentorivivalinnoista</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -568,8 +568,8 @@
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Empower can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. Empower ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. Rubix can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Rubix ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -758,8 +758,8 @@
         <translation>Muokkaa lähettävää osoitetta</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Empower address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen Empower.osoite.</translation>
+        <source>The entered address "%1" is not a valid Rubix address.</source>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen Rubix.osoite.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -855,8 +855,8 @@
         <translation>Määritä oma kansio:</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -867,8 +867,8 @@
         <translation>Noin %1 GB tietoa varastoidaan tähän hakemistoon.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Empower block chain.</source>
-        <translation>%1 lataa ja tallentaa kopion Empower.n lohkoketjusta.</translation>
+        <source>%1 will download and store a copy of the Rubix block chain.</source>
+        <translation>%1 lataa ja tallentaa kopion Rubix.n lohkoketjusta.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -898,12 +898,12 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the empower network, as detailed below.</source>
-        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi empower-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Rubix network, as detailed below.</source>
+        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi Rubix-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
     </message>
     <message>
-        <source>Attempting to spend empower that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Verkko ei tule hyväksymään sellaisten empowerien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
+        <source>Attempting to spend Rubix that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Verkko ei tule hyväksymään sellaisten Rubixien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1084,8 +1084,8 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Empower.asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Rubix.asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1100,8 +1100,8 @@
         <translation>Hyväksy sisääntulevia yhteyksiä</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Empower.verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the Rubix network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Rubix.verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1136,8 +1136,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä Empower.verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the Rubix network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä Rubix.verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1169,11 +1169,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona empower-määrät näytetään</translation>
+        <translation>Yksikkö jona Rubix-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti empower-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti Rubix-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1243,8 +1243,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Empower.verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Rubix.verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1284,7 +1284,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien Empower.en määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Rubix.en määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1318,16 +1318,16 @@
         <translation>Maksupyyntövirhe</translation>
     </message>
     <message>
-        <source>Cannot start empower: click-to-pay handler</source>
-        <translation>Empower.a ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
+        <source>Cannot start Rubix: click-to-pay handler</source>
+        <translation>Rubix.a ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI käsittely</translation>
     </message>
     <message>
-        <source>'empower://' is not a valid URI. Use 'empower:' instead.</source>
-        <translation>'empower://' ei ole kelvollinen URI. Käytä 'empower:' sen sijaan.</translation>
+        <source>'Rubix://' is not a valid URI. Use 'Rubix:' instead.</source>
+        <translation>'Rubix://' ei ole kelvollinen URI. Käytä 'Rubix:' sen sijaan.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1338,8 +1338,8 @@
         <translation>Virheellinen maksuosoite %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Empower address or malformed URI parameters.</source>
-        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä Empower.osoitteesta tai väärin muotoilluista URI parametreista.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Rubix address or malformed URI parameters.</source>
+        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä Rubix.osoitteesta tai väärin muotoilluista URI parametreista.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1440,8 +1440,8 @@
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a Empower address (e.g. %1)</source>
-        <translation>Syötä Empower.osoite (esim. %1)</translation>
+        <source>Enter a Rubix address (e.g. %1)</source>
+        <translation>Syötä Rubix.osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1844,8 +1844,8 @@
         <translation>&amp;Viesti:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Empower network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Empower.verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Rubix network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Rubix.verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2085,7 +2085,7 @@
         <translation>Piilota</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for empower transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Rubix transactions than the network can process.</source>
         <translation>Vähimmäispalkkion maksaminen käy hyvin, kunhan verkossa on vähemmän siirtotapahtumia kuin lohkoissa on tilaa. Huomaa, että tämä saattaa johtaa ei-koskaan-vahvistuvaan siirtoon, jos verkon käsittelykyky ylittyy.</translation>
     </message>
     <message>
@@ -2253,8 +2253,8 @@
         <translation><numerusform>Vahvistuminen alkaa arviolta %n lohkon sisällä.</numerusform><numerusform>Vahvistuminen alkaa arviolta %n lohkon sisällä.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Empower address</source>
-        <translation>Varoitus: Virheellinen Empower.osoite </translation>
+        <source>Warning: Invalid Rubix address</source>
+        <translation>Varoitus: Virheellinen Rubix.osoite </translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2296,8 +2296,8 @@
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Empower address to send the payment to</source>
-        <translation>Empower.osoite johon maksu lähetetään</translation>
+        <source>The Rubix address to send the payment to</source>
+        <translation>Rubix.osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2316,8 +2316,8 @@
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less empower than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän empowereja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Rubix than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän Rubixeja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2344,8 +2344,8 @@
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the empower: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Empower network.</source>
-        <translation>Viesti joka liitettiin empower: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Empower.verkkoon.</translation>
+        <source>A message that was attached to the Rubix: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Rubix network.</source>
+        <translation>Viesti joka liitettiin Rubix: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Rubix.verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2389,12 +2389,12 @@
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive empower sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt empowerit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Rubix sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt Rubixit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
     </message>
     <message>
-        <source>The Empower address to sign the message with</source>
-        <translation>Empower.osoite jolla viesti allekirjoitetaan</translation>
+        <source>The Rubix address to sign the message with</source>
+        <translation>Rubix.osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2425,8 +2425,8 @@
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Empower address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Empower.osoitteen</translation>
+        <source>Sign the message to prove you own this Rubix address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Rubix.osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2449,12 +2449,12 @@
         <translation>Syötä vastaanottajan osoite, viesti ja allekirjoitus (varmista että kopioit rivinvaihdot, välilyönnit, sarkaimet yms. täsmälleen) alle vahvistaaksesi viestin. Varo lukemasta allekirjoitukseen enempää kuin mitä viestissä itsessään on välttääksesi man-in-the-middle -hyökkäyksiltä. Huomaa, että tämä todentaa ainoastaan allekirjoittavan vastaanottajan osoitteen, tämä ei voi todentaa minkään tapahtuman lähettäjää!</translation>
     </message>
     <message>
-        <source>The Empower address the message was signed with</source>
-        <translation>Empower.osoite jolla viesti on allekirjoitettu</translation>
+        <source>The Rubix address the message was signed with</source>
+        <translation>Rubix.osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Empower address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Empower.osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Rubix address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Rubix.osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3090,8 +3090,8 @@
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower.ydin</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix.ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>

@@ -105,7 +105,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent, bool allow_
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Empower address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Rubix address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent, allow_stakeonly));
@@ -114,7 +114,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent, bool allow_
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("empower"))
+    if(!uri.isValid() || uri.scheme() != QString("Rubix"))
         return false;
 
     SendCoinsRecipient rv;
@@ -177,7 +177,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
-    QString ret = QString("empower:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+    QString ret = QString("Rubix:%1").arg(bech_32 ? info.address.toUpper() : info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -554,10 +554,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Empower.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Rubix.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Empower (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Empower (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Rubix (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Rubix (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -637,8 +637,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "empower.desktop";
-    return GetAutostartDir() / strprintf("empower-%s.lnk", chain);
+        return GetAutostartDir() / "Rubix.desktop";
+    return GetAutostartDir() / strprintf("Rubix-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -682,9 +682,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Empower\n";
+            optionFile << "Name=Rubix\n";
         else
-            optionFile << strprintf("Name=Empower (%s)\n", chain);
+            optionFile << strprintf("Name=Rubix (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

@@ -66,12 +66,12 @@
         <translation>Alamat menerima</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ini adalah alamat Empower anda untuk mengirim pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirim koin</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ini adalah alamat Rubix anda untuk mengirim pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirim koin</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ini adalah alamat Empower anda untuk menerima pembayaran. Disarankan untuk menggunakan alamat penerimaan baru untuk setiap transaksi</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ini adalah alamat Rubix anda untuk menerima pembayaran. Disarankan untuk menggunakan alamat penerimaan baru untuk setiap transaksi</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Konfirmasi proses enkripsi wallet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
-        <translation>Peringatan:  Jika anda mengenkripsi wallet anda dan lupa/hilang passphrase anda, anda akan ‭&lt;b&gt; KEHILANGAN SEMUA EMPOWER ANDA &lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
+        <translation>Peringatan:  Jika anda mengenkripsi wallet anda dan lupa/hilang passphrase anda, anda akan ‭&lt;b&gt; KEHILANGAN SEMUA Rubix ANDA &lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Wallet terenkripsi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
-        <translation>%1 akan ditutup sekarang untuk menyelesaikan proses enkripsi. Ingat bahwa mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi empower Anda dari pencurian oleh malware yang menginfeksi komputer Anda.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
+        <translation>%1 akan ditutup sekarang untuk menyelesaikan proses enkripsi. Ingat bahwa mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi Rubix Anda dari pencurian oleh malware yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -342,8 +342,8 @@
         <translation>Klik untuk mengaktifkan kembali network</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Kirim koin ke alamat Empower.</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Kirim koin ke alamat Rubix.</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>&amp;Verifikasi pesan...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -394,12 +394,12 @@
         <translation>Enkripsi private keys wallet anda</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Tambahkan pesan di alamat Empower untuk membuktikan bahwa anda pemiliknya</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Tambahkan pesan di alamat Rubix untuk membuktikan bahwa anda pemiliknya</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Verifikasi pesan untuk memastikan bahwa telah ditanda tangani dengan alamat Empower tertentu</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa telah ditanda tangani dengan alamat Rubix tertentu</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -691,8 +691,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Error</source>

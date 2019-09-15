@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_RCTINDEX_H
-#define EMPOWER_RCTINDEX_H
+#ifndef Rubix_RCTINDEX_H
+#define Rubix_RCTINDEX_H
 
 #include <primitives/transaction.h>
 
@@ -38,4 +38,4 @@ public:
 };
 
 
-#endif // EMPOWER_RCTINDEX_H
+#endif // Rubix_RCTINDEX_H

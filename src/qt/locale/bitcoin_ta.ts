@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -225,8 +225,8 @@
         <translation>நல்வரவு</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -712,8 +712,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower மையம்</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix மையம்</translation>
     </message>
     <message>
         <source>Information</source>

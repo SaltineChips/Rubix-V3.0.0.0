@@ -3,12 +3,12 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_empower import EmpowerTestFramework, isclose
+from test_framework.test_Rubix import RubixTestFramework, isclose
 from test_framework.util import connect_nodes_bi
 from test_framework.authproxy import JSONRPCException
 
 
-class BlindTest(EmpowerTestFramework):
+class BlindTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 4
@@ -45,7 +45,7 @@ class BlindTest(EmpowerTestFramework):
         sxAddrTo1_1 = nodes[1].getnewstealthaddress('lblsx11')
         assert(sxAddrTo1_1 == 'TetbYTGv5LiqyFiUD3a5HHbpSinQ9KiRYDGAMvRzPfz4RnHMbKGAwDr1fjLGJ5Eqg1XDwpeGyqWMiwdK3qM3zKWjzHNpaatdoHVzzA')
 
-        txnHash = nodes[0].sendmpwrtoblind(sxAddrTo1_1, 3.4, '', '', False, 'node0 -> node1 p->b')
+        txnHash = nodes[0].sendRBXtoblind(sxAddrTo1_1, 3.4, '', '', False, 'node0 -> node1 p->b')
         txnHashes.append(txnHash)
 
         ro = nodes[0].listtransactions()
@@ -101,7 +101,7 @@ class BlindTest(EmpowerTestFramework):
         assert(e['stealth_address'] == sxAddrTo2_1)
 
 
-        txnHash4 = nodes[1].sendblindtompwr(sxAddrTo2_1, 0.5, '', '', False, 'node1 -> node2 b->p')
+        txnHash4 = nodes[1].sendblindtoRBX(sxAddrTo2_1, 0.5, '', '', False, 'node1 -> node2 b->p')
 
         ro = nodes[1].getwalletinfo()
         assert(ro['blind_balance'] < 2.7 and ro['blind_balance'] > 2.69)
@@ -134,7 +134,7 @@ class BlindTest(EmpowerTestFramework):
         assert(ro['prefix_bitfield'] == '0x000a')
 
 
-        txnHash5 = nodes[0].sendmpwrtoblind(sxAddrTo2_3, 0.5, '', '', False, 'node0 -> node2 p->b')
+        txnHash5 = nodes[0].sendRBXtoblind(sxAddrTo2_3, 0.5, '', '', False, 'node0 -> node2 p->b')
 
         assert(self.wait_for_mempool(nodes[2], txnHash5))
 
@@ -171,7 +171,7 @@ class BlindTest(EmpowerTestFramework):
         assert(len(nodes[1].listunspentblind(minconf=0)) == len(unspent))
 
         outputs = [{'address': sxAddrTo2_3, 'amount': 2.691068, 'subfee': True},]
-        ro = nodes[1].sendtypeto('blind', 'mpwr', outputs, 'comment_to', 'comment_from', 4, 64, True)
+        ro = nodes[1].sendtypeto('blind', 'RBX', outputs, 'comment_to', 'comment_from', 4, 64, True)
         feePerKB = (1000.0 / ro['bytes']) * float(ro['fee'])
         assert(feePerKB > 0.001 and feePerKB < 0.004)
 
@@ -179,7 +179,7 @@ class BlindTest(EmpowerTestFramework):
         feePerKB = (1000.0 / ro['bytes']) * float(ro['fee'])
         assert(feePerKB > 0.001 and feePerKB < 0.004)
 
-        nodes[1].sendtypeto('blind', 'mpwr', outputs)
+        nodes[1].sendtypeto('blind', 'RBX', outputs)
 
         try:
             ro = nodes[1].sendtypeto('blind', 'blind', outputs)
@@ -191,7 +191,7 @@ class BlindTest(EmpowerTestFramework):
         addrPlain = nodes[0].getnewaddress()
         addrLong = nodes[0].getnewaddress('', False, False, True)
         outputs = [{'address': addrPlain, 'amount': 1.0}, {'address': addrLong, 'amount': 1.0}]
-        nodes[0].sendtypeto('mpwr', 'blind', outputs)
+        nodes[0].sendtypeto('RBX', 'blind', outputs)
 
 
         self.log.info('Test sending all blind to blind')
@@ -204,12 +204,12 @@ class BlindTest(EmpowerTestFramework):
         self.sync_all()
         self.stakeBlocks(1,nStakeNode=3)
 
-        self.log.info('Test sending all blind to mpwr')
+        self.log.info('Test sending all blind to RBX')
         bal1 = nodes[1].getwalletinfo()
 
         assert(isclose(bal1['blind_balance'], 2.002582))
         outputs = [{'address': sxAddrTo1_1, 'amount': bal1['blind_balance'], 'subfee': True}]
-        nodes[1].sendtypeto('blind', 'mpwr', outputs)
+        nodes[1].sendtypeto('blind', 'RBX', outputs)
 
         bal1 = nodes[1].getwalletinfo()
         assert(isclose(bal1['blind_balance'], 0.00000001))

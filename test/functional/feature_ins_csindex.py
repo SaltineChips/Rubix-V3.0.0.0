@@ -5,12 +5,12 @@
 
 import json
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.util import connect_nodes
 from test_framework.authproxy import JSONRPCException
 
 
-class TxIndexTest(EmpowerTestFramework):
+class TxIndexTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
@@ -63,13 +63,13 @@ class TxIndexTest(EmpowerTestFramework):
         self.stakeBlocks(1)
 
         toScript = nodes[1].buildscript({'recipe': 'ifcoinstake', 'addrstake': addrStake, 'addrspend': addrSpend})
-        nodes[1].sendtypeto('mpwr', 'mpwr',
+        nodes[1].sendtypeto('RBX', 'RBX',
                             [{'address': 'script', 'amount':12000, 'script':toScript['hex']},
                              {'address': 'script', 'amount':12000, 'script':toScript['hex']}])
 
         addrStake2_stakeonly = nodes[1].validateaddress(addrStake2, True)['stakeonly_address']
         toScript = nodes[1].buildscript({'recipe': 'ifcoinstake', 'addrstake': addrStake2_stakeonly, 'addrspend': addrSpend2})
-        nodes[1].sendtypeto('mpwr', 'mpwr',
+        nodes[1].sendtypeto('RBX', 'RBX',
                             [{'address': 'script', 'amount':12, 'script':toScript['hex']}])
 
         try:
@@ -79,7 +79,7 @@ class TxIndexTest(EmpowerTestFramework):
             assert('Invalid address' in e.error['message'])
 
         try:
-            nodes[1].sendtypeto('mpwr', 'mpwr',
+            nodes[1].sendtypeto('RBX', 'RBX',
                                 [{'address': addrStake2_stakeonly, 'amount':12}])
             assert(False), 'Sent to stakeonly address'
         except JSONRPCException as e:

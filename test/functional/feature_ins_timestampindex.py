@@ -9,11 +9,11 @@
 
 import time
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.util import connect_nodes, assert_equal
 
 
-class TimestampIndexTest(EmpowerTestFramework):
+class TimestampIndexTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 4

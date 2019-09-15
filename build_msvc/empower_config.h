@@ -1,5 +1,5 @@
-#ifndef EMPOWER_EMPOWER_CONFIG_H
-#define EMPOWER_EMPOWER_CONFIG_H
+#ifndef Rubix_Rubix_CONFIG_H
+#define Rubix_Rubix_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -23,10 +23,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The Empower Network developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Rubix Network developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Empower Network"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "Rubix Network"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2019
@@ -343,10 +343,10 @@
 #define PACKAGE_BUGREPORT "https://github.com/bitcoin/bitcoin/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Empower Network"
+#define PACKAGE_NAME "Rubix Network"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Empower Network 0.18.99"
+#define PACKAGE_STRING "Rubix Network 0.18.99"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "bitcoin"
@@ -421,4 +421,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //EMPOWER_EMPOWER_CONFIG_H
+#endif //Rubix_Rubix_CONFIG_H

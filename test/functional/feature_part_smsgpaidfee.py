@@ -6,7 +6,7 @@
 import struct
 import copy
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.util import connect_nodes, assert_raises_rpc_error
 
 
@@ -33,7 +33,7 @@ def putvarint(i):
     return bb
 
 
-class SmsgPaidFeeTest(EmpowerTestFramework):
+class SmsgPaidFeeTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3

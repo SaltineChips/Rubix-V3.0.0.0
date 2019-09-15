@@ -1447,7 +1447,7 @@ static void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "Empower " + FormatFullVersion();
+        std::string strDesc = "Rubix " + FormatFullVersion();
 
         do {
 #ifndef UPNPDISCOVER_SUCCESS

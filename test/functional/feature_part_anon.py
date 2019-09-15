@@ -5,11 +5,11 @@
 
 import json
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.util import assert_raises_rpc_error, connect_nodes_bi
 
 
-class AnonTest(EmpowerTestFramework):
+class AnonTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
@@ -41,10 +41,10 @@ class AnonTest(EmpowerTestFramework):
         sxAddrTo0_1 = nodes[0].getnewstealthaddress('lblsx01')
 
 
-        txnHash = nodes[0].sendmpwrtoanon(sxAddrTo1_1, 1, '', '', False, 'node0 -> node1 p->a')
+        txnHash = nodes[0].sendRBXtoanon(sxAddrTo1_1, 1, '', '', False, 'node0 -> node1 p->a')
         txnHashes.append(txnHash)
 
-        txnHash = nodes[0].sendmpwrtoblind(sxAddrTo0_1, 1000, '', '', False, 'node0 -> node0 p->b')
+        txnHash = nodes[0].sendRBXtoblind(sxAddrTo0_1, 1000, '', '', False, 'node0 -> node0 p->b')
         txnHashes.append(txnHash)
 
         txnHash = nodes[0].sendblindtoanon(sxAddrTo1_1, 100, '', '', False, 'node0 -> node1 b->a 1')
@@ -60,7 +60,7 @@ class AnonTest(EmpowerTestFramework):
         txnHashes.append(txnHash)
 
         for k in range(4):
-            txnHash = nodes[0].sendmpwrtoanon(sxAddrTo1_1, 10, '', '', False, 'node0 -> node1 p->a')
+            txnHash = nodes[0].sendRBXtoanon(sxAddrTo1_1, 10, '', '', False, 'node0 -> node1 p->a')
             txnHashes.append(txnHash)
         for k in range(10):
             txnHash = nodes[0].sendblindtoanon(sxAddrTo1_1, 10, '', '', False, 'node0 -> node1 b->a')
@@ -114,10 +114,10 @@ class AnonTest(EmpowerTestFramework):
         assert(ro['anon_balance'] > 10)
 
         outputs = [{'address':sxAddrTo0_1, 'amount':10, 'subfee':True},]
-        ro = nodes[1].sendtypeto('anon', 'mpwr', outputs, 'comment_to', 'comment_from', 4, 32, True)
+        ro = nodes[1].sendtypeto('anon', 'RBX', outputs, 'comment_to', 'comment_from', 4, 32, True)
         assert(ro['bytes'] > 0)
 
-        txnHash = nodes[1].sendtypeto('anon', 'mpwr', outputs)
+        txnHash = nodes[1].sendtypeto('anon', 'RBX', outputs)
         txnHashes = [txnHash,]
 
 

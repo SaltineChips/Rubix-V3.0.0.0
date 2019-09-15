@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -228,7 +228,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -244,7 +244,7 @@
     </message>
     <message>
         <location line="-57"/>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -443,8 +443,8 @@
     </message>
     <message>
         <location line="-1135"/>
-        <source>Send coins to a Empower address</source>
-        <translation>Send coins to a Empower address</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Send coins to a Rubix address</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -498,13 +498,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Sign messages with your Empower addresses to prove you own them</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Sign messages with your Rubix addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Empower addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Rubix addresses</translation>
     </message>
     <message>
         <location line="+111"/>
@@ -528,7 +528,7 @@
     </message>
     <message>
         <location line="-267"/>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -543,7 +543,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a empower: URI or payment request</source>
+        <source>Open a Rubix: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -553,10 +553,10 @@
     </message>
     <message numerus="yes">
         <location line="+590"/>
-        <source>%n active connection(s) to Empower network</source>
+        <source>%n active connection(s) to Rubix network</source>
         <translation>
-            <numerusform>%n active connection to Empower network</numerusform>
-            <numerusform>%n active connections to Empower network</numerusform>
+            <numerusform>%n active connection to Rubix network</numerusform>
+            <numerusform>%n active connections to Rubix network</numerusform>
         </translation>
     </message>
     <message>
@@ -644,7 +644,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the %1 help message to get a list with possible Empower command-line options</source>
+        <source>Show the %1 help message to get a list with possible Rubix command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -714,7 +714,7 @@
     </message>
     <message>
         <location line="+34"/>
-        <source>Empower</source>
+        <source>Rubix</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -795,7 +795,7 @@
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+398"/>
-        <source>A fatal error occurred. Empower can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Rubix can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1121,7 +1121,7 @@
     </message>
     <message>
         <location line="+86"/>
-        <source>The entered address &quot;%1&quot; is not a valid Empower address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Rubix address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1246,7 +1246,7 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+22"/>
-        <source>Empower</source>
+        <source>Rubix</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1261,7 +1261,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the Empower block chain.</source>
+        <source>%1 will download and store a copy of the Rubix block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1450,7 +1450,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Open empower app before importing, confirm on device if prompted and wait for chain rescan to complete.</source>
+        <source>Open Rubix app before importing, confirm on device if prompted and wait for chain rescan to complete.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1483,7 +1483,7 @@
     </message>
     <message>
         <location line="+119"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the empower network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Rubix network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1751,8 +1751,8 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1771,7 +1771,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Empower network through a SOCKS5 proxy.</source>
+        <source>Connect to the Rubix network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1819,7 +1819,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the Empower network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Rubix network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1959,8 +1959,8 @@
     <message>
         <location line="+62"/>
         <location line="+539"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-249"/>
@@ -2098,7 +2098,7 @@
     </message>
     <message>
         <location line="-529"/>
-        <source>Cannot start empower: click-to-pay handler</source>
+        <source>Cannot start Rubix: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2113,7 +2113,7 @@
     </message>
     <message>
         <location line="-53"/>
-        <source>&apos;empower://&apos; is not a valid URI. Use &apos;empower:&apos; instead.</source>
+        <source>&apos;Rubix://&apos; is not a valid URI. Use &apos;Rubix:&apos; instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2139,7 +2139,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Empower address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Rubix address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2272,7 +2272,7 @@
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+107"/>
-        <source>Enter a Empower address (e.g. %1)</source>
+        <source>Enter a Rubix address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2899,7 +2899,7 @@
     <message>
         <location line="-3"/>
         <location line="+37"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Empower network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Rubix network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3197,7 +3197,7 @@
     <message>
         <location line="+4"/>
         <location line="+22"/>
-        <source>MPWR</source>
+        <source>RBX</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3261,7 +3261,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+83"/>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for empower transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for Rubix transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3512,7 +3512,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+107"/>
-        <source>Warning: Invalid Empower address</source>
+        <source>Warning: Invalid Rubix address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3575,7 +3575,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="-318"/>
-        <source>The Empower address to send the payment to</source>
+        <source>The Rubix address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3610,7 +3610,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     <message>
         <location line="-1293"/>
         <location line="+83"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less empower than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Rubix than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3627,7 +3627,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     <message>
         <location line="-74"/>
         <location line="+96"/>
-        <source>A short message sent over the Empower network, encrypted if sending to a stealth address or in a blind or anon transaction.</source>
+        <source>A short message sent over the Rubix network, encrypted if sending to a stealth address or in a blind or anon transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3652,7 +3652,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+28"/>
-        <source>The Empower address that will be able to spend the output (must be 256bit)</source>
+        <source>The Rubix address that will be able to spend the output (must be 256bit)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3667,7 +3667,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+31"/>
-        <source>The Empower address that will be able to stake the output</source>
+        <source>The Rubix address that will be able to stake the output</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3687,7 +3687,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+64"/>
-        <source>A message that was attached to the empower: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Empower network.</source>
+        <source>A message that was attached to the Rubix: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Rubix network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3744,12 +3744,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive empower sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Rubix sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Empower address to sign the message with</source>
+        <source>The Rubix address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3791,8 +3791,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Empower address</source>
-        <translation>Sign the message to prove you own this Empower address</translation>
+        <source>Sign the message to prove you own this Rubix address</source>
+        <translation>Sign the message to prove you own this Rubix address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3822,13 +3822,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>The Empower address the message was signed with</source>
+        <source>The Rubix address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Empower address</source>
-        <translation>Verify the message to ensure it was signed with the specified Empower address</translation>
+        <source>Verify the message to ensure it was signed with the specified Rubix address</source>
+        <translation>Verify the message to ensure it was signed with the specified Rubix address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4744,8 +4744,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="-260"/>
-        <source>Empower Network</source>
-        <translation type="unfinished">Empower Network</translation>
+        <source>Rubix Network</source>
+        <translation type="unfinished">Rubix Network</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5246,7 +5246,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+1"/>
-        <source>Invalid Empower address.</source>
+        <source>Invalid Rubix address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

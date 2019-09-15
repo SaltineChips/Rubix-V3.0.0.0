@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_WALLET_HDWALLETTYPES_H
-#define EMPOWER_WALLET_HDWALLETTYPES_H
+#ifndef Rubix_WALLET_HDWALLETTYPES_H
+#define Rubix_WALLET_HDWALLETTYPES_H
 
 #include <key_io.h>
 #include <key/extkey.h>
@@ -312,4 +312,4 @@ public:
     CAmount nAnonImmature = 0;
 };
 
-#endif // EMPOWER_WALLET_HDWALLETTYPES_H
+#endif // Rubix_WALLET_HDWALLETTYPES_H

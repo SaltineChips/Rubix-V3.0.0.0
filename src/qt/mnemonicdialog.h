@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_QT_MNEMONICDIALOG_H
-#define EMPOWER_QT_MNEMONICDIALOG_H
+#ifndef Rubix_QT_MNEMONICDIALOG_H
+#define Rubix_QT_MNEMONICDIALOG_H
 
 #include <QDialog>
 #include <QThread>
@@ -59,4 +59,4 @@ private:
     Ui::MnemonicDialog *ui;
 };
 
-#endif // EMPOWER_QT_MNEMONICDIALOG_H
+#endif // Rubix_QT_MNEMONICDIALOG_H

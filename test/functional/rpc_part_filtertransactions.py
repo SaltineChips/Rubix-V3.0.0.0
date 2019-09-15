@@ -3,12 +3,12 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.util import connect_nodes_bi
 from test_framework.authproxy import JSONRPCException
 
 
-class FilterTransactionsTest(EmpowerTestFramework):
+class FilterTransactionsTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
@@ -45,13 +45,13 @@ class FilterTransactionsTest(EmpowerTestFramework):
         #targetExternal = nodes[1].getnewextaddress('target external')
         stakingAddress = nodes[2].getnewaddress('staking')
 
-        # simple MPWR transaction
+        # simple RBX transaction
         nodes[0].sendtoaddress(targetAddress, 10)
         self.stakeBlocks(1)
         nodes[1].sendtoaddress(selfAddress, 8)
 
-        # MPWR to BLIND
-        nodes[0].sendmpwrtoblind(
+        # RBX to BLIND
+        nodes[0].sendRBXtoblind(
             selfStealth,          # address
             20,                   # amount
             '',                   # ?
@@ -60,8 +60,8 @@ class FilterTransactionsTest(EmpowerTestFramework):
             'node0 -> node0 p->b' # narrative
         )
 
-        # MPWR to ANON
-        nodes[0].sendmpwrtoanon(
+        # RBX to ANON
+        nodes[0].sendRBXtoanon(
             targetStealth,        # address
             20,                   # amount
             '',                   # ?
@@ -72,8 +72,8 @@ class FilterTransactionsTest(EmpowerTestFramework):
 
         # several outputs
         nodes[0].sendtypeto(
-            'mpwr',               # type in
-            'mpwr',               # type out
+            'RBX',               # type in
+            'RBX',               # type out
             [                     # outputs
                 {
                     'address':    selfAddress,
@@ -97,8 +97,8 @@ class FilterTransactionsTest(EmpowerTestFramework):
             }
         )
         nodes[0].sendtypeto(
-            'mpwr',              # type in
-            'mpwr',              # type out
+            'RBX',              # type in
+            'RBX',              # type out
             [                    # outputs
                 {
                     'address':   'script',
@@ -110,8 +110,8 @@ class FilterTransactionsTest(EmpowerTestFramework):
         )
         txid = nodes[0].sendtoaddress(selfSpending, 50)
         nodes[0].sendtypeto(
-            'mpwr',              # type in
-            'mpwr',              # type out
+            'RBX',              # type in
+            'RBX',              # type out
             [                    # outputs
                 {
                     'address':   targetAddress,

@@ -3,14 +3,14 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_empower import EmpowerTestFramework, isclose
+from test_framework.test_Rubix import RubixTestFramework, isclose
 from test_framework.util import (
     assert_equal,
     connect_nodes_bi,
 )
 
 
-class WalletEmpowerAvoidReuseTest(EmpowerTestFramework):
+class WalletRubixAvoidReuseTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 4
@@ -73,4 +73,4 @@ class WalletEmpowerAvoidReuseTest(EmpowerTestFramework):
 
 
 if __name__ == '__main__':
-    WalletEmpowerAvoidReuseTest().main()
+    WalletRubixAvoidReuseTest().main()

@@ -155,9 +155,9 @@ std::shared_ptr<CWallet> LoadWallet(interfaces::Chain& chain, const WalletLocati
     AddWallet(wallet);
     wallet->postInitProcess();
 
-    if (fEmpowerMode) {
+    if (fRubixMode) {
         if (!((CHDWallet*)wallet.get())->Initialise()) {
-            error = "Empower wallet initialise failed.";
+            error = "Rubix wallet initialise failed.";
             return nullptr;
         }
         RestartStakingThreads();
@@ -1873,7 +1873,7 @@ void CWalletTx::GetAmounts(std::list<COutputEntry>& listReceived,
     }
 
     // Sent/received.
-    if (tx->IsEmpowerVersion()) {
+    if (tx->IsRubixVersion()) {
         for (unsigned int i = 0; i < tx->vpout.size(); ++i) {
             const CTxOutBase *txout = tx->vpout[i].get();
             if (!txout->IsStandardOutput()) {
@@ -2260,7 +2260,7 @@ CAmount CWalletTx::GetAvailableCredit(interfaces::Chain::Lock& locked_chain, boo
     for (unsigned int i = 0; i < tx->GetNumVOuts(); i++)
     {
         if (!pwallet->IsSpent(locked_chain, hashTx, i) && (allow_used_addresses || !pwallet->IsUsedDestination(hashTx, i))) {
-            nCredit += fEmpowerWallet ? pwallet->GetCredit(tx->vpout[i].get(), filter)
+            nCredit += fRubixWallet ? pwallet->GetCredit(tx->vpout[i].get(), filter)
                                       : pwallet->GetCredit(tx->vout[i], filter);
             if (!MoneyRange(nCredit))
                 throw std::runtime_error(std::string(__func__) + " : value out of range");
@@ -2326,7 +2326,7 @@ bool CWalletTx::IsTrusted(interfaces::Chain::Lock& locked_chain) const
         if (parent == nullptr)
             return false;
 
-        if (tx->IsEmpowerVersion()) {
+        if (tx->IsRubixVersion()) {
             const CTxOutBase *parentOut = parent->tx->vpout[txin.prevout.n].get();
             if (!(pwallet->IsMine(parentOut) & ISMINE_SPENDABLE)) {
                 return false;
@@ -4303,7 +4303,7 @@ std::shared_ptr<CWallet> CWallet::CreateWalletFromFile(interfaces::Chain& chain,
     bool fFirstRun = true;
     // TODO: Can't use std::make_shared because we need a custom deleter but
     // should be possible to use std::allocate_shared.
-    std::shared_ptr<CWallet> walletInstance(fEmpowerMode
+    std::shared_ptr<CWallet> walletInstance(fRubixMode
         ? std::shared_ptr<CWallet>(new CHDWallet(&chain, location, WalletDatabase::Create(location.GetPath())), ReleaseWallet)
         : std::shared_ptr<CWallet>(new CWallet(&chain, location, WalletDatabase::Create(location.GetPath())), ReleaseWallet));
 
@@ -4356,7 +4356,7 @@ std::shared_ptr<CWallet> CWallet::CreateWalletFromFile(interfaces::Chain& chain,
     }
 
     // Upgrade to HD if explicit upgrade
-    if (gArgs.GetBoolArg("-upgradewallet", false) && !fEmpowerMode) {
+    if (gArgs.GetBoolArg("-upgradewallet", false) && !fRubixMode) {
         LOCK(walletInstance->cs_wallet);
 
         // Do not upgrade versions to any version between HD_SPLIT and FEATURE_PRE_SPLIT_KEYPOOL unless already supporting HD_SPLIT
@@ -4399,7 +4399,7 @@ std::shared_ptr<CWallet> CWallet::CreateWalletFromFile(interfaces::Chain& chain,
     if (fFirstRun)
     {
         // ensure this wallet.dat can only be opened by clients supporting HD with chain split and expects no default key
-        if (fEmpowerMode) {
+        if (fRubixMode) {
             if ((wallet_creation_flags & WALLET_FLAG_DISABLE_PRIVATE_KEYS)) {
                 //selective allow to set flags
                 walletInstance->SetWalletFlag(WALLET_FLAG_DISABLE_PRIVATE_KEYS);
@@ -4554,7 +4554,7 @@ std::shared_ptr<CWallet> CWallet::CreateWalletFromFile(interfaces::Chain& chain,
         walletInstance->m_last_block_processed.SetNull();
     }
 
-    if (!fEmpowerMode) // Must rescan after hdwallet is loaded
+    if (!fRubixMode) // Must rescan after hdwallet is loaded
     if (tip_height && *tip_height != rescan_height)
     {
         // We can't rescan beyond non-pruned blocks, stop and throw an error.
@@ -4717,7 +4717,7 @@ int CMerkleTx::GetBlocksToMaturity(interfaces::Chain::Lock& locked_chain, const 
     int chain_depth = pdepth ? *pdepth : GetDepthInMainChain(locked_chain);
     //assert(chain_depth >= 0); // coinbase tx should not be conflicted
 
-    if (fEmpowerMode && (locked_chain.getHeight() < COINBASE_MATURITY * 2)) {
+    if (fRubixMode && (locked_chain.getHeight() < COINBASE_MATURITY * 2)) {
         const Optional<int> blockheight = locked_chain.getBlockHeight(hashBlock);
         if (!blockheight) {
             return COINBASE_MATURITY;
@@ -4751,7 +4751,7 @@ bool CWalletTx::AcceptToMemoryPool(interfaces::Chain::Lock& locked_chain, CValid
 
 void CWallet::LearnRelatedScripts(const CPubKey& key, OutputType type)
 {
-    if (fEmpowerMode)
+    if (fRubixMode)
         return;
     if (key.IsCompressed() && (type == OutputType::P2SH_SEGWIT || type == OutputType::BECH32)) {
         CTxDestination witdest = WitnessV0KeyHash(key.GetID());

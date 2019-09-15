@@ -436,7 +436,7 @@ public:
         READWRITE(hashPrev);
         READWRITE(hashMerkleRoot);
         // NOTE: Careful matching the version, qa tests use different versions
-        if (this->nVersion == EMPOWER_BLOCK_VERSION)
+        if (this->nVersion == Rubix_BLOCK_VERSION)
             READWRITE(hashWitnessMerkleRoot);
         READWRITE(nTime);
         READWRITE(nBits);

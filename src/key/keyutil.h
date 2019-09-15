@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_KEY_KEYUTIL_H
-#define EMPOWER_KEY_KEYUTIL_H
+#ifndef Rubix_KEY_KEYUTIL_H
+#define Rubix_KEY_KEYUTIL_H
 
 #include <vector>
 #include <stdint.h>
@@ -13,4 +13,4 @@ void AppendChecksum(std::vector<uint8_t> &data);
 bool VerifyChecksum(const std::vector<uint8_t> &data);
 
 
-#endif  // EMPOWER_KEY_KEYUTIL_H
+#endif  // Rubix_KEY_KEYUTIL_H

@@ -294,14 +294,14 @@ public:
     using ReservedBalanceChangedFn = std::function<void(CAmount value)>;
     virtual std::unique_ptr<Handler> handleReservedBalanceChanged(ReservedBalanceChangedFn fn) = 0;
 
-    virtual bool IsEmpowerWallet() = 0;
+    virtual bool IsRubixWallet() = 0;
     virtual CAmount getReserveBalance() = 0;
     virtual bool ownDestination(const CTxDestination &dest) = 0;
     virtual bool isUnlockForStakingOnlySet() = 0;
 
     virtual CAmount getAvailableAnonBalance(const CCoinControl& coin_control) = 0;
     virtual CAmount getAvailableBlindBalance(const CCoinControl& coin_control) = 0;
-    virtual CHDWallet *getEmpowerWallet() = 0;
+    virtual CHDWallet *getRubixWallet() = 0;
     virtual bool setReserveBalance(CAmount nValue) = 0;
     virtual void lockWallet() = 0;
     virtual bool setUnlockedForStaking() = 0;

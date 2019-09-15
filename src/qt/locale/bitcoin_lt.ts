@@ -66,12 +66,12 @@
         <translation>Gavimo adresai</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tai yra jūsų Empower adresai išeinantiems mokėjimams. Visada pasitikrinkite sumą ir gavėjo adresą prieš siunčiant lėšas. </translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tai yra jūsų Rubix adresai išeinantiems mokėjimams. Visada pasitikrinkite sumą ir gavėjo adresą prieš siunčiant lėšas. </translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tai yra Jūsų Empower adresai įeinantiems mokėjimams. Kiekvienam mokėjimui rekomenduojama naudoti naują adresą. </translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tai yra Jūsų Rubix adresai įeinantiems mokėjimams. Kiekvienam mokėjimui rekomenduojama naudoti naują adresą. </translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Patvirtinkite piniginės užšifravimą</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
-        <translation>Dėmesio: jei užšifruosite savo piniginę ir pamesite slaptafrazę, jūs&lt;b&gt;PRARASITE VISUS SAVO EMPOWERUS&lt;/b&gt;! </translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
+        <translation>Dėmesio: jei užšifruosite savo piniginę ir pamesite slaptafrazę, jūs&lt;b&gt;PRARASITE VISUS SAVO RubixUS&lt;/b&gt;! </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -346,8 +346,8 @@
         <translation>Blokai iš naujo indeksuojami...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Siųsti monetas Empower adresui</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Siųsti monetas Rubix adresui</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -370,8 +370,8 @@
         <translation>&amp;Tikrinti žinutę...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -398,12 +398,12 @@
         <translation>Užšifruoti privačius raktus, kurie priklauso jūsų piniginei</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Pasirašydami žinutes su savo Empower adresais įrodysite jog esate jų savininkas </translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Pasirašydami žinutes su savo Rubix adresais įrodysite jog esate jų savininkas </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Empower adresas</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Rubix adresas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -657,8 +657,8 @@
         <translation>Sveiki</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -714,8 +714,8 @@
         <translation>Piniginė</translation>
     </message>
     <message>
-        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatiškai atidaryti Empower kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
+        <source>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatiškai atidaryti Rubix kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1211,7 +1211,7 @@
         <translation>Įveskite pranešimą, kurį norite pasirašyti čia</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Empower address</source>
+        <source>Sign the message to prove you own this Rubix address</source>
         <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
     </message>
     <message>
@@ -1227,8 +1227,8 @@
         <translation>&amp;Patikrinti žinutę</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Empower address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Empower adresas</translation>
+        <source>Verify the message to ensure it was signed with the specified Rubix address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Rubix adresas</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1320,8 +1320,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower branduolys</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix branduolys</translation>
     </message>
     <message>
         <source>Error opening block database</source>

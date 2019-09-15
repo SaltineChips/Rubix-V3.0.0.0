@@ -1,5 +1,5 @@
 ---
-name: "empower-dmg-signer"
+name: "Rubix-dmg-signer"
 distro: "ubuntu"
 suites:
 - "bionic"
@@ -8,10 +8,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/empower/empower-detached-sigs.git"
+- "url": "https://github.com/Rubix/Rubix-detached-sigs.git"
   "dir": "signature"
 files:
-- "empower-osx-unsigned.tar.gz"
+- "Rubix-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
 
@@ -30,8 +30,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=empower-osx-unsigned.tar.gz
-  SIGNED=empower-osx-signed.dmg
+  UNSIGNED=Rubix-osx-unsigned.tar.gz
+  SIGNED=Rubix-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

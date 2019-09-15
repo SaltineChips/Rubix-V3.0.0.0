@@ -5,17 +5,17 @@
 
 from decimal import Decimal
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.util import connect_nodes_bi
 from test_framework.address import keyhash_to_p2pkh, hex_str_to_bytes
 from test_framework.authproxy import JSONRPCException
 
 
-def keyhash_to_p2pkh_mpwr(b):
+def keyhash_to_p2pkh_RBX(b):
     return keyhash_to_p2pkh(b, False, False)
 
 
-class ColdStakingTest(EmpowerTestFramework):
+class ColdStakingTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
@@ -110,7 +110,7 @@ class ColdStakingTest(EmpowerTestFramework):
         assert(hashOther == 'e5c8967e77fdeecaa46a446a0f71988c65b51432f35f8e58fdfe628c5a169386')
 
         ro = nodes[0].deriverangekeys(0, 0, coldstakingaddr)
-        assert(ro[0] == keyhash_to_p2pkh_mpwr(hex_str_to_bytes(hashCoinstake)))
+        assert(ro[0] == keyhash_to_p2pkh_RBX(hex_str_to_bytes(hashCoinstake)))
 
 
         ro = nodes[0].extkey('list', 'true')
@@ -162,10 +162,10 @@ class ColdStakingTest(EmpowerTestFramework):
         assert(hashSpend == '55e9e9b1aebf76f2a2ce9d7af6267be996bc235e3a65fa0f87a345267f9b3895')
 
         ro = nodes[0].deriverangekeys(1, 1, coldstakingaddr)
-        assert(ro[0] == keyhash_to_p2pkh_mpwr(hex_str_to_bytes(hashCoinstake)))
+        assert(ro[0] == keyhash_to_p2pkh_RBX(hex_str_to_bytes(hashCoinstake)))
 
         ro = nodes[0].deriverangekeys(0, 0, ekChange, 'false', 'false', 'false', 'true')
-        assert(ro[0] == keyhash_to_p2pkh_mpwr(hex_str_to_bytes(hashSpend)))
+        assert(ro[0] == keyhash_to_p2pkh_RBX(hex_str_to_bytes(hashSpend)))
 
         ro = nodes[0].extkey('list', 'true')
         fFound = False
@@ -211,10 +211,10 @@ class ColdStakingTest(EmpowerTestFramework):
             hashSpend = asm[10]
 
         ro = nodes[0].deriverangekeys(2, 2, coldstakingaddr)
-        assert(ro[0] == keyhash_to_p2pkh_mpwr(hex_str_to_bytes(hashCoinstake)))
+        assert(ro[0] == keyhash_to_p2pkh_RBX(hex_str_to_bytes(hashCoinstake)))
 
         ro = nodes[0].deriverangekeys(1, 1, ekChange, 'false', 'false', 'false', 'true')
-        assert(ro[0] == keyhash_to_p2pkh_mpwr(hex_str_to_bytes(hashSpend)))
+        assert(ro[0] == keyhash_to_p2pkh_RBX(hex_str_to_bytes(hashSpend)))
 
         ro = nodes[0].extkey('list', 'true')
         fFound = False
@@ -267,7 +267,7 @@ class ColdStakingTest(EmpowerTestFramework):
 
         coincontrol = {'inputs':[{'tx':n1unspent[0]['txid'],'n':n1unspent[0]['vout']}]}
         outputs = [{'address':addr2_1s, 'amount':1, 'narr':'p2b,0->2'},]
-        txid = nodes[0].sendtypeto('mpwr', 'blind', outputs, 'comment', 'comment-to', 4, 64, False, coincontrol)
+        txid = nodes[0].sendtypeto('RBX', 'blind', outputs, 'comment', 'comment-to', 4, 64, False, coincontrol)
 
         self.sync_all()
 

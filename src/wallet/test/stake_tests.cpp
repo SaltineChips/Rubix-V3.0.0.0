@@ -26,7 +26,7 @@
 
 struct StakeTestingSetup: public TestingSetup {
     StakeTestingSetup(const std::string& chainName = CBaseChainParams::REGTEST):
-        TestingSetup(chainName, /* fEmpowerMode */ true)
+        TestingSetup(chainName, /* fRubixMode */ true)
     {
         ECC_Start_Stealth();
         ECC_Start_Blinding();

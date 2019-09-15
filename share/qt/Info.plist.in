@@ -11,34 +11,34 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>empower.icns</string>
+  <string>Rubix.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_EMPOWER@, Copyright © 2009-@COPYRIGHT_YEAR@ @COPYRIGHT_HOLDERS_FINAL@</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_Rubix@, Copyright © 2009-@COPYRIGHT_YEAR@ @COPYRIGHT_HOLDERS_FINAL@</string>
 
   <key>CFBundleShortVersionString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_EMPOWER@</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_Rubix@</string>
 
   <key>CFBundleVersion</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_EMPOWER@</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_Rubix@</string>
 
   <key>CFBundleSignature</key>
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Empower-Qt</string>
+  <string>Rubix-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Empower-Qt</string>
+  <string>Rubix-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.empowerfoundation.Empower-Qt</string>
+  <string>io.Rubixfoundation.Rubix-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.empower.EmpowerPayment</string>
+      <string>org.Rubix.RubixPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>empower</string>
+        <string>Rubix</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.empower.paymentrequest</string>
+      <string>org.Rubix.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Empower payment request</string>
+      <string>Rubix payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-empower-payment-request</string>
+        <string>application/x-Rubix-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>empowerpaymentrequest</string>
+          <string>Rubixpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.empower.paymentrequest</string>
+        <string>org.Rubix.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

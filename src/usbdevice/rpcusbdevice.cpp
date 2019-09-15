@@ -388,7 +388,7 @@ static UniValue getdevicexpub(const JSONRPCRequest &request)
                     {"accountpath", RPCArg::Type::STR, /* default */ GetDefaultAccountPath(), "Account path, set to empty string to ignore."},
                 },
                 RPCResult{
-            "\"address\"              (string) The empower extended public key\n"
+            "\"address\"              (string) The Rubix extended public key\n"
                 },
                 RPCExamples{
             HelpExampleCli("getdevicexpub", "\"0\"") +
@@ -459,7 +459,7 @@ static UniValue devicesignrawtransaction(const JSONRPCRequest &request)
 {
     #ifdef ENABLE_WALLET
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp)) {
         return NullUniValue;
     }
@@ -765,7 +765,7 @@ static UniValue devicesignrawtransaction(const JSONRPCRequest &request)
 static UniValue initaccountfromdevice(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -1018,7 +1018,7 @@ static UniValue initaccountfromdevice(const JSONRPCRequest &request)
 static UniValue devicegetnewstealthaddress(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp)) {
         return NullUniValue;
     }
@@ -1026,7 +1026,7 @@ static UniValue devicegetnewstealthaddress(const JSONRPCRequest &request)
     if (request.fHelp || request.params.size() > 4)
         throw std::runtime_error(
             RPCHelpMan{"devicegetnewstealthaddress",
-                "\nReturns a new Empower stealth address for receiving payments." +
+                "\nReturns a new Rubix stealth address for receiving payments." +
                     HelpRequiringPassphrase(pwallet) + "\n",
                 {
                     {"label", RPCArg::Type::STR, /* default */ "", "If \"label\" is specified the new address will be added to the address book."},
@@ -1039,7 +1039,7 @@ static UniValue devicegetnewstealthaddress(const JSONRPCRequest &request)
                     {"bech32", RPCArg::Type::BOOL, /* default */ "true", "Use Bech32 encoding."},
                 },
                 RPCResult{
-            "\"address\"              (string) The new empower stealth address\n"
+            "\"address\"              (string) The new Rubix stealth address\n"
                 },
                 RPCExamples{
              HelpExampleCli("devicegetnewstealthaddress", "\"lblTestSxAddrPrefix\" 3 \"0b101\"") +

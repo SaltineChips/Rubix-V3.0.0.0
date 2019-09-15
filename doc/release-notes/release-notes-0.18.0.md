@@ -1,4 +1,4 @@
-Empower Network version 0.18.0 is now available.
+Rubix Network version 0.18.0 is now available.
 
 This is a new major version release, including new features, various bugfixes and performance improvements, as well as updated translations.
 

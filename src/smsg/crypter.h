@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_SMSG_CRYPTER_H
-#define EMPOWER_SMSG_CRYPTER_H
+#ifndef Rubix_SMSG_CRYPTER_H
+#define Rubix_SMSG_CRYPTER_H
 
 #include <support/allocators/secure.h>
 #include <vector>
@@ -45,4 +45,4 @@ public:
     bool Decrypt(const uint8_t *chCiphertext, uint32_t nCipher, std::vector<uint8_t> &vchPlaintext);
 };
 
-#endif // EMPOWER_SMSG_CRYPTER_H
+#endif // Rubix_SMSG_CRYPTER_H

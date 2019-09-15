@@ -41,7 +41,7 @@ public:
         READWRITE(nVersion);
         READWRITE(hashPrevBlock);
         READWRITE(hashMerkleRoot);
-        if (IsEmpowerVersion()) {
+        if (IsRubixVersion()) {
             READWRITE(hashWitnessMerkleRoot);
         }
         READWRITE(nTime);
@@ -67,9 +67,9 @@ public:
 
     uint256 GetHash() const;
 
-    bool IsEmpowerVersion() const
+    bool IsRubixVersion() const
     {
-        return nVersion == EMPOWER_BLOCK_VERSION;
+        return nVersion == Rubix_BLOCK_VERSION;
     }
 
     int64_t GetBlockTime() const
@@ -134,7 +134,7 @@ public:
     inline void SerializationOp(Stream& s, Operation ser_action) {
         READWRITEAS(CBlockHeader, *this);
         READWRITE(vtx);
-        if (nVersion == EMPOWER_BLOCK_VERSION) {
+        if (nVersion == Rubix_BLOCK_VERSION) {
             READWRITE(vchBlockSig);
         }
     }

@@ -5,11 +5,11 @@
 
 import json
 
-from test_framework.test_empower import EmpowerTestFramework, isclose
+from test_framework.test_Rubix import RubixTestFramework, isclose
 from test_framework.util import connect_nodes_bi, assert_raises_rpc_error
 
 
-class StealthTest(EmpowerTestFramework):
+class StealthTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3

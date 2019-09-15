@@ -40,8 +40,8 @@
 // Application startup time (used for uptime calculation)
 int64_t GetStartupTime();
 
-extern bool fEmpowerMode;
-extern bool fEmpowerWallet;
+extern bool fRubixMode;
+extern bool fRubixWallet;
 
 extern const char * const BITCOIN_CONF_FILENAME;
 
@@ -168,8 +168,8 @@ enum class OptionsCategory {
     COMMANDS,
     REGISTER_COMMANDS,
     SMSG,
-    MPWR_WALLET,
-    MPWR_STAKING,
+    RBX_WALLET,
+    RBX_STAKING,
 
     HIDDEN // Always the last option to avoid printing these in the help
 };

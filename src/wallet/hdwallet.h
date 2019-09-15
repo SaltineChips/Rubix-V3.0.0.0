@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_WALLET_HDWALLET_H
-#define EMPOWER_WALLET_HDWALLET_H
+#ifndef Rubix_WALLET_HDWALLET_H
+#define Rubix_WALLET_HDWALLET_H
 
 #include <wallet/wallet.h>
 #include <wallet/hdwalletdb.h>
@@ -558,9 +558,9 @@ int64_t CalculateMaximumSignedTxSize(const CTransaction &tx, const CHDWallet *wa
 
 void RestartStakingThreads();
 
-bool IsEmpowerWallet(const CKeyStore *win);
-CHDWallet *GetEmpowerWallet(CKeyStore *win);
-const CHDWallet *GetEmpowerWallet(const CKeyStore *win);
+bool IsRubixWallet(const CKeyStore *win);
+CHDWallet *GetRubixWallet(CKeyStore *win);
+const CHDWallet *GetRubixWallet(const CKeyStore *win);
 
 
-#endif // EMPOWER_WALLET_HDWALLET_H
+#endif // Rubix_WALLET_HDWALLET_H

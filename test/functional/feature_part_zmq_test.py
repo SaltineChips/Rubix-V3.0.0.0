@@ -9,11 +9,11 @@ import struct
 import time
 import base64
 
-from test_framework.test_empower import EmpowerTestFramework
+from test_framework.test_Rubix import RubixTestFramework
 from test_framework.test_framework import SkipTest
 
 
-class ZMQTest(EmpowerTestFramework):
+class ZMQTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -28,14 +28,14 @@ class ZMQTest(EmpowerTestFramework):
         except ImportError:
             raise SkipTest("python3-zmq module not available.")
 
-        # Check that empower has been built with ZMQ enabled
+        # Check that Rubix has been built with ZMQ enabled
         config = configparser.ConfigParser()
         if not self.options.configfile:
             self.options.configfile = os.path.dirname(__file__) + "/../config.ini"
         config.read_file(open(self.options.configfile))
 
         if not config["components"].getboolean("ENABLE_ZMQ"):
-            raise SkipTest("empowerd has not been built with zmq enabled.")
+            raise SkipTest("Rubixd has not been built with zmq enabled.")
 
         self.zmq = zmq
         self.zmqContext = zmq.Context()

@@ -70,7 +70,7 @@ static int ExtractBip32InfoV(const std::vector<uint8_t> &vchKey, UniValue &keyIn
 
     CChainParams::Base58Type typePk = CChainParams::EXT_PUBLIC_KEY;
     if (memcmp(&vchKey[0], &Params().Base58Prefix(CChainParams::EXT_SECRET_KEY)[0], 4) == 0) {
-        keyInfo.pushKV("type", "Empower extended secret key");
+        keyInfo.pushKV("type", "Rubix extended secret key");
     } else
     if (memcmp(&vchKey[0], &Params().Base58Prefix(CChainParams::EXT_SECRET_KEY_BTC)[0], 4) == 0) {
         keyInfo.pushKV("type", "Bitcoin extended secret key");
@@ -112,7 +112,7 @@ static int ExtractBip32InfoP(const std::vector<uint8_t> &vchKey, UniValue &keyIn
     CExtPubKey pk;
 
     if (memcmp(&vchKey[0], &Params().Base58Prefix(CChainParams::EXT_PUBLIC_KEY)[0], 4) == 0) {
-        keyInfo.pushKV("type", "Empower extended public key");
+        keyInfo.pushKV("type", "Rubix extended public key");
     } else
     if (memcmp(&vchKey[0], &Params().Base58Prefix(CChainParams::EXT_PUBLIC_KEY_BTC)[0], 4) == 0)  {
         keyInfo.pushKV("type", "Bitcoin extended public key");
@@ -723,7 +723,7 @@ static int ExtractExtKeyId(const std::string &sInKey, CKeyID &keyId, CChainParam
 static UniValue extkey(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -982,7 +982,7 @@ static UniValue extkey(const JSONRPCRequest &request)
             if (!eKey58.IsValid(CChainParams::EXT_SECRET_KEY)
                 && !eKey58.IsValid(CChainParams::EXT_PUBLIC_KEY_BTC)
                 && !eKey58.IsValid(CChainParams::EXT_PUBLIC_KEY)) {
-                throw JSONRPCError(RPC_INVALID_PARAMETER, "Import failed - Key must begin with a empower prefix.");
+                throw JSONRPCError(RPC_INVALID_PARAMETER, "Import failed - Key must begin with a Rubix prefix.");
             }
         }
 
@@ -1384,7 +1384,7 @@ static UniValue extkey(const JSONRPCRequest &request)
 static UniValue extkeyimportinternal(const JSONRPCRequest &request, bool fGenesisChain)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp)) {
         return NullUniValue;
     }
@@ -1571,7 +1571,7 @@ static UniValue extkeyimportmaster(const JSONRPCRequest &request)
 {
     // Doesn't generate key, require users to run mnemonic new, more likely they'll save the phrase
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -1606,7 +1606,7 @@ static UniValue extkeyimportmaster(const JSONRPCRequest &request)
 static UniValue extkeygenesisimport(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -1645,8 +1645,8 @@ static UniValue extkeyaltversion(const JSONRPCRequest &request)
         throw std::runtime_error(
             RPCHelpMan{"extkeyaltversion",
                 "\nReturns the provided ext_key encoded with alternate version bytes.\n"
-                "If the provided ext_key has a Bitcoin prefix the output will be encoded with a Empower prefix.\n"
-                "If the provided ext_key has a Empower prefix the output will be encoded with a Bitcoin prefix.\n",
+                "If the provided ext_key has a Bitcoin prefix the output will be encoded with a Rubix prefix.\n"
+                "If the provided ext_key has a Rubix prefix the output will be encoded with a Bitcoin prefix.\n",
                 {
                     {"ext_key", RPCArg::Type::STR, RPCArg::Optional::NO, ""},
                 },
@@ -1685,14 +1685,14 @@ static UniValue extkeyaltversion(const JSONRPCRequest &request)
 static UniValue getnewextaddress(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
     if (request.fHelp || request.params.size() > 4)
         throw std::runtime_error(
             RPCHelpMan{"getnewextaddress",
-                "\nReturns a new Empower ext address for receiving payments." +
+                "\nReturns a new Rubix ext address for receiving payments." +
                 HelpRequiringPassphrase(pwallet) + "\n",
                 {
                     {"label", RPCArg::Type::STR, /* default */ "", "If specified the key is added to the address book."},
@@ -1701,7 +1701,7 @@ static UniValue getnewextaddress(const JSONRPCRequest &request)
                     {"hardened", RPCArg::Type::BOOL, /* default */ "false", "Derive a hardened key."},
                 },
                 RPCResult{
-            "\"address\"              (string) The new empower extended address\n"
+            "\"address\"              (string) The new Rubix extended address\n"
                 },
                 RPCExamples{
             HelpExampleCli("getnewextaddress", "") +
@@ -1752,14 +1752,14 @@ static UniValue getnewextaddress(const JSONRPCRequest &request)
 static UniValue getnewstealthaddress(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
     if (request.fHelp || request.params.size() > 5)
         throw std::runtime_error(
             RPCHelpMan{"getnewstealthaddress",
-                "\nReturns a new Empower stealth address for receiving payments." +
+                "\nReturns a new Rubix stealth address for receiving payments." +
                 HelpRequiringPassphrase(pwallet) + "\n",
                 {
                     {"label", RPCArg::Type::STR, /* default */ "", "If specified the key is added to the address book."},
@@ -1773,7 +1773,7 @@ static UniValue getnewstealthaddress(const JSONRPCRequest &request)
                     {"makeV2", RPCArg::Type::BOOL, /* default */ "false", "Generate an address from the same scheme used for hardware wallets."},
                 },
                 RPCResult{
-            "\"address\"              (string) The new empower stealth address\n"
+            "\"address\"              (string) The new Rubix stealth address\n"
                 },
                 RPCExamples{
             HelpExampleCli("getnewstealthaddress", "\"lblTestSxAddrPrefix\" 3 \"0b101\"") +
@@ -1834,7 +1834,7 @@ static UniValue getnewstealthaddress(const JSONRPCRequest &request)
 static UniValue importstealthaddress(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -1856,7 +1856,7 @@ static UniValue importstealthaddress(const JSONRPCRequest &request)
                     {"bech32", RPCArg::Type::BOOL, /* default */ "false", "Use Bech32 encoding."},
                 },
                 RPCResult{
-            "\"address\"              (string) The new empower stealth address\n"
+            "\"address\"              (string) The new Rubix stealth address\n"
                 },
                 RPCExamples{
             HelpExampleCli("importstealthaddress", "scan_secret spend_secret \"label\" 3 \"0b101\"") +
@@ -2064,7 +2064,7 @@ int ListLooseStealthAddresses(UniValue &arr, CHDWallet *pwallet, bool fShowSecre
 static UniValue liststealthaddresses(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -2090,7 +2090,7 @@ static UniValue liststealthaddresses(const JSONRPCRequest &request)
             "    ]\n"
             "  }...\n"
             "]\n"
-            "\"address\"              (string) The new empower stealth address\n"
+            "\"address\"              (string) The new Rubix stealth address\n"
                 },
                 RPCExamples{
             HelpExampleCli("liststealthaddresses", "") +
@@ -2179,7 +2179,7 @@ static UniValue reservebalance(const JSONRPCRequest &request)
     // Reserve balance from being staked for network protection
 
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -2231,7 +2231,7 @@ static UniValue reservebalance(const JSONRPCRequest &request)
 static UniValue deriverangekeys(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -2438,7 +2438,7 @@ static UniValue deriverangekeys(const JSONRPCRequest &request)
 static UniValue clearwallettransactions(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -3015,7 +3015,7 @@ static std::string getAddress(UniValue const & transaction)
 static UniValue filtertransactions(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -3371,7 +3371,7 @@ public:
 static UniValue filteraddresses(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -3556,7 +3556,7 @@ static UniValue filteraddresses(const JSONRPCRequest &request)
 static UniValue manageaddressbook(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -3598,7 +3598,7 @@ static UniValue manageaddressbook(const JSONRPCRequest &request)
     CBitcoinAddress address(sAddress);
 
     if (!address.IsValid()) {
-        throw JSONRPCError(RPC_INVALID_PARAMETER, _("Invalid Empower address."));
+        throw JSONRPCError(RPC_INVALID_PARAMETER, _("Invalid Rubix address."));
     }
 
     LOCK(pwallet->cs_wallet);
@@ -3730,7 +3730,7 @@ extern double GetDifficulty(const CBlockIndex* blockindex = nullptr);
 static UniValue getstakinginfo(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -3746,8 +3746,8 @@ static UniValue getstakinginfo(const JSONRPCRequest &request)
             "  \"staking\": true|false,         (boolean) if this wallet is staking or not\n"
             "  \"errors\": \"...\"              (string) any error messages\n"
             "  \"percentyearreward\": xxxxxxx,  (numeric) current stake reward percentage\n"
-            "  \"moneysupply\": xxxxxxx,        (numeric) the total amount of empower in the network\n"
-            "  \"reserve\": xxxxxxx,            (numeric) the total amount of empower in the network\n"
+            "  \"moneysupply\": xxxxxxx,        (numeric) the total amount of Rubix in the network\n"
+            "  \"reserve\": xxxxxxx,            (numeric) the total amount of Rubix in the network\n"
             "  \"walletfoundationdonationpercent\": xxxxxxx,\n    (numeric) user set percentage of the block reward ceded to the foundation\n"
             "  \"foundationdonationpercent\": xxxxxxx,\n    (numeric) network enforced percentage of the block reward ceded to the foundation\n"
             "  \"foundationdonationpercent\": xxxxxxx,\n    (numeric) network enforced percentage of the block reward ceded to the foundation\n"
@@ -3851,7 +3851,7 @@ static UniValue getstakinginfo(const JSONRPCRequest &request)
 static UniValue getcoldstakinginfo(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -3987,7 +3987,7 @@ static UniValue getcoldstakinginfo(const JSONRPCRequest &request)
 static UniValue listunspentanon(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -4000,9 +4000,9 @@ static UniValue listunspentanon(const JSONRPCRequest &request)
                 {
                     {"minconf", RPCArg::Type::NUM, /* default */ "1", "The minimum confirmations to filter"},
                     {"maxconf", RPCArg::Type::NUM, /* default */ "9999999", "The maximum confirmations to filter"},
-                    {"addresses", RPCArg::Type::ARR, /* default */ "", "A json array of empower addresses to filter",
+                    {"addresses", RPCArg::Type::ARR, /* default */ "", "A json array of Rubix addresses to filter",
                         {
-                            {"address", RPCArg::Type::STR, /* default */ "", "empower address"},
+                            {"address", RPCArg::Type::STR, /* default */ "", "Rubix address"},
                         },
                     },
                     {"include_unsafe", RPCArg::Type::BOOL, /* default */ "true", "Include outputs that are not safe to spend\n"
@@ -4023,7 +4023,7 @@ static UniValue listunspentanon(const JSONRPCRequest &request)
             "  {\n"
             "    \"txid\" : \"txid\",          (string) the transaction id \n"
             "    \"vout\" : n,               (numeric) the vout value\n"
-            "    \"address\" : \"address\",    (string) the empower address\n"
+            "    \"address\" : \"address\",    (string) the Rubix address\n"
             "    \"label\" : \"label\",        (string) The associated label, or \"\" for the default label\n"
             //"    \"scriptPubKey\" : \"key\",   (string) the script key\n"
             "    \"amount\" : x.xxx,         (numeric) the transaction output amount in " + CURRENCY_UNIT + "\n"
@@ -4063,7 +4063,7 @@ static UniValue listunspentanon(const JSONRPCRequest &request)
             const UniValue& input = inputs[idx];
             CBitcoinAddress address(input.get_str());
             if (!address.IsValidStealthAddress())
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Empower stealth address: ")+input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Rubix stealth address: ")+input.get_str());
             if (setAddress.count(address))
                 throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, duplicated address: ")+input.get_str());
            setAddress.insert(address);
@@ -4198,7 +4198,7 @@ static UniValue listunspentanon(const JSONRPCRequest &request)
 static UniValue listunspentblind(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -4213,9 +4213,9 @@ static UniValue listunspentblind(const JSONRPCRequest &request)
                 {
                     {"minconf", RPCArg::Type::NUM, /* default */ "1", "The minimum confirmations to filter"},
                     {"maxconf", RPCArg::Type::NUM, /* default */ "9999999", "The maximum confirmations to filter"},
-                    {"addresses", RPCArg::Type::ARR, /* default */ "", "A json array of empower addresses to filter",
+                    {"addresses", RPCArg::Type::ARR, /* default */ "", "A json array of Rubix addresses to filter",
                         {
-                            {"address", RPCArg::Type::STR, /* default */ "", "empower address"},
+                            {"address", RPCArg::Type::STR, /* default */ "", "Rubix address"},
                         },
                     },
                     {"include_unsafe", RPCArg::Type::BOOL, /* default */ "true", "Include outputs that are not safe to spend\n"
@@ -4235,7 +4235,7 @@ static UniValue listunspentblind(const JSONRPCRequest &request)
             "  {\n"
             "    \"txid\" : \"txid\",          (string) the transaction id \n"
             "    \"vout\" : n,               (numeric) the vout value\n"
-            "    \"address\" : \"address\",    (string) the empower address\n"
+            "    \"address\" : \"address\",    (string) the Rubix address\n"
             "    \"label\" : \"label\",        (string) The associated label, or \"\" for the default label\n"
             "    \"scriptPubKey\" : \"key\",   (string) the script key\n"
             "    \"amount\" : x.xxx,         (numeric) the transaction output amount in " + CURRENCY_UNIT + "\n"
@@ -4313,7 +4313,7 @@ static UniValue listunspentblind(const JSONRPCRequest &request)
             const UniValue& input = inputs[idx];
             CBitcoinAddress address(input.get_str());
             if (!address.IsValidStealthAddress())
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Empower stealth address: ")+input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Rubix stealth address: ")+input.get_str());
             if (setAddress.count(address))
                 throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, duplicated address: ")+input.get_str());
            setAddress.insert(address);
@@ -4454,7 +4454,7 @@ static int AddOutput(uint8_t nType, std::vector<CTempRecipient> &vecSend, const 
 static UniValue SendToInner(const JSONRPCRequest &request, OutputTypes typeIn, OutputTypes typeOut)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp)) {
         return NullUniValue;
     }
@@ -4507,11 +4507,11 @@ static UniValue SendToInner(const JSONRPCRequest &request, OutputTypes typeIn, O
 
             if (typeOut == OUTPUT_RINGCT
                 && !address.IsValidStealthAddress()) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Empower stealth address");
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Rubix stealth address");
             }
 
             if (!obj.exists("script") && !address.IsValid()) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Empower address");
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Rubix address");
             }
 
             if (address.getVchVersion() == Params().Bech32Prefix(CChainParams::STAKE_ONLY_PKADDR)) {
@@ -4580,10 +4580,10 @@ static UniValue SendToInner(const JSONRPCRequest &request, OutputTypes typeIn, O
 
         if (typeOut == OUTPUT_RINGCT
             && !address.IsValidStealthAddress()) {
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Empower stealth address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Rubix stealth address");
         }
         if (!address.IsValid()) {
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Empower address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Rubix address");
         }
 
         CAmount nAmount = AmountFromValue(request.params[1]);
@@ -4874,7 +4874,7 @@ static const char *TypeToWord(OutputTypes type)
     switch (type)
     {
         case OUTPUT_STANDARD:
-            return "mpwr";
+            return "RBX";
         case OUTPUT_CT:
             return "blind";
         case OUTPUT_RINGCT:
@@ -4887,7 +4887,7 @@ static const char *TypeToWord(OutputTypes type)
 
 static OutputTypes WordToType(std::string &s)
 {
-    if (s == "mpwr")
+    if (s == "RBX")
         return OUTPUT_STANDARD;
     if (s == "blind")
         return OUTPUT_CT;
@@ -4909,13 +4909,13 @@ static std::string SendHelp(CHDWallet *pwallet, OutputTypes typeIn, OutputTypes 
 
     rv += "\nSend an amount of ";
     rv += typeIn == OUTPUT_RINGCT ? "anon" : typeIn == OUTPUT_CT ? "blinded" : "";
-    rv += std::string(" mpwr in a") + (typeOut == OUTPUT_RINGCT || typeOut == OUTPUT_CT ? " blinded" : "") + " payment to a given address"
-        + (typeOut == OUTPUT_CT ? " in anon mpwr": "") + ".\n";
+    rv += std::string(" RBX in a") + (typeOut == OUTPUT_RINGCT || typeOut == OUTPUT_CT ? " blinded" : "") + " payment to a given address"
+        + (typeOut == OUTPUT_CT ? " in anon RBX": "") + ".\n";
 
     rv += HelpRequiringPassphrase(pwallet);
 
     rv +=   "\nArguments:\n"
-            "1. \"address\"     (string, required) The empower address to send to.\n"
+            "1. \"address\"     (string, required) The Rubix address to send to.\n"
             "2. \"amount\"      (numeric or string, required) The amount in " + CURRENCY_UNIT + " to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                            This is not part of the transaction, just kept in your wallet.\n"
@@ -4941,10 +4941,10 @@ static std::string SendHelp(CHDWallet *pwallet, OutputTypes typeIn, OutputTypes 
     return rv;
 };
 
-static UniValue sendmpwrtoblind(const JSONRPCRequest &request)
+static UniValue sendRBXtoblind(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 6)
@@ -4953,10 +4953,10 @@ static UniValue sendmpwrtoblind(const JSONRPCRequest &request)
     return SendToInner(request, OUTPUT_STANDARD, OUTPUT_CT);
 };
 
-static UniValue sendmpwrtoanon(const JSONRPCRequest &request)
+static UniValue sendRBXtoanon(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 6)
@@ -4966,10 +4966,10 @@ static UniValue sendmpwrtoanon(const JSONRPCRequest &request)
 };
 
 
-static UniValue sendblindtompwr(const JSONRPCRequest &request)
+static UniValue sendblindtoRBX(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 6)
@@ -4981,7 +4981,7 @@ static UniValue sendblindtompwr(const JSONRPCRequest &request)
 static UniValue sendblindtoblind(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 6)
@@ -4993,7 +4993,7 @@ static UniValue sendblindtoblind(const JSONRPCRequest &request)
 static UniValue sendblindtoanon(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 6)
@@ -5003,10 +5003,10 @@ static UniValue sendblindtoanon(const JSONRPCRequest &request)
 };
 
 
-static UniValue sendanontompwr(const JSONRPCRequest &request)
+static UniValue sendanontoRBX(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 8)
@@ -5018,7 +5018,7 @@ static UniValue sendanontompwr(const JSONRPCRequest &request)
 static UniValue sendanontoblind(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 8)
@@ -5030,7 +5030,7 @@ static UniValue sendanontoblind(const JSONRPCRequest &request)
 static UniValue sendanontoanon(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 8)
@@ -5042,22 +5042,22 @@ static UniValue sendanontoanon(const JSONRPCRequest &request)
 UniValue sendtypeto(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
     if (request.fHelp || request.params.size() < 3 || request.params.size() > 9)
         throw std::runtime_error(
             RPCHelpMan{"sendtypeto",
-                "\nSend mpwr to multiple outputs." +
+                "\nSend RBX to multiple outputs." +
                 HelpRequiringPassphrase(pwallet) + "\n",
                 {
-                    {"typein", RPCArg::Type::STR, RPCArg::Optional::NO, "mpwr/blind/anon"},
-                    {"typeout", RPCArg::Type::STR, RPCArg::Optional::NO, "mpwr/blind/anon"},
+                    {"typein", RPCArg::Type::STR, RPCArg::Optional::NO, "RBX/blind/anon"},
+                    {"typeout", RPCArg::Type::STR, RPCArg::Optional::NO, "RBX/blind/anon"},
                     {"outputs", RPCArg::Type::ARR, RPCArg::Optional::NO, "A json array of json objects",
                         {
                             {"", RPCArg::Type::OBJ, RPCArg::Optional::NO, "",
                                 {
-                                    {"address", RPCArg::Type::STR, /* default */ "", "The empower address to send to."},
+                                    {"address", RPCArg::Type::STR, /* default */ "", "The Rubix address to send to."},
                                     {"amount", RPCArg::Type::AMOUNT, /* default */ "", "The amount in " + CURRENCY_UNIT + " to send. eg 0.1."},
                                     {"narr", RPCArg::Type::STR, /* default */ "", "Up to 24 character narration sent with the transaction."},
                                     {"blindingfactor", RPCArg::Type::STR_HEX, /* default */ "", "The blinding factor, 32 bytes and hex encoded."},
@@ -5077,7 +5077,7 @@ UniValue sendtypeto(const JSONRPCRequest &request)
                     {"test_fee", RPCArg::Type::BOOL, /* default */ "false", "Only return the fee it would cost to send, txn is discarded."},
                     {"coin_control", RPCArg::Type::OBJ, /* default */ "", "",
                         {
-                            {"changeaddress", RPCArg::Type::STR, /* default */ "", "The empower address to receive the change"},
+                            {"changeaddress", RPCArg::Type::STR, /* default */ "", "The Rubix address to receive the change"},
                             {"inputs", RPCArg::Type::ARR, /* default */ "", "A json array of json objects",
                                 {
                                     {"", RPCArg::Type::OBJ, /* default */ "", "",
@@ -5105,7 +5105,7 @@ UniValue sendtypeto(const JSONRPCRequest &request)
             "\"txid\"              (string) The transaction id.\n"
                 },
                 RPCExamples{
-            HelpExampleCli("sendtypeto", "anon mpwr \"[{\\\"address\\\":\\\"PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR\\\",\\\"amount\\\":0.1}]\"")
+            HelpExampleCli("sendtypeto", "anon RBX \"[{\\\"address\\\":\\\"PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR\\\",\\\"amount\\\":0.1}]\"")
                 },
             }.ToString());
 
@@ -5307,7 +5307,7 @@ static UniValue createsignatureinner(const JSONRPCRequest &request, CHDWallet *c
 static UniValue createsignaturewithwallet(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp)) {
         return NullUniValue;
     }
@@ -5406,7 +5406,7 @@ static UniValue createsignaturewithkey(const JSONRPCRequest &request)
 static UniValue debugwallet(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -5628,7 +5628,7 @@ static UniValue debugwallet(const JSONRPCRequest &request)
 static UniValue walletsettings(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -5909,7 +5909,7 @@ static UniValue walletsettings(const JSONRPCRequest &request)
 static UniValue transactionblinds(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -5962,7 +5962,7 @@ static UniValue transactionblinds(const JSONRPCRequest &request)
 static UniValue derivefromstealthaddress(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -6081,7 +6081,7 @@ static UniValue derivefromstealthaddress(const JSONRPCRequest &request)
 static UniValue setvote(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -6164,7 +6164,7 @@ static UniValue setvote(const JSONRPCRequest &request)
 static UniValue votehistory(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -6478,16 +6478,16 @@ static UniValue buildscript(const JSONRPCRequest &request)
     return obj;
 };
 
-static UniValue createrawmpwrtransaction(const JSONRPCRequest& request)
+static UniValue createrawRBXtransaction(const JSONRPCRequest& request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 4)
         throw std::runtime_error(
-            RPCHelpMan{"createrawmpwrtransaction",
+            RPCHelpMan{"createrawRBXtransaction",
                 "\nCreate a transaction spending the given inputs and creating new confidential outputs.\n"
                 "Outputs can be addresses or data.\n"
                 "Returns hex-encoded raw transaction.\n"
@@ -6510,7 +6510,7 @@ static UniValue createrawmpwrtransaction(const JSONRPCRequest& request)
                         {
                             {"", RPCArg::Type::OBJ, /* default */ "", "",
                                 {
-                                    {"address", RPCArg::Type::STR, /* default */ "", "The empower address."},
+                                    {"address", RPCArg::Type::STR, /* default */ "", "The Rubix address."},
                                     {"amount", RPCArg::Type::AMOUNT, /* default */ "", "The numeric value (can be string) in " + CURRENCY_UNIT + " of the output."},
                                     {"data", RPCArg::Type::STR_HEX, /* default */ "", "The key is \"data\", the value is hex encoded data."},
                                     {"data_ct_fee", RPCArg::Type::AMOUNT, /* default */ "", "If type is \"data\" and output is at index 0, then it will be treated as a CT fee output."},
@@ -6544,11 +6544,11 @@ static UniValue createrawmpwrtransaction(const JSONRPCRequest& request)
             "}\n"
                 },
                 RPCExamples{
-            HelpExampleCli("createrawmpwrtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\" \"{\\\"address\\\":0.01}\"")
-            + HelpExampleCli("createrawmpwrtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\" \"{\\\"data\\\":\\\"00010203\\\"}\"") +
+            HelpExampleCli("createrawRBXtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\" \"{\\\"address\\\":0.01}\"")
+            + HelpExampleCli("createrawRBXtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\" \"{\\\"data\\\":\\\"00010203\\\"}\"") +
             "\nAs a JSON-RPC call\n"
-            + HelpExampleRpc("createrawmpwrtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\", \"{\\\"address\\\":0.01}\"")
-            + HelpExampleRpc("createrawmpwrtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\", \"{\\\"data\\\":\\\"00010203\\\"}\"")
+            + HelpExampleRpc("createrawRBXtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\", \"{\\\"address\\\":0.01}\"")
+            + HelpExampleRpc("createrawRBXtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\", \"{\\\"data\\\":\\\"00010203\\\"}\"")
                 },
             }.ToString());
 
@@ -6563,7 +6563,7 @@ static UniValue createrawmpwrtransaction(const JSONRPCRequest& request)
     UniValue outputs = request.params[1].get_array();
 
     CMutableTransaction rawTx;
-    rawTx.nVersion = EMPOWER_TXN_VERSION;
+    rawTx.nVersion = Rubix_TXN_VERSION;
 
 
     if (!request.params[2].isNull()) {
@@ -6841,7 +6841,7 @@ static UniValue createrawmpwrtransaction(const JSONRPCRequest& request)
 static UniValue fundrawtransactionfrom(const JSONRPCRequest& request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp)) {
         return NullUniValue;
     }
@@ -6878,7 +6878,7 @@ static UniValue fundrawtransactionfrom(const JSONRPCRequest& request)
                     },
                     {"options", RPCArg::Type::OBJ, /* default */ "", "",
                         {
-                            {"changeAddress", RPCArg::Type::STR, /* default */ "", "The empower address to receive the change."},
+                            {"changeAddress", RPCArg::Type::STR, /* default */ "", "The Rubix address to receive the change."},
                             {"changePosition", RPCArg::Type::NUM, /* default */ "random", "The index of the change output."},
                             //{"change_type", RPCArg::Type::STR, /* default */ "", "The output type to use. Only valid if changeAddress is not specified. Options are \"legacy\", \"p2sh-segwit\", and \"bech32\". Default is set by -changetype."},
                             {"includeWatching", RPCArg::Type::BOOL, /* default */ "false", "Also select inputs which are watch only."},
@@ -6887,7 +6887,7 @@ static UniValue fundrawtransactionfrom(const JSONRPCRequest& request)
                             {"subtractFeeFromOutputs", RPCArg::Type::ARR, /* default */ "", "A json array of integers.\n"
                             "                              The fee will be equally deducted from the amount of each specified output.\n"
                             "                              The outputs are specified by their zero-based index, before any change output is added.\n"
-                            "                              Those recipients will receive less empower than you enter in their corresponding amount field.\n"
+                            "                              Those recipients will receive less Rubix than you enter in their corresponding amount field.\n"
                             "                              If no outputs are specified here, the sender pays the fee.",
                                 {
                                     {"vout_index", RPCArg::Type::NUM, /* default */ "", ""},
@@ -6971,7 +6971,7 @@ static UniValue fundrawtransactionfrom(const JSONRPCRequest& request)
             CTxDestination dest = DecodeDestination(options["changeAddress"].get_str());
 
             if (!IsValidDestination(dest)) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "changeAddress must be a valid empower address");
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "changeAddress must be a valid Rubix address");
             }
 
             coinControl.destChange = dest;
@@ -7041,7 +7041,7 @@ static UniValue fundrawtransactionfrom(const JSONRPCRequest& request)
 
     // parse hex string from parameter
     CMutableTransaction tx;
-    tx.nVersion = EMPOWER_TXN_VERSION;
+    tx.nVersion = Rubix_TXN_VERSION;
     if (!DecodeHexTx(tx, request.params[1].get_str(), true)) {
         throw JSONRPCError(RPC_DESERIALIZATION_ERROR, "TX decode failed");
     }
@@ -7924,7 +7924,7 @@ static bool PruneBlockFile(FILE *fp, bool test_only, size_t &num_blocks_in_file,
 static UniValue rewindchain(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp))
         return NullUniValue;
 
@@ -8046,7 +8046,7 @@ static UniValue pruneorphanedblocks(const JSONRPCRequest &request)
 static UniValue rehashblock(const JSONRPCRequest &request)
 {
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
-    CHDWallet *const pwallet = GetEmpowerWallet(wallet.get());
+    CHDWallet *const pwallet = GetRubixWallet(wallet.get());
     if (!EnsureWalletIsAvailable(pwallet, request.fHelp)) {
         return NullUniValue;
     }
@@ -8174,15 +8174,15 @@ static const CRPCCommand commands[] =
     { "wallet",             "listunspentblind",                 &listunspentblind,              {"minconf","maxconf","addresses","include_unsafe","query_options"} },
 
 
-    //sendmpwrtompwr // normal txn
-    { "wallet",             "sendmpwrtoblind",                  &sendmpwrtoblind,               {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
-    { "wallet",             "sendmpwrtoanon",                   &sendmpwrtoanon,                {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
+    //sendRBXtoRBX // normal txn
+    { "wallet",             "sendRBXtoblind",                  &sendRBXtoblind,               {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
+    { "wallet",             "sendRBXtoanon",                   &sendRBXtoanon,                {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
 
-    { "wallet",             "sendblindtompwr",                  &sendblindtompwr,               {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
+    { "wallet",             "sendblindtoRBX",                  &sendblindtoRBX,               {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
     { "wallet",             "sendblindtoblind",                 &sendblindtoblind,              {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
     { "wallet",             "sendblindtoanon",                  &sendblindtoanon,               {"address","amount","comment","comment_to","subtractfeefromamount","narration"} },
 
-    { "wallet",             "sendanontompwr",                   &sendanontompwr,                {"address","amount","comment","comment_to","subtractfeefromamount","narration","ringsize","inputs_per_sig"} },
+    { "wallet",             "sendanontoRBX",                   &sendanontoRBX,                {"address","amount","comment","comment_to","subtractfeefromamount","narration","ringsize","inputs_per_sig"} },
     { "wallet",             "sendanontoblind",                  &sendanontoblind,               {"address","amount","comment","comment_to","subtractfeefromamount","narration","ringsize","inputs_per_sig"} },
     { "wallet",             "sendanontoanon",                   &sendanontoanon,                {"address","amount","comment","comment_to","subtractfeefromamount","narration","ringsize","inputs_per_sig"} },
 
@@ -8205,7 +8205,7 @@ static const CRPCCommand commands[] =
     { "governance",         "tallyvotes",                       &tallyvotes,                    {"proposal","height_start","height_end"} },
 
     { "rawtransactions",    "buildscript",                      &buildscript,                   {"json"} },
-    { "rawtransactions",    "createrawmpwrtransaction",         &createrawmpwrtransaction,      {"inputs","outputs","locktime","replaceable"} },
+    { "rawtransactions",    "createrawRBXtransaction",         &createrawRBXtransaction,      {"inputs","outputs","locktime","replaceable"} },
     { "rawtransactions",    "fundrawtransactionfrom",           &fundrawtransactionfrom,        {"input_type","hexstring","input_amounts","output_amounts","options"} },
     { "rawtransactions",    "verifycommitment",                 &verifycommitment,              {"commitment","blind","amount"} },
     { "rawtransactions",    "rewindrangeproof",                 &rewindrangeproof,              {"rangeproof","commitment","nonce_key","ephemeral_key"} },

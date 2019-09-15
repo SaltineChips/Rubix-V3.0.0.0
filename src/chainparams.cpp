@@ -175,7 +175,7 @@ static CBlock CreateGenesisBlockRegTest(uint32_t nTime, uint32_t nNonce, uint32_
     const char *pszTimestamp = "The Times 18/Jun/2019 Domestic Abuse Bill ‘traps’ migrant women";
 
     CMutableTransaction txNew;
-    txNew.nVersion = EMPOWER_TXN_VERSION;
+    txNew.nVersion = Rubix_TXN_VERSION;
     txNew.SetType(TXN_COINBASE);
     txNew.vin.resize(1);
     uint32_t nHeight = 0;  // bip34
@@ -193,7 +193,7 @@ static CBlock CreateGenesisBlockRegTest(uint32_t nTime, uint32_t nNonce, uint32_
     genesis.nTime    = nTime;
     genesis.nBits    = nBits;
     genesis.nNonce   = nNonce;
-    genesis.nVersion = EMPOWER_BLOCK_VERSION;
+    genesis.nVersion = Rubix_BLOCK_VERSION;
     genesis.vtx.push_back(MakeTransactionRef(std::move(txNew)));
 
     genesis.hashPrevBlock.SetNull();
@@ -208,7 +208,7 @@ static CBlock CreateGenesisBlockTestNet(uint32_t nTime, uint32_t nNonce, uint32_
     const char *pszTimestamp = "The Times 18/Jun/2019 Domestic Abuse Bill ‘traps’ migrant women";
 
     CMutableTransaction txNew;
-    txNew.nVersion = EMPOWER_TXN_VERSION;
+    txNew.nVersion = Rubix_TXN_VERSION;
     txNew.SetType(TXN_COINBASE);
     txNew.vin.resize(1);
     uint32_t nHeight = 0;  // bip34
@@ -226,7 +226,7 @@ static CBlock CreateGenesisBlockTestNet(uint32_t nTime, uint32_t nNonce, uint32_
     genesis.nTime    = nTime;
     genesis.nBits    = nBits;
     genesis.nNonce   = nNonce;
-    genesis.nVersion = EMPOWER_BLOCK_VERSION;
+    genesis.nVersion = Rubix_BLOCK_VERSION;
     genesis.vtx.push_back(MakeTransactionRef(std::move(txNew)));
 
     genesis.hashPrevBlock.SetNull();
@@ -241,7 +241,7 @@ static CBlock CreateGenesisBlockMainNet(uint32_t nTime, uint32_t nNonce, uint32_
     const char *pszTimestamp = "The Charlotte Post 22/Jun/2019 Prosecutors change approach on sexual assault in NC";
 
     CMutableTransaction txNew;
-    txNew.nVersion = EMPOWER_TXN_VERSION;
+    txNew.nVersion = Rubix_TXN_VERSION;
     txNew.SetType(TXN_COINBASE);
 
     txNew.vin.resize(1);
@@ -260,7 +260,7 @@ static CBlock CreateGenesisBlockMainNet(uint32_t nTime, uint32_t nNonce, uint32_
     genesis.nTime    = nTime;
     genesis.nBits    = nBits;
     genesis.nNonce   = nNonce;
-    genesis.nVersion = EMPOWER_BLOCK_VERSION;
+    genesis.nVersion = Rubix_BLOCK_VERSION;
     genesis.vtx.push_back(MakeTransactionRef(std::move(txNew)));
 
     genesis.hashPrevBlock.SetNull();
@@ -367,9 +367,9 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        //vSeeds.emplace_back("mainnet-seed.empower.io");
-        //vSeeds.emplace_back("dnsseed-mainnet.empower.io");
-        //vSeeds.emplace_back("mainnet.empower.io");
+        //vSeeds.emplace_back("mainnet-seed.Rubix.io");
+        //vSeeds.emplace_back("dnsseed-mainnet.Rubix.io");
+        //vSeeds.emplace_back("mainnet.Rubix.io");
 
 
         //vDevFundSettings.emplace_back(0,
@@ -534,8 +534,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        //vSeeds.emplace_back("testnet-seed.empower.io");
-        //vSeeds.emplace_back("dnsseed-testnet.empower.io");
+        //vSeeds.emplace_back("testnet-seed.Rubix.io");
+        //vSeeds.emplace_back("dnsseed-testnet.Rubix.io");
 
         //vDevFundSettings.push_back(std::make_pair(0, DevFundSettings("rTvv9vsbu269mjYYEecPYinDG8Bt7D86qD", 10, 60)));
 
@@ -823,11 +823,11 @@ void SetOldParams(std::unique_ptr<CChainParams> &params)
     }
 };
 
-void ResetParams(std::string sNetworkId, bool fEmpowerModeIn)
+void ResetParams(std::string sNetworkId, bool fRubixModeIn)
 {
     // Hack to pass old unit tests
     globalChainParams = CreateChainParams(sNetworkId);
-    if (!fEmpowerModeIn) {
+    if (!fRubixModeIn) {
         SetOldParams(globalChainParams);
     }
 };

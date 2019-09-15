@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_SCRIPT_EMPOWERCONSENSUS_H
-#define EMPOWER_SCRIPT_EMPOWERCONSENSUS_H
+#ifndef Rubix_SCRIPT_RubixCONSENSUS_H
+#define Rubix_SCRIPT_RubixCONSENSUS_H
 
 #include <stdint.h>
 
@@ -21,7 +21,7 @@
   #elif defined(HAVE_FUNC_ATTRIBUTE_VISIBILITY)
     #define EXPORT_SYMBOL __attribute__ ((visibility ("default")))
   #endif
-#elif defined(MSC_VER) && !defined(STATIC_LIBEMPOWERCONSENSUS)
+#elif defined(MSC_VER) && !defined(STATIC_LIBRubixCONSENSUS)
   #define EXPORT_SYMBOL __declspec(dllimport)
 #endif
 
@@ -80,4 +80,4 @@ EXPORT_SYMBOL unsigned int bitcoinconsensus_version();
 
 #undef EXPORT_SYMBOL
 
-#endif // EMPOWER_SCRIPT_EMPOWERCONSENSUS_H
+#endif // Rubix_SCRIPT_RubixCONSENSUS_H

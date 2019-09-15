@@ -18,7 +18,7 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/empower/empower-core
+url=https://github.com/Rubix/Rubix-core
 proc=2
 mem=3000
 lxc=true
@@ -33,7 +33,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the empower, gitian-builder, gitian.sigs, and bitcoin-detached-sigs.
+Run this script from the directory containing the Rubix, gitian-builder, gitian.sigs, and bitcoin-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -41,7 +41,7 @@ version         Version number, commit, or branch to build. If building a commit
 
 Options:
 -c|--commit     Indicate that the version argument is for a commit or branch
--u|--url        Specify the URL of the repository. Default is https://github.com/empower/empower-core
+-u|--url        Specify the URL of the repository. Default is https://github.com/Rubix/Rubix-core
 -v|--verify     Verify the Gitian build
 -b|--build      Do a Gitian build
 -s|--sign       Make signed binaries for Windows and Mac OSX
@@ -251,8 +251,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/empower/gitian.sigs
-    git clone https://github.com/empower/empower-detached-sigs
+    git clone https://github.com/Rubix/gitian.sigs
+    git clone https://github.com/Rubix/Rubix-detached-sigs
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -270,7 +270,7 @@ then
 fi
 
 # Set up build
-pushd ./empower-core
+pushd ./Rubix-core
 git fetch --tags
 git checkout ${COMMIT}
 popd
@@ -279,7 +279,7 @@ popd
 if [[ $build = true ]]
 then
     # Make output folder
-    mkdir -p ./empower-binaries/${VERSION}
+    mkdir -p ./Rubix-binaries/${VERSION}
 
     # Build Dependencies
     echo ""
@@ -289,7 +289,7 @@ then
     mkdir -p inputs
     wget -N -P inputs $osslPatchUrl
     wget -N -P inputs $osslTarUrl
-    make -C ../empower-core/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../Rubix-core/depends download SOURCES_PATH=`pwd`/cache/common
 
     # Linux
     if [[ $linux = true ]]
@@ -297,9 +297,9 @@ then
         echo ""
         echo "Compiling ${VERSION} Linux"
         echo ""
-        ./bin/gbuild --allow-sudo -j ${proc} -m ${mem} --commit empower-core=${COMMIT} --url empower-core=${url} ../empower-core/contrib/gitian-descriptors/gitian-linux.yml
-        ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../empower-core/contrib/gitian-descriptors/gitian-linux.yml
-        mv build/out/empower-*.tar.gz build/out/src/empower-*.tar.gz ../empower-binaries/${VERSION}
+        ./bin/gbuild --allow-sudo -j ${proc} -m ${mem} --commit Rubix-core=${COMMIT} --url Rubix-core=${url} ../Rubix-core/contrib/gitian-descriptors/gitian-linux.yml
+        ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../Rubix-core/contrib/gitian-descriptors/gitian-linux.yml
+        mv build/out/Rubix-*.tar.gz build/out/src/Rubix-*.tar.gz ../Rubix-binaries/${VERSION}
     fi
     # Windows
     if [[ $windows = true ]]
@@ -307,10 +307,10 @@ then
         echo ""
         echo "Compiling ${VERSION} Windows"
         echo ""
-        ./bin/gbuild -j ${proc} -m ${mem} --commit empower-core=${COMMIT} --url empower-core=${url} ../empower-core/contrib/gitian-descriptors/gitian-win.yml
-        ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../empower-core/contrib/gitian-descriptors/gitian-win.yml
-        mv build/out/empower-*-win-unsigned.tar.gz inputs/empower-win-unsigned.tar.gz
-        mv build/out/empower-*.zip build/out/empower-*.exe ../empower-binaries/${VERSION}
+        ./bin/gbuild -j ${proc} -m ${mem} --commit Rubix-core=${COMMIT} --url Rubix-core=${url} ../Rubix-core/contrib/gitian-descriptors/gitian-win.yml
+        ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../Rubix-core/contrib/gitian-descriptors/gitian-win.yml
+        mv build/out/Rubix-*-win-unsigned.tar.gz inputs/Rubix-win-unsigned.tar.gz
+        mv build/out/Rubix-*.zip build/out/Rubix-*.exe ../Rubix-binaries/${VERSION}
     fi
     # Mac OSX
     if [[ $osx = true ]]
@@ -318,10 +318,10 @@ then
         echo ""
         echo "Compiling ${VERSION} Mac OSX"
         echo ""
-        ./bin/gbuild -j ${proc} -m ${mem} --commit empower-core=${COMMIT} --url empower-core=${url} ../empower-core/contrib/gitian-descriptors/gitian-osx.yml
-        ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../empower-core/contrib/gitian-descriptors/gitian-osx.yml
-        mv build/out/empower-*-osx-unsigned.tar.gz inputs/empower-osx-unsigned.tar.gz
-        mv build/out/empower-*.tar.gz build/out/empower-*.dmg ../empower-binaries/${VERSION}
+        ./bin/gbuild -j ${proc} -m ${mem} --commit Rubix-core=${COMMIT} --url Rubix-core=${url} ../Rubix-core/contrib/gitian-descriptors/gitian-osx.yml
+        ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../Rubix-core/contrib/gitian-descriptors/gitian-osx.yml
+        mv build/out/Rubix-*-osx-unsigned.tar.gz inputs/Rubix-osx-unsigned.tar.gz
+        mv build/out/Rubix-*.tar.gz build/out/Rubix-*.dmg ../Rubix-binaries/${VERSION}
     fi
     popd
 
@@ -348,27 +348,27 @@ then
     echo ""
     echo "Verifying v${VERSION} Linux"
     echo ""
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../empower-core/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../Rubix-core/contrib/gitian-descriptors/gitian-linux.yml
     # Windows
     echo ""
     echo "Verifying v${VERSION} Windows"
     echo ""
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../empower-core/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../Rubix-core/contrib/gitian-descriptors/gitian-win.yml
     # Mac OSX
     echo ""
     echo "Verifying v${VERSION} Mac OSX"
     echo ""
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../empower-core/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../Rubix-core/contrib/gitian-descriptors/gitian-osx.yml
     # Signed Windows
     echo ""
     echo "Verifying v${VERSION} Signed Windows"
     echo ""
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../empower-core/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../Rubix-core/contrib/gitian-descriptors/gitian-osx-signer.yml
     # Signed Mac OSX
     echo ""
     echo "Verifying v${VERSION} Signed Mac OSX"
     echo ""
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../empower-core/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../Rubix-core/contrib/gitian-descriptors/gitian-osx-signer.yml
     popd
 fi
 
@@ -382,10 +382,10 @@ then
         echo ""
         echo "Signing ${VERSION} Windows"
         echo ""
-        ./bin/gbuild --skip-image --upgrade --commit signature=${COMMIT} ../empower-core/contrib/gitian-descriptors/gitian-win-signer.yml
-        ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../empower-core/contrib/gitian-descriptors/gitian-win-signer.yml
-        mv build/out/empower-*win64-setup.exe ../empower-binaries/${VERSION}
-        mv build/out/empower-*win32-setup.exe ../empower-binaries/${VERSION}
+        ./bin/gbuild --skip-image --upgrade --commit signature=${COMMIT} ../Rubix-core/contrib/gitian-descriptors/gitian-win-signer.yml
+        ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../Rubix-core/contrib/gitian-descriptors/gitian-win-signer.yml
+        mv build/out/Rubix-*win64-setup.exe ../Rubix-binaries/${VERSION}
+        mv build/out/Rubix-*win32-setup.exe ../Rubix-binaries/${VERSION}
     fi
     # Sign Mac OSX
     if [[ $osx = true ]]
@@ -393,9 +393,9 @@ then
         echo ""
         echo "Signing ${VERSION} Mac OSX"
         echo ""
-        ./bin/gbuild --skip-image --upgrade --commit signature=${COMMIT} ../empower-core/contrib/gitian-descriptors/gitian-osx-signer.yml
-        ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../empower-core/contrib/gitian-descriptors/gitian-osx-signer.yml
-        mv build/out/empower-osx-signed.dmg ../empower-binaries/${VERSION}/empower-${VERSION}-osx.dmg
+        ./bin/gbuild --skip-image --upgrade --commit signature=${COMMIT} ../Rubix-core/contrib/gitian-descriptors/gitian-osx-signer.yml
+        ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../Rubix-core/contrib/gitian-descriptors/gitian-osx-signer.yml
+        mv build/out/Rubix-osx-signed.dmg ../Rubix-binaries/${VERSION}/Rubix-${VERSION}-osx.dmg
     fi
     popd
 

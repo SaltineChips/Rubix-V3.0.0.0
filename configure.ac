@@ -3,24 +3,24 @@ AC_PREREQ([2.60])
 define(_CLIENT_VERSION_MAJOR, 1)
 define(_CLIENT_VERSION_MINOR, 0)
 define(_CLIENT_VERSION_REVISION, 0)
-define(_CLIENT_VERSION_EMPOWER, 1)
+define(_CLIENT_VERSION_Rubix, 1)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_RC, 0)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2019)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Empower Network]])
-AC_INIT([Empower Network],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION._CLIENT_VERSION_EMPOWER],[https://github.com/empower/empower-core/issues],[empower],[https://empower.io/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Rubix Network]])
+AC_INIT([Rubix Network],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION._CLIENT_VERSION_Rubix],[https://github.com/Rubix/Rubix-core/issues],[Rubix],[https://Rubix.io/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=empowerd
-BITCOIN_GUI_NAME=empower-qt
-BITCOIN_CLI_NAME=empower-cli
-BITCOIN_TX_NAME=empower-tx
-BITCOIN_WALLET_TOOL_NAME=empower-wallet
+BITCOIN_DAEMON_NAME=Rubixd
+BITCOIN_GUI_NAME=Rubix-qt
+BITCOIN_CLI_NAME=Rubix-cli
+BITCOIN_TX_NAME=Rubix-tx
+BITCOIN_WALLET_TOOL_NAME=Rubix-wallet
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
@@ -30,9 +30,9 @@ fi
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef EMPOWER_CONFIG_H])
-AH_TOP([#define EMPOWER_CONFIG_H])
-AH_BOTTOM([#endif //EMPOWER_CONFIG_H])
+AH_TOP([#ifndef Rubix_CONFIG_H])
+AH_TOP([#define Rubix_CONFIG_H])
+AH_BOTTOM([#endif //Rubix_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
@@ -1376,19 +1376,19 @@ fi
 
 
 
-AC_MSG_CHECKING([whether to build empowerd])
+AC_MSG_CHECKING([whether to build Rubixd])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build empower-cli])
+AC_MSG_CHECKING([whether to build Rubix-cli])
 AM_CONDITIONAL([BUILD_BITCOIN_CLI], [test x$build_bitcoin_cli = xyes])
 AC_MSG_RESULT($build_bitcoin_cli)
 
-AC_MSG_CHECKING([whether to build empower-tx])
+AC_MSG_CHECKING([whether to build Rubix-tx])
 AM_CONDITIONAL([BUILD_BITCOIN_TX], [test x$build_bitcoin_tx = xyes])
 AC_MSG_RESULT($build_bitcoin_tx)
 
-AC_MSG_CHECKING([whether to build empower-wallet])
+AC_MSG_CHECKING([whether to build Rubix-wallet])
 AM_CONDITIONAL([BUILD_BITCOIN_WALLET], [test x$build_bitcoin_wallet = xyes])
 AC_MSG_RESULT($build_bitcoin_wallet)
 
@@ -1396,7 +1396,7 @@ AC_MSG_CHECKING([whether to build libraries])
 AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test x$build_bitcoin_libs = xyes])
 if test x$build_bitcoin_libs = xyes; then
   AC_DEFINE(HAVE_CONSENSUS_LIB, 1, [Define this symbol if the consensus lib has been built])
-  AC_CONFIG_FILES([libempowerconsensus.pc:libempowerconsensus.pc.in])
+  AC_CONFIG_FILES([libRubixconsensus.pc:libRubixconsensus.pc.in])
 fi
 AC_MSG_RESULT($build_bitcoin_libs)
 
@@ -1568,7 +1568,7 @@ AM_CONDITIONAL([USE_ASM],[test x$use_asm = xyes])
 
 AC_DEFINE(CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MAJOR, [Major version])
 AC_DEFINE(CLIENT_VERSION_MINOR, _CLIENT_VERSION_MINOR, [Minor version])
-AC_DEFINE(CLIENT_VERSION_EMPOWER, _CLIENT_VERSION_EMPOWER, [Empower version])
+AC_DEFINE(CLIENT_VERSION_Rubix, _CLIENT_VERSION_Rubix, [Rubix version])
 AC_DEFINE(CLIENT_VERSION_REVISION, _CLIENT_VERSION_REVISION, [Build revision])
 AC_DEFINE(CLIENT_VERSION_BUILD, _CLIENT_VERSION_BUILD, [Version Build])
 AC_DEFINE(CLIENT_VERSION_IS_RELEASE, _CLIENT_VERSION_IS_RELEASE, [Version is release])
@@ -1579,7 +1579,7 @@ define(_COPYRIGHT_HOLDERS_FINAL, [patsubst(_COPYRIGHT_HOLDERS, [%s], [_COPYRIGHT
 AC_DEFINE(COPYRIGHT_HOLDERS_FINAL, "_COPYRIGHT_HOLDERS_FINAL", [Copyright holder(s)])
 AC_SUBST(CLIENT_VERSION_MAJOR, _CLIENT_VERSION_MAJOR)
 AC_SUBST(CLIENT_VERSION_MINOR, _CLIENT_VERSION_MINOR)
-AC_SUBST(CLIENT_VERSION_EMPOWER, _CLIENT_VERSION_EMPOWER)
+AC_SUBST(CLIENT_VERSION_Rubix, _CLIENT_VERSION_Rubix)
 AC_SUBST(CLIENT_VERSION_REVISION, _CLIENT_VERSION_REVISION)
 AC_SUBST(CLIENT_VERSION_BUILD, _CLIENT_VERSION_BUILD)
 AC_SUBST(CLIENT_VERSION_IS_RELEASE, _CLIENT_VERSION_IS_RELEASE)

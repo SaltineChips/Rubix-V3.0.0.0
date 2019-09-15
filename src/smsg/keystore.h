@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_SMSG_KEYSTORE_H
-#define EMPOWER_SMSG_KEYSTORE_H
+#ifndef Rubix_SMSG_KEYSTORE_H
+#define Rubix_SMSG_KEYSTORE_H
 
 #include <key.h>
 #include <pubkey.h>
@@ -60,4 +60,4 @@ public:
 
 } // namespace smsg
 
-#endif //EMPOWER_SMSG_KEYSTORE_H
+#endif //Rubix_SMSG_KEYSTORE_H

@@ -1728,7 +1728,7 @@ static bool ScanBlock(CSMSG &smsg, const CBlock &block, SecMsgDB &addrpkdb,
     for (const auto &tx : block.vtx) {
         // Harvest public keys from coinstake txns
 
-        if (!tx->IsEmpowerVersion()) // skip legacy txns
+        if (!tx->IsRubixVersion()) // skip legacy txns
             continue;
 
         for (const auto &txin : tx->vin) {
@@ -3845,7 +3845,7 @@ int CSMSG::FundMsg(SecureMessage &smsg, std::string &sError, bool fTestFee, CAmo
         return errorN(SMSG_GENERAL_ERROR, sError, __func__, "Message hash failed.");
     }
 
-    txFund.nVersion = EMPOWER_TXN_VERSION;
+    txFund.nVersion = Rubix_TXN_VERSION;
 
     size_t nMsgBytes = SMSG_HDR_LEN + smsg.nPayload;
 

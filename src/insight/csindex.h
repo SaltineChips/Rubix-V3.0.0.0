@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_INSIGHT_CSINDEX_H
-#define EMPOWER_INSIGHT_CSINDEX_H
+#ifndef Rubix_INSIGHT_CSINDEX_H
+#define Rubix_INSIGHT_CSINDEX_H
 
 #include <script/standard.h>
 
@@ -98,4 +98,4 @@ public:
     }
 };
 
-#endif // EMPOWER_INSIGHT_CSINDEX_H
+#endif // Rubix_INSIGHT_CSINDEX_H

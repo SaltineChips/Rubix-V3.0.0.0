@@ -3,11 +3,11 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_empower import EmpowerTestFramework
-from test_framework.test_empower import isclose
+from test_framework.test_Rubix import RubixTestFramework
+from test_framework.test_Rubix import isclose
 
 
-class WalletEmpowerWatchOnlyTest(EmpowerTestFramework):
+class WalletRubixWatchOnlyTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
@@ -47,4 +47,4 @@ class WalletEmpowerWatchOnlyTest(EmpowerTestFramework):
 
 
 if __name__ == '__main__':
-    WalletEmpowerWatchOnlyTest().main()
+    WalletRubixWatchOnlyTest().main()

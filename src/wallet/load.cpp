@@ -70,7 +70,7 @@ bool LoadWallets(interfaces::Chain& chain, const std::vector<std::string>& walle
         if (!pwallet) {
             return false;
         }
-        if (fEmpowerMode && !((CHDWallet*)pwallet.get())->Initialise()) {
+        if (fRubixMode && !((CHDWallet*)pwallet.get())->Initialise()) {
             return false;
         }
         AddWallet(pwallet);

@@ -1,14 +1,14 @@
 *.tar.gz
 
 *.exe
-src/empower
-src/empowerd
-src/empower-cli
-src/empower-tx
-src/empower-wallet
-src/test/test_empower
-src/test/test_empower_fuzzy
-src/qt/test/test_empower-qt
+src/Rubix
+src/Rubixd
+src/Rubix-cli
+src/Rubix-tx
+src/Rubix-wallet
+src/test/test_Rubix
+src/test/test_Rubix_fuzzy
+src/qt/test/test_Rubix-qt
 
 # autoreconf
 src/Makefile.in
@@ -52,11 +52,11 @@ src/qt/bitcoin-qt.creator.user
 src/qt/bitcoin-qt.files
 src/qt/bitcoin-qt.includes
 
-src/qt/empower-qt.config
-src/qt/empower-qt.creator
-src/qt/empower-qt.creator.user
-src/qt/empower-qt.files
-src/qt/empower-qt.includes
+src/qt/Rubix-qt.config
+src/qt/Rubix-qt.creator
+src/qt/Rubix-qt.creator.user
+src/qt/Rubix-qt.files
+src/qt/Rubix-qt.includes
 
 .deps
 .dirstamp
@@ -92,13 +92,13 @@ src/qt/empower-qt.includes
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-empower-qt
-Empower-Qt.app
+Rubix-qt
+Rubix-Qt.app
 background.tiff*
 
 # Unit-tests
 Makefile.test
-empower-qt_test
+Rubix-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -111,7 +111,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_empower.coverage/
+test_Rubix.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -126,7 +126,7 @@ test/cache/*
 
 /doc/doxygen/
 
-libempowerconsensus.pc
+libRubixconsensus.pc
 contrib/devtools/split-debug.sh
 
 # Output from running db4 installation

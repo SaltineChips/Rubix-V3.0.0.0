@@ -7,8 +7,8 @@ import time
 import json
 import binascii
 
-from test_framework.test_empower import (
-    EmpowerTestFramework,
+from test_framework.test_Rubix import (
+    RubixTestFramework,
     isclose,
     getIndexAtProperty,
 )
@@ -16,7 +16,7 @@ from test_framework.util import assert_raises_rpc_error, connect_nodes
 from test_framework.authproxy import JSONRPCException
 
 
-class SmsgPaidTest(EmpowerTestFramework):
+class SmsgPaidTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3

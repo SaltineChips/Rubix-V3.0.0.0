@@ -19,7 +19,7 @@
 
 #include <boost/test/unit_test.hpp>
 
-BOOST_FIXTURE_TEST_SUITE(empowerchain_tests, EmpowerBasicTestingSetup)
+BOOST_FIXTURE_TEST_SUITE(Rubixchain_tests, RubixBasicTestingSetup)
 
 
 BOOST_AUTO_TEST_CASE(oldversion_test)
@@ -51,7 +51,7 @@ BOOST_AUTO_TEST_CASE(signature_test)
     CKeyID id = pk.GetID();
 
     CMutableTransaction txn;
-    txn.nVersion = EMPOWER_TXN_VERSION;
+    txn.nVersion = Rubix_TXN_VERSION;
     txn.nLockTime = 0;
 
     int nBlockHeight = 22;
@@ -66,7 +66,7 @@ BOOST_AUTO_TEST_CASE(signature_test)
     txn.vpout.push_back(out1);
 
     CMutableTransaction txn2;
-    txn2.nVersion = EMPOWER_TXN_VERSION;
+    txn2.nVersion = Rubix_TXN_VERSION;
     txn2.vin.push_back(CTxIn(txn.GetHash(), 0));
 
     std::vector<uint8_t> vchAmount(8);
@@ -80,7 +80,7 @@ BOOST_AUTO_TEST_CASE(signature_test)
     BOOST_CHECK(serror == SCRIPT_ERR_OK);
 }
 
-BOOST_AUTO_TEST_CASE(empowerchain_test)
+BOOST_AUTO_TEST_CASE(Rubixchain_test)
 {
     SeedInsecureRand();
     CBasicKeyStore keystore;
@@ -95,11 +95,11 @@ BOOST_AUTO_TEST_CASE(empowerchain_test)
     CScript script = CScript() << OP_DUP << OP_HASH160 << ToByteVector(id) << OP_EQUALVERIFY << OP_CHECKSIG;
 
     CBlock blk;
-    blk.nVersion = EMPOWER_BLOCK_VERSION;
+    blk.nVersion = Rubix_BLOCK_VERSION;
     blk.nTime = 1487406900;
 
     CMutableTransaction txn;
-    txn.nVersion = EMPOWER_TXN_VERSION;
+    txn.nVersion = Rubix_TXN_VERSION;
     txn.SetType(TXN_COINBASE);
     txn.nLockTime = 0;
     OUTPUT_PTR<CTxOutStandard> out0 = MAKE_OUTPUT<CTxOutStandard>();
@@ -129,7 +129,7 @@ BOOST_AUTO_TEST_CASE(empowerchain_test)
 
     CMutableTransaction txnSpend;
 
-    txnSpend.nVersion = EMPOWER_BLOCK_VERSION;
+    txnSpend.nVersion = Rubix_BLOCK_VERSION;
 }
 
 BOOST_AUTO_TEST_CASE(opiscoinstake_test)
@@ -203,7 +203,7 @@ BOOST_AUTO_TEST_CASE(opiscoinstake_test)
     SignatureData sigdataA, sigdataB, sigdataC;
 
     CMutableTransaction txn;
-    txn.nVersion = EMPOWER_TXN_VERSION;
+    txn.nVersion = Rubix_TXN_VERSION;
     txn.SetType(TXN_COINSTAKE);
     txn.nLockTime = 0;
 
@@ -235,7 +235,7 @@ BOOST_AUTO_TEST_CASE(opiscoinstake_test)
     BOOST_CHECK(VerifyScript(scriptSig, script, &sigdataA.scriptWitness, nFlags, MutableTransactionSignatureChecker(&txn, 0, vchAmount), &serror));
 
 
-    txn.nVersion = EMPOWER_TXN_VERSION;
+    txn.nVersion = Rubix_TXN_VERSION;
     txn.SetType(TXN_STANDARD);
     BOOST_CHECK(!txn.IsCoinStake());
 
@@ -311,8 +311,8 @@ BOOST_AUTO_TEST_CASE(varints)
 BOOST_AUTO_TEST_CASE(mixed_input_types)
 {
     CMutableTransaction txn;
-    txn.nVersion = EMPOWER_TXN_VERSION;
-    BOOST_CHECK(txn.IsEmpowerVersion());
+    txn.nVersion = Rubix_TXN_VERSION;
+    BOOST_CHECK(txn.IsRubixVersion());
 
     CAmount txfee;
     int nSpendHeight = 1;
@@ -320,8 +320,8 @@ BOOST_AUTO_TEST_CASE(mixed_input_types)
     CCoinsViewCache inputs(&viewDummy);
 
     CMutableTransaction txnPrev;
-    txnPrev.nVersion = EMPOWER_TXN_VERSION;
-    BOOST_CHECK(txnPrev.IsEmpowerVersion());
+    txnPrev.nVersion = Rubix_TXN_VERSION;
+    BOOST_CHECK(txnPrev.IsRubixVersion());
 
     CScript scriptPubKey;
     txnPrev.vpout.push_back(MAKE_OUTPUT<CTxOutStandard>(1 * COIN, scriptPubKey));

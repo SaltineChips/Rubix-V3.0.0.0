@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_USBDEVICE_USBDEVICE_H
-#define EMPOWER_USBDEVICE_USBDEVICE_H
+#ifndef Rubix_USBDEVICE_USBDEVICE_H
+#define Rubix_USBDEVICE_USBDEVICE_H
 
 #include <string.h>
 #include <assert.h>
@@ -166,7 +166,7 @@ public:
     DeviceSignatureCreator(CUSBDevice *pDeviceIn, const CMutableTransaction *txToIn, unsigned int nInIn, const std::vector<uint8_t> &amountIn, int nHashTypeIn=SIGHASH_ALL);
     const BaseSignatureChecker &Checker() const override { return checker; }
 
-    bool IsEmpowerVersion() const override { return txTo && txTo->IsEmpowerVersion(); }
+    bool IsRubixVersion() const override { return txTo && txTo->IsRubixVersion(); }
     bool IsCoinStake() const override { return txTo && txTo->IsCoinStake(); }
 
     bool CreateSig(const SigningProvider& provider, std::vector<unsigned char> &vchSig, const CKeyID &keyid, const CScript &scriptCode, SigVersion sigversion) const override;
@@ -174,4 +174,4 @@ public:
 
 } // usb_device
 
-#endif // EMPOWER_USBDEVICE_USBDEVICE_H
+#endif // Rubix_USBDEVICE_USBDEVICE_H

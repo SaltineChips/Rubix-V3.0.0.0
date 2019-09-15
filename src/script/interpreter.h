@@ -166,7 +166,7 @@ public:
         return false;
     }
 
-    virtual bool IsEmpowerVersion() const
+    virtual bool IsRubixVersion() const
     {
         return false;
     }
@@ -198,9 +198,9 @@ public:
         return txTo && txTo->IsCoinStake();
     }
 
-    bool IsEmpowerVersion() const override
+    bool IsRubixVersion() const override
     {
-        return txTo && txTo->IsEmpowerVersion();
+        return txTo && txTo->IsRubixVersion();
     }
 };
 

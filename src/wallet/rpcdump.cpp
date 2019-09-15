@@ -295,7 +295,7 @@ UniValue importaddress(const JSONRPCRequest& request)
             "as change, and not show up in many RPCs.\n"
             "Note: Use \"getwalletinfo\" to query the scanning progress.\n",
                 {
-                    {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The Empower address (or hex-encoded script)"},
+                    {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The Rubix address (or hex-encoded script)"},
                     {"label", RPCArg::Type::STR, /* default */ "\"\"", "An optional label"},
                     {"rescan", RPCArg::Type::BOOL, /* default */ "true", "Rescan the wallet for transactions"},
                     {"p2sh", RPCArg::Type::BOOL, /* default */ "false", "Add the P2SH version of the script as well"},
@@ -352,7 +352,7 @@ UniValue importaddress(const JSONRPCRequest& request)
             std::vector<unsigned char> data(ParseHex(request.params[0].get_str()));
             ImportScript(pwallet, CScript(data.begin(), data.end()), strLabel, fP2SH);
         } else {
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Empower address or script");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Rubix address or script");
         }
     }
     if (fRescan)
@@ -645,10 +645,10 @@ UniValue importwallet(const JSONRPCRequest& request)
                     UniValue inj;
                     inj.read(sJson);
 
-                    if (!IsEmpowerWallet(pwallet)) {
+                    if (!IsRubixWallet(pwallet)) {
                         throw JSONRPCError(RPC_INVALID_PARAMETER, "Legacy wallet");
                     }
-                    if (!GetEmpowerWallet(pwallet)->LoadJson(inj, sError)) {
+                    if (!GetRubixWallet(pwallet)->LoadJson(inj, sError)) {
                         throw JSONRPCError(RPC_WALLET_ERROR, "LoadJson failed " + sError);
                     }
                 }
@@ -770,7 +770,7 @@ UniValue dumpprivkey(const JSONRPCRequest& request)
                 "\nReveals the private key corresponding to 'address'.\n"
                 "Then the importprivkey can be used with this output\n",
                 {
-                    {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The empower address for the private key"},
+                    {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The Rubix address for the private key"},
                 },
                 RPCResult{
             "\"key\"                (string) The private key\n"
@@ -790,12 +790,12 @@ UniValue dumpprivkey(const JSONRPCRequest& request)
     std::string strAddress = request.params[0].get_str();
     CTxDestination dest = DecodeDestination(strAddress);
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Empower address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Rubix address");
     }
 
-    if (IsEmpowerWallet(pwallet)) {
+    if (IsRubixWallet(pwallet)) {
         if (dest.type() == typeid(CExtKeyPair)) {
-            CHDWallet *phdw = GetEmpowerWallet(pwallet);
+            CHDWallet *phdw = GetRubixWallet(pwallet);
             CExtKeyPair ek = boost::get<CExtKeyPair>(dest);
             CKeyID id = ek.GetID();
             CStoredExtKey sek;
@@ -844,7 +844,7 @@ UniValue dumpwallet(const JSONRPCRequest& request)
                 "Note that if your wallet contains keys which are not derived from your HD seed (e.g. imported keys), these are not covered by\n"
                 "only backing up the seed itself, and must be backed up too (e.g. ensure you back up the whole dumpfile).\n",
                 {
-                    {"filename", RPCArg::Type::STR, RPCArg::Optional::NO, "The filename with path (either absolute or relative to empowerd)"},
+                    {"filename", RPCArg::Type::STR, RPCArg::Optional::NO, "The filename with path (either absolute or relative to Rubixd)"},
                 },
                 RPCResult{
             "{                           (json object)\n"
@@ -894,7 +894,7 @@ UniValue dumpwallet(const JSONRPCRequest& request)
     std::sort(vKeyBirth.begin(), vKeyBirth.end());
 
     // produce output
-    file << strprintf("# Wallet dump created by Empower %s\n", CLIENT_BUILD);
+    file << strprintf("# Wallet dump created by Rubix %s\n", CLIENT_BUILD);
     file << strprintf("# * Created on %s\n", FormatISO8601DateTime(GetTime()));
     const Optional<int> tip_height = locked_chain->getHeight();
     file << strprintf("# * Best block at time of backup was %i (%s),\n", tip_height.get_value_or(-1), tip_height ? locked_chain->getBlockHash(*tip_height).ToString() : "(missing block hash)");
@@ -936,12 +936,12 @@ UniValue dumpwallet(const JSONRPCRequest& request)
         }
     }
 
-    if (IsEmpowerWallet(pwallet)) {
+    if (IsRubixWallet(pwallet)) {
         std::string sError;
         file << "\n# --- Begin JSON --- \n";
 
         UniValue rv(UniValue::VOBJ);
-        if (!GetEmpowerWallet(pwallet)->DumpJson(rv, sError)) {
+        if (!GetRubixWallet(pwallet)->DumpJson(rv, sError)) {
             throw JSONRPCError(RPC_WALLET_ERROR, "DumpJson failed " + sError);
         }
         file << rv.write(1);
@@ -1553,7 +1553,7 @@ UniValue importmulti(const JSONRPCRequest& mainRequest)
                                       "block from time %d, which is after or within %d seconds of key creation, and "
                                       "could contain transactions pertaining to the key. As a result, transactions "
                                       "and coins using this key may not appear in the wallet. This error could be "
-                                      "caused by pruning or data corruption (see empowerd log for details) and could "
+                                      "caused by pruning or data corruption (see Rubixd log for details) and could "
                                       "be dealt with by downloading and rescanning the relevant blocks (see -reindex "
                                       "and -rescan options).",
                                 GetImportTimestamp(request, now), scannedTime - TIMESTAMP_WINDOW - 1, TIMESTAMP_WINDOW)));

@@ -79,7 +79,7 @@ static inline void InsecureRandBytes(uint8_t *p, size_t n)
 struct BasicTestingSetup {
     ECCVerifyHandle globalVerifyHandle;
 
-    explicit BasicTestingSetup(const std::string& chainName = CBaseChainParams::MAIN, bool fEmpowerModeIn = false);
+    explicit BasicTestingSetup(const std::string& chainName = CBaseChainParams::MAIN, bool fRubixModeIn = false);
     ~BasicTestingSetup();
 
     fs::path SetDataDir(const std::string& name);
@@ -95,7 +95,7 @@ struct TestingSetup : public BasicTestingSetup {
     boost::thread_group threadGroup;
     CScheduler scheduler;
 
-    explicit TestingSetup(const std::string& chainName = CBaseChainParams::MAIN, bool fEmpowerModeIn = false);
+    explicit TestingSetup(const std::string& chainName = CBaseChainParams::MAIN, bool fRubixModeIn = false);
     ~TestingSetup();
 };
 
@@ -153,8 +153,8 @@ CBlock getBlock13b8a();
 // define an implicit conversion here so that uint256 may be used directly in BOOST_CHECK_*
 std::ostream& operator<<(std::ostream& os, const uint256& num);
 
-struct EmpowerBasicTestingSetup : public BasicTestingSetup {
-    EmpowerBasicTestingSetup() : BasicTestingSetup(CBaseChainParams::MAIN, true) {}
+struct RubixBasicTestingSetup : public BasicTestingSetup {
+    RubixBasicTestingSetup() : BasicTestingSetup(CBaseChainParams::MAIN, true) {}
 };
 
 #endif

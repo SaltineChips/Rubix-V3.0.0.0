@@ -100,14 +100,14 @@ static int AppInitRawTx(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
-    fEmpowerMode = !gArgs.GetBoolArg("-btcmode", false); // qa tests
+    fRubixMode = !gArgs.GetBoolArg("-btcmode", false); // qa tests
     fCreateBlank = gArgs.GetBoolArg("-create", false);
 
     if (argc < 2 || HelpRequested(gArgs)) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " empower-tx utility version " + FormatFullVersion() + "\n\n" +
-            "Usage:  empower-tx [options] <hex-tx> [commands]  Update hex-encoded bitcoin transaction\n" +
-            "or:     empower-tx [options] -create [commands]   Create hex-encoded bitcoin transaction\n" +
+        std::string strUsage = PACKAGE_NAME " Rubix-tx utility version " + FormatFullVersion() + "\n\n" +
+            "Usage:  Rubix-tx [options] <hex-tx> [commands]  Update hex-encoded bitcoin transaction\n" +
+            "or:     Rubix-tx [options] -create [commands]   Create hex-encoded bitcoin transaction\n" +
             "\n";
         strUsage += gArgs.GetHelpMessage();
 
@@ -200,10 +200,10 @@ static CAmount ExtractAndValidateValue(const std::string& strValue)
 static void MutateTxVersion(CMutableTransaction& tx, const std::string& cmdVal)
 {
     int64_t newVersion;
-    if (!ParseInt64(cmdVal, &newVersion) || newVersion < 1 || newVersion > CTransaction::MAX_STANDARD_EMPOWER_VERSION)
+    if (!ParseInt64(cmdVal, &newVersion) || newVersion < 1 || newVersion > CTransaction::MAX_STANDARD_Rubix_VERSION)
         throw std::runtime_error("Invalid TX version requested: '" + cmdVal + "'");
 
-    if (!tx.IsEmpowerVersion() && IsEmpowerTxVersion(newVersion)) {
+    if (!tx.IsRubixVersion() && IsRubixTxVersion(newVersion)) {
         for (const auto& txout : tx.vout) {
             tx.vpout.push_back(MAKE_OUTPUT<CTxOutStandard>(txout.nValue, txout.scriptPubKey));
         }
@@ -218,7 +218,7 @@ static void MutateTxVersion(CMutableTransaction& tx, const std::string& cmdVal)
             txin.scriptSig.clear();
         }
     } else
-    if (tx.IsEmpowerVersion() && !IsEmpowerTxVersion(newVersion)) {
+    if (tx.IsRubixVersion() && !IsRubixTxVersion(newVersion)) {
         for (const auto &txout : tx.vpout) {
             if (!txout->IsStandardOutput()) {
                 throw std::runtime_error("Can't convert non-standard output.");
@@ -355,7 +355,7 @@ static void MutateTxAddOutAddr(CMutableTransaction& tx, const std::string& strIn
     CScript scriptPubKey = GetScriptForDestination(destination);
 
     // construct TxOut, append to transaction output list
-    if (tx.IsEmpowerVersion())
+    if (tx.IsRubixVersion())
     {
         if (destination.type() == typeid(CStealthAddress))
         {
@@ -419,7 +419,7 @@ static void MutateTxAddOutPubKey(CMutableTransaction& tx, const std::string& str
     }
 
     // construct TxOut, append to transaction output list
-    if (tx.IsEmpowerVersion())
+    if (tx.IsRubixVersion())
     {
         tx.vpout.push_back(MAKE_OUTPUT<CTxOutStandard>(value, scriptPubKey));
         return;
@@ -499,7 +499,7 @@ static void MutateTxAddOutMultiSig(CMutableTransaction& tx, const std::string& s
     }
 
     // construct TxOut, append to transaction output list
-    if (tx.IsEmpowerVersion())
+    if (tx.IsRubixVersion())
     {
         tx.vpout.push_back(MAKE_OUTPUT<CTxOutStandard>(value, scriptPubKey));
         return;
@@ -531,7 +531,7 @@ static void MutateTxAddOutData(CMutableTransaction& tx, const std::string& strIn
 
     std::vector<unsigned char> data = ParseHex(strData);
 
-    if (tx.IsEmpowerVersion())
+    if (tx.IsRubixVersion())
     {
         // TODO OUTPUT_DATA
         tx.vpout.push_back(MAKE_OUTPUT<CTxOutStandard>(value, CScript() << OP_RETURN << data));
@@ -582,7 +582,7 @@ static void MutateTxAddOutScript(CMutableTransaction& tx, const std::string& str
     }
 
     // construct TxOut, append to transaction output list
-    if (tx.IsEmpowerVersion())
+    if (tx.IsRubixVersion())
     {
         tx.vpout.push_back(MAKE_OUTPUT<CTxOutStandard>(value, scriptPubKey));
         return;
@@ -611,7 +611,7 @@ static void MutateTxDelOutput(CMutableTransaction& tx, const std::string& strOut
         throw std::runtime_error("Invalid TX output index '" + strOutIdx + "'");
     }
 
-    if (tx.IsEmpowerVersion()) {
+    if (tx.IsRubixVersion()) {
         // delete output from transaction
         tx.vpout.erase(tx.vpout.begin() + outIdx);
         return;
@@ -765,7 +765,7 @@ static void MutateTxSign(CMutableTransaction& tx, const std::string& flagStr)
         const CScript& prevPubKey = coin.out.scriptPubKey;
         const CAmount& amount = coin.out.nValue;
 
-        if (tx.IsEmpowerVersion() && amount == 0)
+        if (tx.IsRubixVersion() && amount == 0)
             throw std::runtime_error("expected amount for prevtx");
 
         std::vector<uint8_t> vchAmount(8);
@@ -782,8 +782,8 @@ static void MutateTxSign(CMutableTransaction& tx, const std::string& flagStr)
 
 static void MutateTxAddOutBlind(CMutableTransaction& tx, const std::string& strInput)
 {
-    if (!tx.IsEmpowerVersion())
-        throw std::runtime_error("tx not empower version.");
+    if (!tx.IsRubixVersion())
+        throw std::runtime_error("tx not Rubix version.");
     // separate COMMITMENT:SCRIPT:RANGEPROOF[:DATA]
     std::vector<std::string> vStrInputParts;
     boost::split(vStrInputParts, strInput, boost::is_any_of(":"));
@@ -828,8 +828,8 @@ static void MutateTxAddOutBlind(CMutableTransaction& tx, const std::string& strI
 
 static void MutateTxAddOutDataType(CMutableTransaction& tx, const std::string& strInput)
 {
-    if (!tx.IsEmpowerVersion())
-        throw std::runtime_error("tx not empower version.");
+    if (!tx.IsRubixVersion())
+        throw std::runtime_error("tx not Rubix version.");
     if (!IsHex(strInput))
         throw std::runtime_error("invalid TX output data");
 
@@ -976,7 +976,7 @@ static int CommandLineRawTx(int argc, char* argv[])
         }
 
         CMutableTransaction tx;
-        tx.nVersion = CTransaction::CURRENT_EMPOWER_VERSION;
+        tx.nVersion = CTransaction::CURRENT_Rubix_VERSION;
         int startArg;
 
         if (!fCreateBlank) {

@@ -86,9 +86,9 @@ License: Expat
 Comment: Modifications of Stephan Hutchings Typicons
 
 Files: src/qt/res/icons/about.png
-       src/qt/res/icons/empower.*
-       share/pixmaps/empower*
-       src/qt/res/src/empower.svg
+       src/qt/res/icons/Rubix.*
+       share/pixmaps/Rubix*
+       src/qt/res/src/Rubix.svg
 Copyright: cryptostiltskin
 License: public-domain
 Comment: Site: https://bitcointalk.org/?topic=1756.0

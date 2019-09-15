@@ -346,8 +346,8 @@ BOOST_AUTO_TEST_CASE(test_TxOutRingCT)
     BOOST_MESSAGE("---------------- Serialize Transaction with No Segwit ---------------------\n");
     CMutableTransaction tx;
     tx.vpout.emplace_back(txout);
-    tx.nVersion = 2|EMPOWER_TXN_VERSION;
-    BOOST_CHECK_MESSAGE(tx.IsEmpowerVersion(), "failed IsEmpowerVersion");
+    tx.nVersion = 2|Rubix_TXN_VERSION;
+    BOOST_CHECK_MESSAGE(tx.IsRubixVersion(), "failed IsRubixVersion");
 
     //The peer that sends the block sets the version that the data stream will use!
     CDataStream ss(SER_NETWORK, PROTOCOL_VERSION|SERIALIZE_TRANSACTION_NO_WITNESS);

@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_SMSG_DB_H
-#define EMPOWER_SMSG_DB_H
+#ifndef Rubix_SMSG_DB_H
+#define Rubix_SMSG_DB_H
 
 #include <leveldb/write_batch.h>
 #include <leveldb/db.h>
@@ -74,4 +74,4 @@ public:
 
 } // namespace smsg
 
-#endif // EMPOWER_SMSG_DB_H
+#endif // Rubix_SMSG_DB_H

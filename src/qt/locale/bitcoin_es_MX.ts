@@ -66,12 +66,12 @@
         <translation>Direcciones de recibo</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones de Empower para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones de Rubix para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones de Empower para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones de Rubix para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -198,8 +198,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Enviar monedas a una dirección Empower.</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Enviar monedas a una dirección Rubix.</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -222,8 +222,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -377,8 +377,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -470,8 +470,8 @@
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Empower network.</source>
-        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Empower .</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Rubix network.</source>
+        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Rubix .</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -656,8 +656,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Empower Network</source>
-        <translation>nucleo Empower.</translation>
+        <source>Rubix Network</source>
+        <translation>nucleo Rubix.</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

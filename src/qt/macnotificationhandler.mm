@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.empowerfoundation.Empower-Qt";
+        return @"io.Rubixfoundation.Rubix-Qt";
     } else {
         return [self __bundleIdentifier];
     }

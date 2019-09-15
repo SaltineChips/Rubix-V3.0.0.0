@@ -66,12 +66,12 @@
         <translation>Fogadási cím</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ezek a Empower címeid kifizetések küldéséhez. Mindíg ellenőrizd az összeget és a fogadó címet mielőtt coinokat küldenél.</translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ezek a Rubix címeid kifizetések küldéséhez. Mindíg ellenőrizd az összeget és a fogadó címet mielőtt coinokat küldenél.</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ezek a Empower címeid kifizetések fogadásához. Ajánlott új címet használni minden új fogadáshoz.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ezek a Rubix címeid kifizetések fogadásához. Ajánlott új címet használni minden új fogadáshoz.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -173,8 +173,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Tárca titkosításának megerősítése</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR EMPOWER&lt;/b&gt;!</source>
-        <translation>Figyelem: Ha titkosítja a tárcáját és elveszíti a jelszavát, akkor &lt;b&gt;AZ ÖSSZES EMPOWERJA ELVESZIK&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR Rubix&lt;/b&gt;!</source>
+        <translation>Figyelem: Ha titkosítja a tárcáját és elveszíti a jelszavát, akkor &lt;b&gt;AZ ÖSSZES RubixJA ELVESZIK&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -185,8 +185,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Tárca titkosítva</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your empower from being stolen by malware infecting your computer.</source>
-        <translation>A %1 most bezár, hogy befejezze a titkosítást. Ne feledje, hogy a tárca titkosítása nem nyújt teljes védelmet azzal szemben, hogy kártékony programok megfertőzzék a számítógépét és ellopják a empowerjait.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Rubix from being stolen by malware infecting your computer.</source>
+        <translation>A %1 most bezár, hogy befejezze a titkosítást. Ne feledje, hogy a tárca titkosítása nem nyújt teljes védelmet azzal szemben, hogy kártékony programok megfertőzzék a számítógépét és ellopják a Rubixjait.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -343,8 +343,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Lemezen lévő blokkok újraindexelése...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Empower küldése megadott címre</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Rubix küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -367,8 +367,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Üzenet &amp;valódiságának ellenőrzése</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -395,12 +395,12 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>A tárcádhoz tartozó privát kulcsok titkosítása</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Üzenetek aláírása a Empower.címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Üzenetek aláírása a Rubix.címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Üzenetek ellenőrzése, hogy valóban a megjelölt Empower.címekkel vannak-e aláírva</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Üzenetek ellenőrzése, hogy valóban a megjelölt Rubix.címekkel vannak-e aláírva</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -419,8 +419,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Fül eszköztár</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and empower: URIs)</source>
-        <translation>Fizetési kérelem (QR-kódot és "empower:" URI azonosítót hoz létre)</translation>
+        <source>Request payments (generates QR codes and Rubix: URIs)</source>
+        <translation>Fizetési kérelem (QR-kódot és "Rubix:" URI azonosítót hoz létre)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -431,16 +431,16 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>A használt fogadó címek és címkék megtekintése</translation>
     </message>
     <message>
-        <source>Open a empower: URI or payment request</source>
-        <translation>"empower:" URI azonosító vagy fizetési kérelem megnyitása</translation>
+        <source>Open a Rubix: URI or payment request</source>
+        <translation>"Rubix:" URI azonosító vagy fizetési kérelem megnyitása</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Paran&amp;cssor kapcsolók</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Empower network</source>
-        <translation><numerusform>%n aktív kapcsolat a Empower hálózathoz</numerusform><numerusform>%n aktív kapcsolat a Empower hálózathoz</numerusform></translation>
+        <source>%n active connection(s) to Rubix network</source>
+        <translation><numerusform>%n aktív kapcsolat a Rubix hálózathoz</numerusform><numerusform>%n aktív kapcsolat a Rubix hálózathoz</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -483,8 +483,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Naprakész</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Empower command-line options</source>
-        <translation>A %1 súgó megjelenítése a Empower lehetséges parancssori kapcsolóinak listájával</translation>
+        <source>Show the %1 help message to get a list with possible Rubix command-line options</source>
+        <translation>A %1 súgó megjelenítése a Rubix lehetséges parancssori kapcsolóinak listájával</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -553,8 +553,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Tárca &lt;b&gt;kódolva&lt;/b&gt; és jelenleg &lt;b&gt;zárva&lt;/b&gt;.</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Empower can no longer continue safely and will quit.</source>
-        <translation>Végzetes hiba történt. A Empower működése nem biztonságos és hamarosan leáll.</translation>
+        <source>A fatal error occurred. Rubix can no longer continue safely and will quit.</source>
+        <translation>Végzetes hiba történt. A Rubix működése nem biztonságos és hamarosan leáll.</translation>
     </message>
 </context>
 <context>
@@ -743,8 +743,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Küldő cím szerkesztése</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Empower address.</source>
-        <translation>A megadott "%1" cím nem egy érvényes Empower.cím.</translation>
+        <source>The entered address "%1" is not a valid Rubix address.</source>
+        <translation>A megadott "%1" cím nem egy érvényes Rubix.cím.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -828,8 +828,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Saját adatkönyvtár használata:</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -840,8 +840,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Hozzávetőlegesen %1 GB adatot fogunk ebben a könyvtárban tárolni.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Empower block chain.</source>
-        <translation>%1 le fog töltődni és a Empower blokk lánc egy másolatát fogja tárolni.</translation>
+        <source>%1 will download and store a copy of the Rubix block chain.</source>
+        <translation>%1 le fog töltődni és a Rubix blokk lánc egy másolatát fogja tárolni.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -867,12 +867,12 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Űrlap</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the empower network, as detailed below.</source>
-        <translation>A legutóbbi tranzakciók még lehet, hogy nem látszanak, ezért előfordulhat, hogy a pénztárca egyenlege nem a valós állapotot mutatja. Ha a pénztárca befejezte a szinkronizációt a empower hálózattal, utána már az aktuális egyenleget fogja mutatni, amint alant részletesen látszik.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Rubix network, as detailed below.</source>
+        <translation>A legutóbbi tranzakciók még lehet, hogy nem látszanak, ezért előfordulhat, hogy a pénztárca egyenlege nem a valós állapotot mutatja. Ha a pénztárca befejezte a szinkronizációt a Rubix hálózattal, utána már az aktuális egyenleget fogja mutatni, amint alant részletesen látszik.</translation>
     </message>
     <message>
-        <source>Attempting to spend empower that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>A hálózat nem fogadja el azoknak a empoweroknak az elköltését, amelyek érintettek a még nem látszódó tranzakciókban.</translation>
+        <source>Attempting to spend Rubix that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>A hálózat nem fogadja el azoknak a Rubixoknak az elköltését, amelyek érintettek a még nem látszódó tranzakciókban.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1033,8 +1033,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>&amp;Költése a a jóváhagyatlan visszajárónak</translation>
     </message>
     <message>
-        <source>Automatically open the Empower client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>A Empower.kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the Rubix client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>A Rubix.kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1049,8 +1049,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Bejövő kapcsolatok engedélyezése.</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a SOCKS5 proxy.</source>
-        <translation>Csatlakozás a Empower hálózatához SOCKS5 proxyn keresztül</translation>
+        <source>Connect to the Rubix network through a SOCKS5 proxy.</source>
+        <translation>Csatlakozás a Rubix hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1085,8 +1085,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Empower network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Csatlakozás a Empower hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
+        <source>Connect to the Rubix network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Csatlakozás a Rubix hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1192,8 +1192,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Empower network after a connection is established, but this process has not completed yet.</source>
-        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Empower hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Rubix network after a connection is established, but this process has not completed yet.</source>
+        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Rubix hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1267,8 +1267,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Hiba történt a fizetési kérelem során</translation>
     </message>
     <message>
-        <source>Cannot start empower: click-to-pay handler</source>
-        <translation>A empower nem tud elindulni: click-to-pay kezelő</translation>
+        <source>Cannot start Rubix: click-to-pay handler</source>
+        <translation>A Rubix nem tud elindulni: click-to-pay kezelő</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1279,8 +1279,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Érvénytelen fizetési cím %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Empower address or malformed URI parameters.</source>
-        <translation>Nem sikerült az URI elemzése! Ezt okozhatja érvénytelen Empower cím, vagy rossz URI paraméterezés.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Rubix address or malformed URI parameters.</source>
+        <translation>Nem sikerült az URI elemzése! Ezt okozhatja érvénytelen Rubix cím, vagy rossz URI paraméterezés.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1377,8 +1377,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Összeg</translation>
     </message>
     <message>
-        <source>Enter a Empower address (e.g. %1)</source>
-        <translation>Ad meg egy Empower címet (pl: %1)</translation>
+        <source>Enter a Rubix address (e.g. %1)</source>
+        <translation>Ad meg egy Rubix címet (pl: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1789,8 +1789,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>&amp;Üzenet:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Empower network.</source>
-        <translation>Egy opcionális üzenet csatolása a fizetési kérelemhez, amely megjelenik a kérelem megnyitásakor. Megjegyzés: Az üzenet nem lesz elküldve a fizetséggel a Empower hálózaton keresztül.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Rubix network.</source>
+        <translation>Egy opcionális üzenet csatolása a fizetési kérelemhez, amely megjelenik a kérelem megnyitásakor. Megjegyzés: Az üzenet nem lesz elküldve a fizetséggel a Rubix hálózaton keresztül.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2034,7 +2034,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Elrejtés</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for empower transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Rubix transactions than the network can process.</source>
         <translation>Alacsony díj is megfelelő, ha nincs több tranzakció mint amennyi hely a blokkokban. Figyelem! Ha a hálózat túlterhelt, lehetséges, hogy a tranzakció nem lesz megerősítve.</translation>
     </message>
     <message>
@@ -2178,8 +2178,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Csak a szükséges %1 díj fizetése</translation>
     </message>
     <message>
-        <source>Warning: Invalid Empower address</source>
-        <translation>Figyelmeztetés: Érvénytelen Empower cím</translation>
+        <source>Warning: Invalid Rubix address</source>
+        <translation>Figyelmeztetés: Érvénytelen Rubix cím</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2221,8 +2221,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Ez normál fizetés.</translation>
     </message>
     <message>
-        <source>The Empower address to send the payment to</source>
-        <translation>Erre a Empower címre küldje az összeget</translation>
+        <source>The Rubix address to send the payment to</source>
+        <translation>Erre a Rubix címre küldje az összeget</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2306,8 +2306,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Üzenet aláírása...</translation>
     </message>
     <message>
-        <source>The Empower address to sign the message with</source>
-        <translation>Empower cím, amivel alá kívánja írni az üzenetet</translation>
+        <source>The Rubix address to sign the message with</source>
+        <translation>Rubix cím, amivel alá kívánja írni az üzenetet</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2338,7 +2338,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Empower address</source>
+        <source>Sign the message to prove you own this Rubix address</source>
         <translation>Üzenet </translation>
     </message>
     <message>
@@ -2354,12 +2354,12 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Üzenet ellenőrzése</translation>
     </message>
     <message>
-        <source>The Empower address the message was signed with</source>
-        <translation>Empower cím, amivel aláírta az üzenetet</translation>
+        <source>The Rubix address the message was signed with</source>
+        <translation>Rubix cím, amivel aláírta az üzenetet</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Empower address</source>
-        <translation>Ellenőrizze az üzenetet, hogy valóban a megjelölt Empower címmel van-e aláírva</translation>
+        <source>Verify the message to ensure it was signed with the specified Rubix address</source>
+        <translation>Ellenőrizze az üzenetet, hogy valóban a megjelölt Rubix címmel van-e aláírva</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2903,8 +2903,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>HTTP szerver indítása sikertelen. A részleteket lásd: debug log.</translation>
     </message>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower Network</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix Network</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3092,7 +3092,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>Insufficient funds</source>
-        <translation>Nincs elég empowerod.</translation>
+        <translation>Nincs elég Rubixod.</translation>
     </message>
     <message>
         <source>Loading block index...</source>

@@ -44,8 +44,8 @@ alias = Alias.from_bytes(icvp['backgroundImageAlias'])
 alias.volume.name = package_name_ns
 alias.volume.posix_path = '/Volumes/' + package_name_ns
 alias.volume.disk_image_alias.target.filename = package_name_ns + '.temp.dmg'
-alias.volume.disk_image_alias.target.carbon_path = 'Macintosh HD:Users:\x00empoweruser:\x00Documents:\x00empower:\x00empower:\x00' + package_name_ns + '.temp.dmg'
-alias.volume.disk_image_alias.target.posix_path = 'Users/empoweruser/Documents/empower/empower/' + package_name_ns + '.temp.dmg'
+alias.volume.disk_image_alias.target.carbon_path = 'Macintosh HD:Users:\x00Rubixuser:\x00Documents:\x00Rubix:\x00Rubix:\x00' + package_name_ns + '.temp.dmg'
+alias.volume.disk_image_alias.target.posix_path = 'Users/Rubixuser/Documents/Rubix/Rubix/' + package_name_ns + '.temp.dmg'
 alias.target.carbon_path = package_name_ns + ':.background:\x00background.tiff'
 icvp['backgroundImageAlias'] = biplist.Data(alias.to_bytes())
 ds['.']['icvp'] = icvp
@@ -53,7 +53,7 @@ ds['.']['icvp'] = icvp
 ds['.']['vSrn'] = ('long', 1)
 
 ds['Applications']['Iloc'] = (370, 156)
-ds['Empower-Qt.app']['Iloc'] = (128, 156)
+ds['Rubix-Qt.app']['Iloc'] = (128, 156)
 
 ds.flush()
 ds.close()

@@ -13,7 +13,7 @@
 #include <blind.h>
 
 HDWalletTestingSetup::HDWalletTestingSetup(const std::string &chainName):
-    TestingSetup(chainName, true) // fEmpowerMode = true
+    TestingSetup(chainName, true) // fRubixMode = true
 {
     ECC_Start_Stealth();
     ECC_Start_Blinding();

@@ -62,12 +62,12 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Empower addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones Empower para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
+        <source>These are your Rubix addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones Rubix para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
     </message>
     <message>
-        <source>These are your Empower addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones Empower para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
+        <source>These are your Rubix addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones Rubix para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -216,8 +216,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Empower address</source>
-        <translation>Enviar monedas a una dirección Empower.</translation>
+        <source>Send coins to a Rubix address</source>
+        <translation>Enviar monedas a una dirección Rubix.</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -232,8 +232,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -260,12 +260,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Empower addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones Empower para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your Rubix addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Rubix para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Empower addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Empower especificas</translation>
+        <source>Verify messages to ensure they were signed with specified Rubix addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Rubix especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -503,8 +503,8 @@
         <translation>Usa un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>Empower.</source>
-        <translation>Empower.</translation>
+        <source>Rubix.</source>
+        <translation>Rubix.</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -786,8 +786,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Empower Network</source>
-        <translation>Empower Network</translation>
+        <source>Rubix Network</source>
+        <translation>Rubix Network</translation>
     </message>
     <message>
         <source>Information</source>

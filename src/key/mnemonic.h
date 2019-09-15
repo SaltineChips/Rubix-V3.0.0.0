@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_KEY_MNEMONIC_H
-#define EMPOWER_KEY_MNEMONIC_H
+#ifndef Rubix_KEY_MNEMONIC_H
+#define Rubix_KEY_MNEMONIC_H
 
 #include <string>
 #include <vector>
@@ -38,4 +38,4 @@ int MnemonicGetWord(int nLanguage, int nWord, std::string &sWord, std::string &s
 std::string MnemonicGetLanguage(int nLanguage);
 
 
-#endif // EMPOWER_KEY_MNEMONIC_H
+#endif // Rubix_KEY_MNEMONIC_H

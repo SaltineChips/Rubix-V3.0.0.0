@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_QT_COLDSTAKINGDIALOG_H
-#define EMPOWER_QT_COLDSTAKINGDIALOG_H
+#ifndef Rubix_QT_COLDSTAKINGDIALOG_H
+#define Rubix_QT_COLDSTAKINGDIALOG_H
 
 #include <QDialog>
 
@@ -34,4 +34,4 @@ private:
     Ui::ColdStakingDialog *ui;
 };
 
-#endif // EMPOWER_QT_COLDSTAKINGDIALOG_H
+#endif // Rubix_QT_COLDSTAKINGDIALOG_H

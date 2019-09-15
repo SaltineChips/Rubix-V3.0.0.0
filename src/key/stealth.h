@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file license.txt or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_KEY_STEALTH_H
-#define EMPOWER_KEY_STEALTH_H
+#ifndef Rubix_KEY_STEALTH_H
+#define Rubix_KEY_STEALTH_H
 
 #include <stdio.h>
 #include <stdint.h>
@@ -152,4 +152,4 @@ void ECC_Start_Stealth();
 void ECC_Stop_Stealth();
 
 
-#endif  // EMPOWER_KEY_STEALTH_H
+#endif  // Rubix_KEY_STEALTH_H

@@ -220,7 +220,7 @@ void SelectParams(const std::string& chain);
  * Toggle old parameters for unit tests
  */
 void SetOldParams(std::unique_ptr<CChainParams> &params);
-void ResetParams(std::string sNetworkId, bool fEmpowerModeIn);
+void ResetParams(std::string sNetworkId, bool fRubixModeIn);
 
 /**
  * mutable handle to regtest params

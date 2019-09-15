@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_SMSG_SMESSAGE_H
-#define EMPOWER_SMSG_SMESSAGE_H
+#ifndef Rubix_SMSG_SMESSAGE_H
+#define Rubix_SMSG_SMESSAGE_H
 
 #include <key_io.h>
 #include <net.h>
@@ -480,4 +480,4 @@ double GetDifficulty(uint32_t compact);
 
 extern smsg::CSMSG smsgModule;
 
-#endif // EMPOWER_SMSG_SMESSAGE_H
+#endif // Rubix_SMSG_SMESSAGE_H

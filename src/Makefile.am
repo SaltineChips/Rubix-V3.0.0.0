@@ -24,42 +24,42 @@ BITCOIN_INCLUDES=-I$(builddir) $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFL
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBEMPOWER_SERVER=libempower_server.a
-LIBEMPOWER_COMMON=libempower_common.a
-LIBEMPOWER_CONSENSUS=libempower_consensus.a
-LIBEMPOWER_CLI=libempower_cli.a
-LIBEMPOWER_UTIL=libempower_util.a
-LIBEMPOWER_CRYPTO_BASE=crypto/libempower_crypto_base.a
-LIBEMPOWERQT=qt/libempowerqt.a
+LIBRubix_SERVER=libRubix_server.a
+LIBRubix_COMMON=libRubix_common.a
+LIBRubix_CONSENSUS=libRubix_consensus.a
+LIBRubix_CLI=libRubix_cli.a
+LIBRubix_UTIL=libRubix_util.a
+LIBRubix_CRYPTO_BASE=crypto/libRubix_crypto_base.a
+LIBRubixQT=qt/libRubixqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
-LIBEMPOWER_SMSG=libempower_smsg.a
+LIBRubix_SMSG=libRubix_smsg.a
 
 if ENABLE_ZMQ
-LIBEMPOWER_ZMQ=libempower_zmq.a
+LIBRubix_ZMQ=libRubix_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBEMPOWERCONSENSUS=libempowerconsensus.la
+LIBRubixCONSENSUS=libRubixconsensus.la
 endif
 if ENABLE_WALLET
-LIBEMPOWER_WALLET=libempower_wallet.a
-LIBEMPOWER_WALLET_TOOL=libempower_wallet_tool.a
+LIBRubix_WALLET=libRubix_wallet.a
+LIBRubix_WALLET_TOOL=libRubix_wallet_tool.a
 endif
 if ENABLE_USBDEVICE
-LIBEMPOWER_USBDEVICE=libempower_usbdevice.a
+LIBRubix_USBDEVICE=libRubix_usbdevice.a
 endif
 
-LIBEMPOWER_CRYPTO= $(LIBEMPOWER_CRYPTO_BASE)
+LIBRubix_CRYPTO= $(LIBRubix_CRYPTO_BASE)
 if ENABLE_SSE41
-LIBEMPOWER_CRYPTO_SSE41 = crypto/libempower_crypto_sse41.a
-LIBEMPOWER_CRYPTO += $(LIBEMPOWER_CRYPTO_SSE41)
+LIBRubix_CRYPTO_SSE41 = crypto/libRubix_crypto_sse41.a
+LIBRubix_CRYPTO += $(LIBRubix_CRYPTO_SSE41)
 endif
 if ENABLE_AVX2
-LIBEMPOWER_CRYPTO_AVX2 = crypto/libempower_crypto_avx2.a
-LIBEMPOWER_CRYPTO += $(LIBEMPOWER_CRYPTO_AVX2)
+LIBRubix_CRYPTO_AVX2 = crypto/libRubix_crypto_avx2.a
+LIBRubix_CRYPTO += $(LIBRubix_CRYPTO_AVX2)
 endif
 if ENABLE_SHANI
-LIBEMPOWER_CRYPTO_SHANI = crypto/libempower_crypto_shani.a
-LIBEMPOWER_CRYPTO += $(LIBEMPOWER_CRYPTO_SHANI)
+LIBRubix_CRYPTO_SHANI = crypto/libRubix_crypto_shani.a
+LIBRubix_CRYPTO += $(LIBRubix_CRYPTO_SHANI)
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(wildcard secp256k1/include/*)
@@ -68,19 +68,19 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(w
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBEMPOWER_CRYPTO) \
-  $(LIBEMPOWER_UTIL) \
-  $(LIBEMPOWER_COMMON) \
-  $(LIBEMPOWER_CONSENSUS) \
-  $(LIBEMPOWER_SERVER) \
-  $(LIBEMPOWER_CLI) \
-  $(LIBEMPOWER_WALLET) \
-  $(LIBEMPOWER_WALLET_TOOL) \
-  $(LIBEMPOWER_USBDEVICE) \
-  $(LIBEMPOWER_SMSG) \
-  $(LIBEMPOWER_ZMQ)
+  $(LIBRubix_CRYPTO) \
+  $(LIBRubix_UTIL) \
+  $(LIBRubix_COMMON) \
+  $(LIBRubix_CONSENSUS) \
+  $(LIBRubix_SERVER) \
+  $(LIBRubix_CLI) \
+  $(LIBRubix_WALLET) \
+  $(LIBRubix_WALLET_TOOL) \
+  $(LIBRubix_USBDEVICE) \
+  $(LIBRubix_SMSG) \
+  $(LIBRubix_ZMQ)
 
-lib_LTLIBRARIES = $(LIBEMPOWERCONSENSUS)
+lib_LTLIBRARIES = $(LIBRubixCONSENSUS)
 
 bin_PROGRAMS =
 noinst_PROGRAMS =
@@ -88,18 +88,18 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += empowerd
+  bin_PROGRAMS += Rubixd
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += empower-cli
+  bin_PROGRAMS += Rubix-cli
 endif
 if BUILD_BITCOIN_TX
-  bin_PROGRAMS += empower-tx
+  bin_PROGRAMS += Rubix-tx
 endif
 if ENABLE_WALLET
 if BUILD_BITCOIN_WALLET
-  bin_PROGRAMS += empower-wallet
+  bin_PROGRAMS += Rubix-wallet
 endif
 endif
 
@@ -288,15 +288,15 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libempower_util_a-clientversion.$(OBJEXT): obj/build.h
+libRubix_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between bitcoind and bitcoin-qt
 # Contains code accessing mempool and chain state that is meant to be separated
 # from wallet and gui code (see node/README.md). Shared code should go in
 # libbitcoin_common or libbitcoin_util libraries, instead.
-libempower_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libempower_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_server_a_SOURCES = \
+libRubix_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libRubix_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_server_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   banman.cpp \
@@ -353,16 +353,16 @@ libempower_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_WALLET
-libempower_server_a_SOURCES += wallet/init.cpp
+libRubix_server_a_SOURCES += wallet/init.cpp
 endif
 if !ENABLE_WALLET
-libempower_server_a_SOURCES += dummywallet.cpp
+libRubix_server_a_SOURCES += dummywallet.cpp
 endif
 
 if ENABLE_ZMQ
-libempower_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libempower_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_zmq_a_SOURCES = \
+libRubix_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libRubix_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp \
@@ -370,10 +370,10 @@ libempower_zmq_a_SOURCES = \
 endif
 
 if ENABLE_USBDEVICE
-libempower_usbdevice_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(AM_CPPFLAGS) $(PROTOBUF_CFLAGS)
-libempower_usbdevice_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_usbdevice_a_CFLAGS = -DHAVE_HIDAPI $(AM_CFLAGS)
-libempower_usbdevice_a_SOURCES = \
+libRubix_usbdevice_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(AM_CPPFLAGS) $(PROTOBUF_CFLAGS)
+libRubix_usbdevice_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_usbdevice_a_CFLAGS = -DHAVE_HIDAPI $(AM_CFLAGS)
+libRubix_usbdevice_a_SOURCES = \
   usbdevice/usbwrapper.cpp \
   usbdevice/usbwrapper.h \
   usbdevice/ledger/btchipApdu.h \
@@ -393,7 +393,7 @@ libempower_usbdevice_a_SOURCES = \
   usbdevice/trezordevice.h \
   usbdevice/trezordevice.cpp \
   usbdevice/rpcusbdevice.cpp
-nodist_libempower_usbdevice_a_SOURCES = \
+nodist_libRubix_usbdevice_a_SOURCES = \
   usbdevice/trezor/messages.pb.h \
   usbdevice/trezor/messages.pb.cc \
   usbdevice/trezor/messages-common.pb.h \
@@ -402,14 +402,14 @@ nodist_libempower_usbdevice_a_SOURCES = \
   usbdevice/trezor/messages-management.pb.cc \
   usbdevice/trezor/messages-bitcoin.pb.h \
   usbdevice/trezor/messages-bitcoin.pb.cc
-BUILT_SOURCES = $(nodist_libempower_usbdevice_a_SOURCES)
+BUILT_SOURCES = $(nodist_libRubix_usbdevice_a_SOURCES)
 endif
 
 # wallet: shared between bitcoind and bitcoin-qt, but only linked
 # when wallet enabled
-libempower_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libempower_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_wallet_a_SOURCES = \
+libRubix_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libRubix_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_wallet_a_SOURCES = \
   interfaces/wallet.cpp \
   wallet/coincontrol.cpp \
   wallet/crypter.cpp \
@@ -434,16 +434,16 @@ libempower_wallet_a_SOURCES = \
   wallet/coinselection.cpp \
   $(BITCOIN_CORE_H)
 
-libempower_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libempower_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_wallet_tool_a_SOURCES = \
+libRubix_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libRubix_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libempower_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libempower_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libempower_crypto_base_a_SOURCES = \
+crypto_libRubix_crypto_base_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libRubix_crypto_base_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libRubix_crypto_base_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha20.h \
@@ -469,31 +469,31 @@ crypto_libempower_crypto_base_a_SOURCES = \
   crypto/siphash.h
 
 if USE_ASM
-crypto_libempower_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
+crypto_libRubix_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
 endif
 
-crypto_libempower_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libempower_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libempower_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
-crypto_libempower_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
-crypto_libempower_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
+crypto_libRubix_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libRubix_crypto_sse41_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libRubix_crypto_sse41_a_CXXFLAGS += $(SSE41_CXXFLAGS)
+crypto_libRubix_crypto_sse41_a_CPPFLAGS += -DENABLE_SSE41
+crypto_libRubix_crypto_sse41_a_SOURCES = crypto/sha256_sse41.cpp
 
-crypto_libempower_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libempower_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libempower_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
-crypto_libempower_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
-crypto_libempower_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
+crypto_libRubix_crypto_avx2_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libRubix_crypto_avx2_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libRubix_crypto_avx2_a_CXXFLAGS += $(AVX2_CXXFLAGS)
+crypto_libRubix_crypto_avx2_a_CPPFLAGS += -DENABLE_AVX2
+crypto_libRubix_crypto_avx2_a_SOURCES = crypto/sha256_avx2.cpp
 
-crypto_libempower_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libempower_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libempower_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
-crypto_libempower_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
-crypto_libempower_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
+crypto_libRubix_crypto_shani_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libRubix_crypto_shani_a_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libRubix_crypto_shani_a_CXXFLAGS += $(SHANI_CXXFLAGS)
+crypto_libRubix_crypto_shani_a_CPPFLAGS += -DENABLE_SHANI
+crypto_libRubix_crypto_shani_a_SOURCES = crypto/sha256_shani.cpp
 
 # consensus: shared between all executables that validate any consensus rules.
-libempower_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libempower_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_consensus_a_SOURCES = \
+libRubix_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libRubix_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -528,9 +528,9 @@ libempower_consensus_a_SOURCES = \
   version.h
 
 # common: shared between bitcoind, and bitcoin-qt and non-server tools
-libempower_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libempower_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_common_a_SOURCES = \
+libRubix_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libRubix_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_common_a_SOURCES = \
   base58.cpp \
   bech32.cpp \
   bloom.cpp \
@@ -573,9 +573,9 @@ libempower_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libempower_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libempower_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_util_a_SOURCES = \
+libRubix_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libRubix_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -605,9 +605,9 @@ libempower_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 
-libempower_smsg_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libempower_smsg_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_smsg_a_SOURCES = \
+libRubix_smsg_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libRubix_smsg_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_smsg_a_SOURCES = \
   lz4/lz4.h \
   lz4/lz4.c \
   xxhash/xxhash.h \
@@ -622,142 +622,142 @@ libempower_smsg_a_SOURCES = \
 
 
 if GLIBC_BACK_COMPAT
-libempower_util_a_SOURCES += compat/glibc_compat.cpp
+libRubix_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
 # cli: shared between bitcoin-cli and bitcoin-qt
-libempower_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libempower_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libempower_cli_a_SOURCES = \
+libRubix_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libRubix_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubix_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
 
-nodist_libempower_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libRubix_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-empowerd_SOURCES = bitcoind.cpp
-empowerd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-empowerd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-empowerd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+Rubixd_SOURCES = bitcoind.cpp
+Rubixd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+Rubixd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Rubixd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-empowerd_SOURCES += bitcoind-res.rc
+Rubixd_SOURCES += bitcoind-res.rc
 endif
 
 # Libraries below may be listed more than once to resolve circular dependencies (see
 # https://eli.thegreenplace.net/2013/07/09/library-order-in-static-linking#circular-dependency)
-empowerd_LDADD = \
-  $(LIBEMPOWER_SERVER) \
-  $(LIBEMPOWER_WALLET) \
-  $(LIBEMPOWER_COMMON) \
+Rubixd_LDADD = \
+  $(LIBRubix_SERVER) \
+  $(LIBRubix_WALLET) \
+  $(LIBRubix_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBEMPOWER_UTIL) \
-  $(LIBEMPOWER_ZMQ) \
-  $(LIBEMPOWER_CONSENSUS) \
-  $(LIBEMPOWER_CRYPTO) \
+  $(LIBRubix_UTIL) \
+  $(LIBRubix_ZMQ) \
+  $(LIBRubix_CONSENSUS) \
+  $(LIBRubix_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBLEVELDB_SSE42) \
   $(LIBMEMENV) \
   $(LIBSECP256K1) \
-  $(LIBEMPOWER_SMSG) \
-  $(LIBEMPOWER_USBDEVICE)
+  $(LIBRubix_SMSG) \
+  $(LIBRubix_USBDEVICE)
 
-empowerd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+Rubixd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 if ENABLE_USBDEVICE
-empowerd_LDADD += $(USB_LIBS) $(HIDAPI_LIBS) $(PROTOBUF_LIBS)
+Rubixd_LDADD += $(USB_LIBS) $(HIDAPI_LIBS) $(PROTOBUF_LIBS)
 endif
 
 # bitcoin-cli binary #
 #$(BITCOIN_CLI_NAME)_SOURCES = bitcoin-cli.cpp
-empower_cli_SOURCES = bitcoin-cli.cpp
-empower_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-empower_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-empower_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+Rubix_cli_SOURCES = bitcoin-cli.cpp
+Rubix_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+Rubix_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Rubix_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-empower_cli_SOURCES += bitcoin-cli-res.rc
+Rubix_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-empower_cli_LDADD = \
-  $(LIBEMPOWER_CLI) \
+Rubix_cli_LDADD = \
+  $(LIBRubix_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBEMPOWER_UTIL) \
-  $(LIBEMPOWER_CRYPTO)
+  $(LIBRubix_UTIL) \
+  $(LIBRubix_CRYPTO)
 
-empower_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+Rubix_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-empower_tx_SOURCES = bitcoin-tx.cpp
-empower_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-empower_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-empower_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+Rubix_tx_SOURCES = bitcoin-tx.cpp
+Rubix_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+Rubix_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Rubix_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-empower_tx_SOURCES += bitcoin-tx-res.rc
+Rubix_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-empower_tx_LDADD = \
+Rubix_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBEMPOWER_COMMON) \
-  $(LIBEMPOWER_UTIL) \
-  $(LIBEMPOWER_CONSENSUS) \
-  $(LIBEMPOWER_CRYPTO) \
+  $(LIBRubix_COMMON) \
+  $(LIBRubix_UTIL) \
+  $(LIBRubix_CONSENSUS) \
+  $(LIBRubix_CRYPTO) \
   $(LIBSECP256K1)
 
-empower_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+Rubix_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoin-wallet binary #
-empower_wallet_SOURCES = bitcoin-wallet.cpp
-empower_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-empower_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-empower_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+Rubix_wallet_SOURCES = bitcoin-wallet.cpp
+Rubix_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+Rubix_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Rubix_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-empower_wallet_SOURCES += bitcoin-wallet-res.rc
+Rubix_wallet_SOURCES += bitcoin-wallet-res.rc
 endif
 
 
-empower_wallet_LDADD = \
-  $(LIBEMPOWER_WALLET_TOOL) \
-  $(LIBEMPOWER_WALLET) \
-  $(LIBEMPOWER_SERVER) \
-  $(LIBEMPOWER_COMMON) \
-  $(LIBEMPOWER_CONSENSUS) \
-  $(LIBEMPOWER_UTIL) \
-  $(LIBEMPOWER_CRYPTO) \
-  $(LIBEMPOWER_SMSG) \
-  $(LIBEMPOWER_USBDEVICE) \
-  $(LIBEMPOWER_ZMQ) \
+Rubix_wallet_LDADD = \
+  $(LIBRubix_WALLET_TOOL) \
+  $(LIBRubix_WALLET) \
+  $(LIBRubix_SERVER) \
+  $(LIBRubix_COMMON) \
+  $(LIBRubix_CONSENSUS) \
+  $(LIBRubix_UTIL) \
+  $(LIBRubix_CRYPTO) \
+  $(LIBRubix_SMSG) \
+  $(LIBRubix_USBDEVICE) \
+  $(LIBRubix_ZMQ) \
   $(LIBLEVELDB) \
   $(LIBLEVELDB_SSE42) \
   $(LIBMEMENV) \
   $(LIBSECP256K1) \
   $(LIBUNIVALUE)
 
-empower_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
+Rubix_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
 if ENABLE_USBDEVICE
-empower_wallet_LDADD += $(USB_LIBS) $(HIDAPI_LIBS) $(PROTOBUF_LIBS)
+Rubix_wallet_LDADD += $(USB_LIBS) $(HIDAPI_LIBS) $(PROTOBUF_LIBS)
 endif
 #
 
 # bitcoinconsensus library #
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h
-libempowerconsensus_la_SOURCES = $(crypto_libempower_crypto_base_a_SOURCES) $(libempower_consensus_a_SOURCES)
+libRubixconsensus_la_SOURCES = $(crypto_libRubix_crypto_base_a_SOURCES) $(libRubix_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libempowerconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libRubixconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libempowerconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libempowerconsensus_la_LIBADD = $(LIBSECP256K1) $(BOOST_LIBS)
-libempowerconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libempowerconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libRubixconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libRubixconsensus_la_LIBADD = $(LIBSECP256K1) $(BOOST_LIBS)
+libRubixconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libRubixconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_SMSG_RPCSMESSAGE_H
-#define EMPOWER_SMSG_RPCSMESSAGE_H
+#ifndef Rubix_SMSG_RPCSMESSAGE_H
+#define Rubix_SMSG_RPCSMESSAGE_H
 
 class CRPCTable;
 
 void RegisterSmsgRPCCommands(CRPCTable &t);
 
-#endif // EMPOWER_SMSG_RPCSMESSAGE_H
+#endif // Rubix_SMSG_RPCSMESSAGE_H

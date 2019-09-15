@@ -525,18 +525,18 @@ class CTransaction:
 class CBlockHeader:
     __slots__ = ("hash", "hashMerkleRoot", "hashPrevBlock", "nBits", "nNonce",
                  "nTime", "nVersion", "sha256",
-                 "is_mpwr", "hashWitnessMerkleRoot")
+                 "is_RBX", "hashWitnessMerkleRoot")
 
-    def __init__(self, header=None, is_mpwr=False):
-        self.is_mpwr = is_mpwr
+    def __init__(self, header=None, is_RBX=False):
+        self.is_RBX = is_RBX
         if header is None:
             self.set_null()
         else:
-            self.is_mpwr = header.is_mpwr
+            self.is_RBX = header.is_RBX
             self.nVersion = header.nVersion
             self.hashPrevBlock = header.hashPrevBlock
             self.hashMerkleRoot = header.hashMerkleRoot
-            if self.is_mpwr:
+            if self.is_RBX:
                 self.hashWitnessMerkleRoot = header.hashWitnessMerkleRoot
             self.nTime = header.nTime
             self.nBits = header.nBits
@@ -549,7 +549,7 @@ class CBlockHeader:
         self.nVersion = 1
         self.hashPrevBlock = 0
         self.hashMerkleRoot = 0
-        if self.is_mpwr:
+        if self.is_RBX:
             self.hashWitnessMerkleRoot = 0
         self.nTime = 0
         self.nBits = 0
@@ -561,7 +561,7 @@ class CBlockHeader:
         self.nVersion = struct.unpack("<i", f.read(4))[0]
         self.hashPrevBlock = deser_uint256(f)
         self.hashMerkleRoot = deser_uint256(f)
-        if self.is_mpwr:
+        if self.is_RBX:
             self.hashWitnessMerkleRoot = deser_uint256(f)
         self.nTime = struct.unpack("<I", f.read(4))[0]
         self.nBits = struct.unpack("<I", f.read(4))[0]
@@ -574,7 +574,7 @@ class CBlockHeader:
         r += struct.pack("<i", self.nVersion)
         r += ser_uint256(self.hashPrevBlock)
         r += ser_uint256(self.hashMerkleRoot)
-        if self.is_mpwr:
+        if self.is_RBX:
             r += ser_uint256(self.hashWitnessMerkleRoot)
         r += struct.pack("<I", self.nTime)
         r += struct.pack("<I", self.nBits)
@@ -587,7 +587,7 @@ class CBlockHeader:
             r += struct.pack("<i", self.nVersion)
             r += ser_uint256(self.hashPrevBlock)
             r += ser_uint256(self.hashMerkleRoot)
-            if self.is_mpwr:
+            if self.is_RBX:
                 r += ser_uint256(self.hashWitnessMerkleRoot)
             r += struct.pack("<I", self.nTime)
             r += struct.pack("<I", self.nBits)

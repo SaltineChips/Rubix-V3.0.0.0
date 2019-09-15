@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef EMPOWER_KEY_EXTKEY_H
-#define EMPOWER_KEY_EXTKEY_H
+#ifndef Rubix_KEY_EXTKEY_H
+#define Rubix_KEY_EXTKEY_H
 
 #include <util/system.h>
 #include <key.h>
@@ -901,4 +901,4 @@ std::string HDKeyIDToString(const CKeyID &id);
 
 std::string GetDefaultAccountPath();
 
-#endif // EMPOWER_KEY_EXTKEY_H
+#endif // Rubix_KEY_EXTKEY_H

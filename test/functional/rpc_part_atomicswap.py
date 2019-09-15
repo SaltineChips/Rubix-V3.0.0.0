@@ -11,8 +11,8 @@ import binascii
 from random import random
 from decimal import Decimal
 
-from test_framework.test_empower import (
-    EmpowerTestFramework,
+from test_framework.test_Rubix import (
+    RubixTestFramework,
     isclose,
     getIndexAtProperty,
 )
@@ -36,7 +36,7 @@ from test_framework.address import chars as __b58chars, script_to_p2sh
 from test_framework.authproxy import JSONRPCException
 
 
-def script_to_p2sh_mpwr(b):
+def script_to_p2sh_RBX(b):
     return script_to_p2sh(b, False, False)
 
 
@@ -147,7 +147,7 @@ def estimateRefundSerializeSize(contract, txhex):
 
 
 def createRefundTx(node, rawtx, script, lockTime, addrRefundFrom, addrRefundTo):
-    p2sh = script_to_p2sh_mpwr(script)
+    p2sh = script_to_p2sh_RBX(script)
     ro = node.decoderawtransaction(rawtx)
     txnid = ro['txid']
     n = getOutputByAddr(ro, p2sh)
@@ -193,7 +193,7 @@ def createRefundTx(node, rawtx, script, lockTime, addrRefundFrom, addrRefundTo):
 
 
 def createClaimTx(node, rawtx, script, secret, addrClaimFrom, addrClaimTo):
-    p2sh = script_to_p2sh_mpwr(script)
+    p2sh = script_to_p2sh_RBX(script)
 
     ro = node.decoderawtransaction(rawtx)
     txnid = ro['txid']
@@ -240,7 +240,7 @@ def createClaimTx(node, rawtx, script, secret, addrClaimFrom, addrClaimTo):
 
 
 def createRefundTxCT(node, rawtx, output_amounts, script, lockTime, privKeySign, pubKeySign, addrRefundTo):
-    p2sh = script_to_p2sh_mpwr(script)
+    p2sh = script_to_p2sh_RBX(script)
     ro = node.decoderawtransaction(rawtx)
     txnid = ro['txid']
     n = getOutputByAddr(ro, p2sh)
@@ -258,7 +258,7 @@ def createRefundTxCT(node, rawtx, output_amounts, script, lockTime, privKeySign,
         'type':'blind',
         'amount':amountIn,
     }, ]
-    ro = node.createrawmpwrtransaction(inputs, outputs, lockTime)
+    ro = node.createrawRBXtransaction(inputs, outputs, lockTime)
     rawtxrefund = ro['hex']
 
     witnessSize = 5 + 73 + 33 + 1 + len(script)
@@ -300,7 +300,7 @@ def createRefundTxCT(node, rawtx, output_amounts, script, lockTime, privKeySign,
 
 
 def createClaimTxCT(node, rawtx, output_amounts, script, secret, privKeySign, pubKeySign, addrClaimTo):
-    p2sh = script_to_p2sh_mpwr(script)
+    p2sh = script_to_p2sh_RBX(script)
 
     ro = node.decoderawtransaction(rawtx)
     txnid = ro['txid']
@@ -318,7 +318,7 @@ def createClaimTxCT(node, rawtx, output_amounts, script, secret, privKeySign, pu
         'type':'blind',
         'amount':amountIn,
     }, ]
-    ro = node.createrawmpwrtransaction(inputs, outputs)
+    ro = node.createrawRBXtransaction(inputs, outputs)
     rawtxClaim = ro['hex']
 
     # Need estimated witnessSize for fee estimation
@@ -367,7 +367,7 @@ def getRandomAmount():
     return round(Decimal(random()) * 9 + Decimal(1.2), 8)
 
 
-class AtomicSwapTest(EmpowerTestFramework):
+class AtomicSwapTest(RubixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -404,7 +404,7 @@ class AtomicSwapTest(EmpowerTestFramework):
         lockTime = int(time.time()) + 10000 # future locktime
 
         scriptInitiate = CreateAtomicSwapScript(payTo=pkh1_0, refundTo=pkh0_0, lockTime=lockTime, secretHash=secretAHash)
-        p2sh_initiate = script_to_p2sh_mpwr(scriptInitiate)
+        p2sh_initiate = script_to_p2sh_RBX(scriptInitiate)
         rawtxInitiate = nodes[0].createrawtransaction([], {p2sh_initiate:amountA})
         rawtxInitiate = nodes[0].fundrawtransaction(rawtxInitiate)['hex']
         ro = nodes[0].signrawtransactionwithwallet(rawtxInitiate)
@@ -439,7 +439,7 @@ class AtomicSwapTest(EmpowerTestFramework):
 
         lockTimeP = int(time.time()) + 10000 # future locktime
         scriptParticipate = CreateAtomicSwapScript(payTo=pkh0_0, refundTo=pkh1_0, lockTime=lockTimeP, secretHash=secretAHash)
-        p2sh_participate = script_to_p2sh_mpwr(scriptParticipate)
+        p2sh_participate = script_to_p2sh_RBX(scriptParticipate)
 
         rawtx_p = nodes[1].createrawtransaction([], {p2sh_participate:amountB})
         rawtx_p = nodes[1].fundrawtransaction(rawtx_p)['hex']
@@ -499,7 +499,7 @@ class AtomicSwapTest(EmpowerTestFramework):
 
         scriptInitiate2 = CreateAtomicSwapScript(payTo=pkh1_0, refundTo=pkh0_0, lockTime=lockTime, secretHash=secretAHash)
 
-        p2sh_initiate = script_to_p2sh_mpwr(scriptInitiate2)
+        p2sh_initiate = script_to_p2sh_RBX(scriptInitiate2)
         rawtxInitiate = nodes[0].createrawtransaction([], {p2sh_initiate:6.0})
         rawtxInitiate = nodes[0].fundrawtransaction(rawtxInitiate)['hex']
         ro = nodes[0].signrawtransactionwithwallet(rawtxInitiate)
@@ -538,7 +538,7 @@ class AtomicSwapTest(EmpowerTestFramework):
             'type':'blind',
             'amount':100,
         }, ]
-        ro = nodes[0].createrawmpwrtransaction([], outputs)
+        ro = nodes[0].createrawRBXtransaction([], outputs)
 
         ro = nodes[0].fundrawtransactionfrom('standard', ro['hex'], {}, ro['amounts'])
         rawtx = ro['hex']
@@ -596,7 +596,7 @@ class AtomicSwapTest(EmpowerTestFramework):
 
 
         scriptInitiate = CreateAtomicSwapScript(payTo=pkh1_0, refundTo=pkh0_0, lockTime=lockTime, secretHash=secretAHash)
-        p2sh_initiate = script_to_p2sh_mpwr(scriptInitiate)
+        p2sh_initiate = script_to_p2sh_RBX(scriptInitiate)
 
         outputs = [ {
             'address':p2sh_initiate,
@@ -604,7 +604,7 @@ class AtomicSwapTest(EmpowerTestFramework):
             'type':'blind',
             'amount':amountA,
         }, ]
-        ro = nodes[0].createrawmpwrtransaction([], outputs)
+        ro = nodes[0].createrawRBXtransaction([], outputs)
         ro = nodes[0].fundrawtransactionfrom('blind', ro['hex'], {}, ro['amounts'])
         output_amounts_i = ro['output_amounts']
         ro = nodes[0].signrawtransactionwithwallet(ro['hex'])
@@ -642,7 +642,7 @@ class AtomicSwapTest(EmpowerTestFramework):
 
         lockTimeP = int(time.time()) + 10000 # future locktime
         scriptParticipate = CreateAtomicSwapScript(payTo=pkh0_0, refundTo=pkh1_0, lockTime=lockTimeP, secretHash=secretAHash)
-        p2sh_participate = script_to_p2sh_mpwr(scriptParticipate)
+        p2sh_participate = script_to_p2sh_RBX(scriptParticipate)
 
         outputs = [ {
             'address':p2sh_participate,
@@ -651,7 +651,7 @@ class AtomicSwapTest(EmpowerTestFramework):
             'amount':amountB,
         }, ]
 
-        ro = nodes[1].createrawmpwrtransaction([], outputs)
+        ro = nodes[1].createrawRBXtransaction([], outputs)
         ro = nodes[1].fundrawtransactionfrom('blind', ro['hex'], {}, ro['amounts'])
         output_amounts_p = ro['output_amounts']
         ro = nodes[1].signrawtransactionwithwallet(ro['hex'])
@@ -694,7 +694,7 @@ class AtomicSwapTest(EmpowerTestFramework):
 
         amountA = 7.1
         scriptInitiate = CreateAtomicSwapScript(payTo=pkh1_0, refundTo=pkh0_0, lockTime=lockTime, secretHash=secretAHash)
-        p2sh_initiate = script_to_p2sh_mpwr(scriptInitiate)
+        p2sh_initiate = script_to_p2sh_RBX(scriptInitiate)
 
         outputs = [ {
             'address':p2sh_initiate,
@@ -702,7 +702,7 @@ class AtomicSwapTest(EmpowerTestFramework):
             'type':'blind',
             'amount':amountA,
         }, ]
-        ro = nodes[0].createrawmpwrtransaction([], outputs)
+        ro = nodes[0].createrawRBXtransaction([], outputs)
         ro = nodes[0].fundrawtransactionfrom('blind', ro['hex'], {}, ro['amounts'])
 
         r2 = nodes[0].verifyrawtransaction(ro['hex'])
@@ -758,7 +758,7 @@ class AtomicSwapTest(EmpowerTestFramework):
             'type':'blind',
             'amount': amount,
         }, ]
-        ro = nodes[0].createrawmpwrtransaction([], outputs)
+        ro = nodes[0].createrawRBXtransaction([], outputs)
 
         ro = nodes[1].decoderawtransaction(ro['hex'])
         assert(ro['vout'][0]['ct_fee'] == amount)
@@ -783,8 +783,8 @@ class AtomicSwapTest(EmpowerTestFramework):
             'blindingfactor': blind,
             'ephemeral_key': ephem
         }, ]
-        txA = nodes[1].createrawmpwrtransaction([], outputs)
-        txB = nodes[0].createrawmpwrtransaction([], outputs)
+        txA = nodes[1].createrawRBXtransaction([], outputs)
+        txB = nodes[0].createrawRBXtransaction([], outputs)
 
         rangeproofA = nodes[1].decoderawtransaction(txA['hex'])['vout'][0]['rangeproof']
         rangeproofB = nodes[0].decoderawtransaction(txB['hex'])['vout'][0]['rangeproof']

@@ -1,7 +1,7 @@
-Contributing to Empower Network
+Contributing to Rubix Network
 ============================
 
-The Empower project operates an open contributor model where anyone is
+The Rubix project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -17,7 +17,7 @@ release cycle, overall merging, moderation and appointment of maintainers.
 Communication Channels
 ----------------------
 
-Most communication about Empower development happens on [#empower-dev:matrix.org](https://riot.im/app/#/room/#empower-dev:matrix.org), in the Empower Open Development channel on Riot. The easiest way to participate on Riot is
+Most communication about Rubix development happens on [#Rubix-dev:matrix.org](https://riot.im/app/#/room/#Rubix-dev:matrix.org), in the Rubix Open Development channel on Riot. The easiest way to participate on Riot is
 with the web client, [riot.im](https://riot.im/app/). Desktop downloads also available.
 
 Discussion about code base improvements happens in GitHub issues and on pull
@@ -186,9 +186,9 @@ workload on reviewing.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the Empower project..
+The following applies to code changes to the Rubix project..
 
-Whether a pull request is merged into Empower Network rests with the project merge
+Whether a pull request is merged into Rubix Network rests with the project merge
 maintainers and ultimately the project lead.
 
 Maintainers will take into consideration if a patch is in line with the general
@@ -207,7 +207,7 @@ In general, all pull requests must:
     demonstrating the bug and also proving the fix. This helps prevent regression.
   - Change relevant comments and documentation when behaviour of code changes.
 
-Patches that change Empower consensus rules are considerably more involved than
+Patches that change Rubix consensus rules are considerably more involved than
 normal because they affect the entire ecosystem and so must be preceded by
 extensive mailing list discussions and have a numbered PIP. While each case will
 be different, one should be prepared to expend more time and effort than for
@@ -262,7 +262,7 @@ higher in terms of discussion and peer review requirements, keeping in mind that
 mistakes could be very costly to the wider community. This includes refactoring
 of consensus critical code.
 
-[//]: # (Where a patch set proposes to change the Empower consensus, it must have been
+[//]: # (Where a patch set proposes to change the Rubix consensus, it must have been
 discussed extensively on the mailing list and IRC, be accompanied by a widely
 discussed BIP and have a generally widely perceived technical consensus of being
 a worthwhile change based on the judgement of the maintainers.)
@@ -302,7 +302,7 @@ about:
 Release Policy
 --------------
 
-The project leader is the release manager for each Empower Network release.
+The project leader is the release manager for each Rubix Network release.
 
 Acknowledgement
 ---------------

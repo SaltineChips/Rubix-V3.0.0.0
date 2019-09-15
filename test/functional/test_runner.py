@@ -72,9 +72,9 @@ EXTENDED_SCRIPTS = [
     'feature_pruning.py',
     'feature_dbcrash.py',
 
-    'wallet_mpwr_unloadspent.py',
-    'p2p_mpwr_dos.py',
-    'feature_mpwr_smsgpaidfee_ext.py',
+    'wallet_RBX_unloadspent.py',
+    'p2p_RBX_dos.py',
+    'feature_RBX_smsgpaidfee_ext.py',
 ]
 
 BASE_SCRIPTS = [
@@ -209,30 +209,30 @@ BASE_SCRIPTS = [
     # Put them in a random line within the section that fits their approximate run-time
 ]
 
-EMPOWER_SCRIPTS = [
-    'p2p_mpwr_fork.py',
-    'feature_mpwr_pos.py',
-    'feature_mpwr_extkey.py',
-    'feature_mpwr_stealth.py',
-    'feature_mpwr_blind.py',
-    'feature_mpwr_anon.py',
-    'wallet_mpwr_empower.py',
-    'rpc_mpwr_mnemonic.py',
-    'feature_mpwr_smsg.py',
-    'feature_mpwr_smsgpaid.py',
-    'feature_mpwr_smsgpaidfee.py',
-    'wallet_mpwr_multisig.py',
-    'wallet_mpwr_multiwallet.py',
-    'feature_mpwr_coldstaking.py',
-    'rpc_mpwr_filtertransactions.py',
-    'feature_mpwr_vote.py',
-    'feature_mpwr_zmq_test.py',
-    'rpc_mpwr_wallet.py',
-    'feature_mpwr_usbdevice.py',
-    'wallet_mpwr_watchonly.py',
-    'rpc_mpwr_atomicswap.py',
-    'rpc_mpwr_signmessage.py',
-    'wallet_mpwr_avoidreuse.py',
+Rubix_SCRIPTS = [
+    'p2p_RBX_fork.py',
+    'feature_RBX_pos.py',
+    'feature_RBX_extkey.py',
+    'feature_RBX_stealth.py',
+    'feature_RBX_blind.py',
+    'feature_RBX_anon.py',
+    'wallet_RBX_Rubix.py',
+    'rpc_RBX_mnemonic.py',
+    'feature_RBX_smsg.py',
+    'feature_RBX_smsgpaid.py',
+    'feature_RBX_smsgpaidfee.py',
+    'wallet_RBX_multisig.py',
+    'wallet_RBX_multiwallet.py',
+    'feature_RBX_coldstaking.py',
+    'rpc_RBX_filtertransactions.py',
+    'feature_RBX_vote.py',
+    'feature_RBX_zmq_test.py',
+    'rpc_RBX_wallet.py',
+    'feature_RBX_usbdevice.py',
+    'wallet_RBX_watchonly.py',
+    'rpc_RBX_atomicswap.py',
+    'rpc_RBX_signmessage.py',
+    'wallet_RBX_avoidreuse.py',
 ]
 
 INSIGHT_SCRIPTS = [
@@ -244,7 +244,7 @@ INSIGHT_SCRIPTS = [
 ]
 
 # Place EXTENDED_SCRIPTS first since it has the 3 longest running tests
-ALL_SCRIPTS = EXTENDED_SCRIPTS + BASE_SCRIPTS + EMPOWER_SCRIPTS + INSIGHT_SCRIPTS
+ALL_SCRIPTS = EXTENDED_SCRIPTS + BASE_SCRIPTS + Rubix_SCRIPTS + INSIGHT_SCRIPTS
 
 NON_SCRIPTS = [
     # These are python files that live in the functional tests directory, but are not test scripts.
@@ -269,7 +269,7 @@ def main():
     parser.add_argument('--exclude', '-x', help='specify a comma-separated-list of scripts to exclude.')
     parser.add_argument('--extended', action='store_true', help='run the extended test suite in addition to the basic tests')
     parser.add_argument('--bitcoin', action='store_true', help='run Bitcoin specific tests')
-    parser.add_argument('--empower', action='store_true', help='run Empower specific tests')
+    parser.add_argument('--Rubix', action='store_true', help='run Rubix specific tests')
     parser.add_argument('--insight', action='store_true', help='run Insight specific tests')
     parser.add_argument('--withstdout', action='store_true', help='print stdout when test passed also')
     parser.add_argument('--help', '-h', '-?', action='store_true', help='print help text and exit')
@@ -297,7 +297,7 @@ def main():
     logging.basicConfig(format='%(message)s', level=logging_level)
 
     # Create base test directory
-    tmpdir = "%s/empower_test_runner_₿_🏃_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
+    tmpdir = "%s/Rubix_test_runner_₿_🏃_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
 
     os.makedirs(tmpdir)
 
@@ -330,8 +330,8 @@ def main():
         test_list = []
         if args.extended:
             test_list += EXTENDED_SCRIPTS
-        if args.empower:
-            test_list += EMPOWER_SCRIPTS
+        if args.Rubix:
+            test_list += Rubix_SCRIPTS
         if args.insight:
             test_list += INSIGHT_SCRIPTS
         if args.bitcoin:
@@ -376,7 +376,7 @@ def main():
         combined_logs_len=args.combinedlogslen,
         failfast=args.failfast,
         runs_ci=args.ci,
-        create_cache=(True if args.bitcoin or (not args.empower and not args.insight) else False)
+        create_cache=(True if args.bitcoin or (not args.Rubix and not args.insight) else False)
     )
 
 def run_tests(test_list, src_dir, build_dir, tmpdir, jobs=1, enable_coverage=False, args=[], combined_logs_len=0, failfast=False, runs_ci=False, create_cache=True):
@@ -384,8 +384,8 @@ def run_tests(test_list, src_dir, build_dir, tmpdir, jobs=1, enable_coverage=Fal
 
     # Warn if bitcoind is already running (unix only)
     try:
-        if subprocess.check_output(["pidof", "empowerd"]) is not None:
-            print("%sWARNING!%s There is already a empowerd process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
+        if subprocess.check_output(["pidof", "Rubixd"]) is not None:
+            print("%sWARNING!%s There is already a Rubixd process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
     except (OSError, subprocess.SubprocessError):
         pass
 
@@ -652,7 +652,7 @@ class RPCCoverage():
     Coverage reporting utilities for test_runner.
 
     Coverage calculation works by having each test script subprocess write
-    coverage files into a mpwricular directory. These files contain the RPC
+    coverage files into a RBXicular directory. These files contain the RPC
     commands invoked during testing, as well as a complete listing of RPC
     commands per `bitcoin-cli help` (`rpc_interface.txt`).
 

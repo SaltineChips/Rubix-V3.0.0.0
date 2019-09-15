@@ -24,7 +24,7 @@ Next Release
 0.18.0.6 rc2
 ==============
 
-- Fixed regression when sending all blind to mpwr.
+- Fixed regression when sending all blind to RBX.
 
 
 0.18.0.6 rc1
@@ -32,7 +32,7 @@ Next Release
 
 SMSG won't connect to nodes running a version below 0.18.0.6
 
-- Fixed failure when sending all blind to mpwr.
+- Fixed failure when sending all blind to RBX.
 - smsgbuckets: Add total only mode
 - SMSG: Difficulty can be adjusted by stakers.
 - SMSG: Messages can be created and imported without being transmitted.

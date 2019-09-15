@@ -1,8 +1,8 @@
 #include <windows.h>             // needed for VERSIONINFO
 #include "clientversion.h"       // holds the needed client version information
 
-#define VER_PRODUCTVERSION     CLIENT_VERSION_MAJOR,CLIENT_VERSION_MINOR,CLIENT_VERSION_REVISION,CLIENT_VERSION_EMPOWER
-#define VER_PRODUCTVERSION_STR STRINGIZE(CLIENT_VERSION_MAJOR) "." STRINGIZE(CLIENT_VERSION_MINOR) "." STRINGIZE(CLIENT_VERSION_REVISION) "." STRINGIZE(CLIENT_VERSION_EMPOWER)
+#define VER_PRODUCTVERSION     CLIENT_VERSION_MAJOR,CLIENT_VERSION_MINOR,CLIENT_VERSION_REVISION,CLIENT_VERSION_Rubix
+#define VER_PRODUCTVERSION_STR STRINGIZE(CLIENT_VERSION_MAJOR) "." STRINGIZE(CLIENT_VERSION_MINOR) "." STRINGIZE(CLIENT_VERSION_REVISION) "." STRINGIZE(CLIENT_VERSION_Rubix)
 #define VER_FILEVERSION        VER_PRODUCTVERSION
 #define VER_FILEVERSION_STR    VER_PRODUCTVERSION_STR
 
@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Empower"
-            VALUE "FileDescription",    "empower-tx (CLI Empower transaction editor utility)"
+            VALUE "CompanyName",        "Rubix"
+            VALUE "FileDescription",    "Rubix-tx (CLI Rubix transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "empower-tx"
+            VALUE "InternalName",       "Rubix-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "empower-tx.exe"
-            VALUE "ProductName",        "empower-tx"
+            VALUE "OriginalFilename",   "Rubix-tx.exe"
+            VALUE "ProductName",        "Rubix-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
